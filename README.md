@@ -8,3 +8,8 @@ A UICollectionViewLayout that uses a supplimental view to display a folder below
 2. Set the layout on your collectionView to Custom, and set it's name to RBCollectionViewInfoFolderLayout
 
 ####TODO
+
+- [ ] Imlement decoration view that places a caret over opened item linking it to the folder
+- [ ] Figure out why position of the folder animates open, but the view just pops in
+- [ ] Implement sticky headers
+- [ ] Refactor deltaX calculation into prepareLayout so it isn't re-done for every item 
