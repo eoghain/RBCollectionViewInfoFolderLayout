@@ -136,8 +136,8 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 - (void)toggleFolderViewForIndexPath:(NSIndexPath *)indexPath
 {
 	NSIndexPath * visibleFolder = self.visibleFolderInSection[@( indexPath.section )];
-	NSInteger openFolderRow = [self rowForIndexPath:visibleFolder];
 	NSInteger selectedFolderRow = [self rowForIndexPath:indexPath];
+	NSInteger openFolderRow = (visibleFolder) ? [self rowForIndexPath:visibleFolder] : selectedFolderRow;
 
 	// Ugly Hack to get folders to animate closeing
 	/*
@@ -161,8 +161,15 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 					CGRect origFrame = subview.frame;
 
 					// Close folder A & B.1
-					[UIView animateWithDuration:0.2 animations:^{
+					[UIView animateWithDuration:0.295 // Just under .3 to try and match
+										  delay:0.0
+										options:UIViewAnimationOptionCurveEaseInOut
+									 animations:^{
 						CGRect frame = subview.frame;
+
+						if (selectedFolderRow < openFolderRow)
+							frame.origin.y += frame.size.height;
+
 						frame.size.height = 0;
 						subview.frame = frame;
 					} completion:^(BOOL finished) {
@@ -204,6 +211,9 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 
 - (NSInteger)rowForIndexPath:(NSIndexPath *)indexPath
 {
+	if (indexPath == nil)
+		return -1;
+
 	NSInteger cellsPerRowInSection = [self.cellsPerRowInSection[@( indexPath.section )] integerValue];
 	NSInteger row = (indexPath.row / cellsPerRowInSection);
 
@@ -409,6 +419,8 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 		viewRect.origin.y += self.headerSize.height + (self.interItemSpacingY * 2);
 		viewRect.size.height = self.folderHeight;
 		viewRect.size.width = self.collectionView.bounds.size.width;
+
+//		attributes.zIndex = -10;
 	}
 
 	attributes.frame = viewRect;
