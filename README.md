@@ -13,3 +13,4 @@ A UICollectionViewLayout that uses a supplimental view to display a folder below
 - [ ] Figure out why position of the folder animates open, but the view just pops in
 - [ ] Implement sticky headers
 - [ ] Refactor deltaX calculation into prepareLayout so it isn't re-done for every item 
+- [ ] Allow for per item folder heights.
