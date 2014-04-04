@@ -48,6 +48,10 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 @property (strong, nonatomic) NSMutableDictionary * cellsPerRowInSection;
 @property (strong, nonatomic) NSMutableDictionary * visibleFolderInSection;
 
+@property (nonatomic, strong) NSMutableArray * insertIndexPaths;
+@property (nonatomic, strong) NSMutableArray * deleteIndexPaths;
+@property (nonatomic, strong) NSMutableArray * reloadIndexPaths;
+
 @end
 
 @implementation RBCollectionViewInfoFolderLayout
@@ -132,7 +136,25 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 - (void)toggleFolderViewForIndexPath:(NSIndexPath *)indexPath
 {
 	NSIndexPath * visibleFolder = self.visibleFolderInSection[@( indexPath.section )];
-	NSArray * reloadPaths = @[ indexPath ];
+
+	// Ugly Hack to get folders to close
+	if (visibleFolder)
+	{
+		UICollectionViewLayoutAttributes * attributes = self.layoutInformation[RBCollectionViewInfoFolderFolderKind][indexPath];
+		for (UIView *subview in [self.collectionView subviews])
+		{
+			if ([subview isKindOfClass:[UICollectionReusableView class]] && CGRectEqualToRect(subview.frame, attributes.frame))
+			{
+				[UIView animateWithDuration:0.2 animations:^{
+					CGRect frame = subview.frame;
+					frame.size.height = 0;
+					subview.frame = frame;
+				} completion:^(BOOL finished) {
+					[subview removeFromSuperview];
+				}];
+			}
+		}
+	}
 
 	if ([visibleFolder isEqual:indexPath])
 	{
@@ -140,12 +162,9 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 	}
 	else
 	{
-		if (visibleFolder)
-			reloadPaths = [reloadPaths arrayByAddingObject:visibleFolder];
-		
 		self.visibleFolderInSection[@( indexPath.section )] = indexPath;
 	}
-	
+
 	[self.collectionView reloadItemsAtIndexPaths:@[ indexPath ]]; // makes animation happen
 	[self invalidateLayout]; // makes folder disappear
 }
@@ -215,10 +234,14 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 			[cellLayoutDictionary setObject:attributes forKey:indexPath];
 
 			// Folder
-			UICollectionViewLayoutAttributes * folderAttributes = [self layoutAttributesForSupplementaryViewOfKind:RBCollectionViewInfoFolderFolderKind atIndexPath:indexPath];
-			if (folderAttributes)
+
+			if ([indexPath isEqual:self.visibleFolderInSection[@( section )]])
 			{
-				[folderLayoutDictionary setObject:folderAttributes forKey:indexPath];
+				UICollectionViewLayoutAttributes * folderAttributes = [self layoutAttributesForSupplementaryViewOfKind:RBCollectionViewInfoFolderFolderKind atIndexPath:indexPath];
+				if (folderAttributes)
+				{
+					[folderLayoutDictionary setObject:folderAttributes forKey:indexPath];
+				}
 			}
 			
 			// TODO: figure out decorations
@@ -502,5 +525,101 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 //	
 //	return attributes;
 //}
+
+- (void)prepareForCollectionViewUpdates:(NSArray *)updateItems
+{
+	// Keep track of insert and delete index paths
+	[super prepareForCollectionViewUpdates:updateItems];
+
+	self.deleteIndexPaths = [NSMutableArray array];
+	self.insertIndexPaths = [NSMutableArray array];
+	self.reloadIndexPaths = [NSMutableArray array];
+
+	for (UICollectionViewUpdateItem *update in updateItems)
+	{
+		if (update.updateAction == UICollectionUpdateActionDelete)
+		{
+			[self.deleteIndexPaths addObject:update.indexPathBeforeUpdate];
+		}
+		else if (update.updateAction == UICollectionUpdateActionInsert)
+		{
+			[self.insertIndexPaths addObject:update.indexPathAfterUpdate];
+		}
+		else if (update.updateAction == UICollectionUpdateActionReload)
+		{
+			[self.reloadIndexPaths addObject:update.indexPathAfterUpdate];
+		}
+	}
+}
+
+- (void)finalizeCollectionViewUpdates
+{
+	[super finalizeCollectionViewUpdates];
+
+	// release the insert and delete index paths
+	self.deleteIndexPaths = nil;
+	self.insertIndexPaths = nil;
+	self.reloadIndexPaths = nil;
+}
+
+- (UICollectionViewLayoutAttributes *)initialLayoutAttributesForAppearingSupplementaryElementOfKind:(NSString *)elementKind atIndexPath:(NSIndexPath *)elementIndexPath
+{
+	UICollectionViewLayoutAttributes * attributes = [super initialLayoutAttributesForAppearingSupplementaryElementOfKind:elementKind atIndexPath:elementIndexPath];
+
+	if (elementKind == RBCollectionViewInfoFolderFolderKind)
+	{
+		CGRect frame = attributes.frame;
+		frame.size.height = 0;
+		attributes.frame = frame;
+	}
+	attributes.alpha = 1.0;
+
+	return attributes;
+}
+
+- (UICollectionViewLayoutAttributes *)finalLayoutAttributesForDisappearingSupplementaryElementOfKind:(NSString *)elementKind atIndexPath:(NSIndexPath *)elementIndexPath
+{
+	UICollectionViewLayoutAttributes * attributes = [super finalLayoutAttributesForDisappearingSupplementaryElementOfKind:elementKind atIndexPath:elementIndexPath];
+
+	if (elementKind == RBCollectionViewInfoFolderFolderKind)
+	{
+		CGRect frame = attributes.frame;
+		frame.size.height = 0;
+		attributes.frame = frame;
+	}
+	attributes.alpha = 1.0;
+
+	return attributes;
+}
+
+- (UICollectionViewLayoutAttributes *)initialLayoutAttributesForAppearingItemAtIndexPath:(NSIndexPath *)itemIndexPath
+{
+	UICollectionViewLayoutAttributes * attributes;
+
+	if ([self.reloadIndexPaths containsObject:itemIndexPath])
+	{
+		attributes = self.layoutInformation[RBCollectionViewInfoFolderCellKind][itemIndexPath];
+	}
+	else
+	{
+		attributes = [super initialLayoutAttributesForAppearingItemAtIndexPath:itemIndexPath];
+	}
+
+	attributes.alpha = 1.0;
+
+	return attributes;
+}
+
+- (UICollectionViewLayoutAttributes *)finalLayoutAttributesForDisappearingItemAtIndexPath:(NSIndexPath *)itemIndexPath
+{
+	UICollectionViewLayoutAttributes * attributes = [super finalLayoutAttributesForDisappearingItemAtIndexPath:itemIndexPath];
+
+	if (!attributes) // If cell is moving off the screen attributes will be nil, but we want it to animate
+		attributes = self.layoutInformation[RBCollectionViewInfoFolderCellKind][itemIndexPath];
+
+	attributes.alpha = 1.0;
+
+	return attributes;
+}
 
 @end
