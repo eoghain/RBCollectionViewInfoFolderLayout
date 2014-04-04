@@ -13,8 +13,7 @@
 		316925CC18EDF6AE005F235B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 316925CA18EDF6AE005F235B /* InfoPlist.strings */; };
 		316925CE18EDF6AE005F235B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 316925CD18EDF6AE005F235B /* main.m */; };
 		316925D218EDF6AE005F235B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 316925D118EDF6AE005F235B /* AppDelegate.m */; };
-		316925D518EDF6AE005F235B /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 316925D318EDF6AE005F235B /* Main_iPhone.storyboard */; };
-		316925D818EDF6AE005F235B /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 316925D618EDF6AE005F235B /* Main_iPad.storyboard */; };
+		316925D818EDF6AE005F235B /* Application.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 316925D618EDF6AE005F235B /* Application.storyboard */; };
 		316925DB18EDF6AE005F235B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 316925DA18EDF6AE005F235B /* ViewController.m */; };
 		316925DD18EDF6AE005F235B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 316925DC18EDF6AE005F235B /* Images.xcassets */; };
 		316925E418EDF6AE005F235B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 316925E318EDF6AE005F235B /* XCTest.framework */; };
@@ -22,6 +21,7 @@
 		316925E618EDF6AE005F235B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 316925C518EDF6AE005F235B /* UIKit.framework */; };
 		316925EE18EDF6AE005F235B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 316925EC18EDF6AE005F235B /* InfoPlist.strings */; };
 		316925F018EDF6AE005F235B /* RBCollectionViewInfoFolderLayoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 316925EF18EDF6AE005F235B /* RBCollectionViewInfoFolderLayoutTests.m */; };
+		316925FD18EDF8A5005F235B /* RBCollectionViewInfoFolderLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 316925FC18EDF8A5005F235B /* RBCollectionViewInfoFolderLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,8 +45,7 @@
 		316925CF18EDF6AE005F235B /* RBCollectionViewInfoFolderLayout-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RBCollectionViewInfoFolderLayout-Prefix.pch"; sourceTree = "<group>"; };
 		316925D018EDF6AE005F235B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		316925D118EDF6AE005F235B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		316925D418EDF6AE005F235B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		316925D718EDF6AE005F235B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		316925D718EDF6AE005F235B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Application.storyboard; sourceTree = "<group>"; };
 		316925D918EDF6AE005F235B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		316925DA18EDF6AE005F235B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		316925DC18EDF6AE005F235B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -55,6 +54,8 @@
 		316925EB18EDF6AE005F235B /* RBCollectionViewInfoFolderLayoutTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RBCollectionViewInfoFolderLayoutTests-Info.plist"; sourceTree = "<group>"; };
 		316925ED18EDF6AE005F235B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		316925EF18EDF6AE005F235B /* RBCollectionViewInfoFolderLayoutTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RBCollectionViewInfoFolderLayoutTests.m; sourceTree = "<group>"; };
+		316925FB18EDF8A5005F235B /* RBCollectionViewInfoFolderLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBCollectionViewInfoFolderLayout.h; sourceTree = "<group>"; };
+		316925FC18EDF8A5005F235B /* RBCollectionViewInfoFolderLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBCollectionViewInfoFolderLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +85,9 @@
 		316925B518EDF6AE005F235B = {
 			isa = PBXGroup;
 			children = (
-				316925C718EDF6AE005F235B /* RBCollectionViewInfoFolderLayout */,
-				316925E918EDF6AE005F235B /* RBCollectionViewInfoFolderLayoutTests */,
+				316925FA18EDF885005F235B /* RBCollectionViewInfoFolderLayout */,
+				316925C718EDF6AE005F235B /* Demo */,
+				316925E918EDF6AE005F235B /* DemoTests */,
 				316925C018EDF6AE005F235B /* Frameworks */,
 				316925BF18EDF6AE005F235B /* Products */,
 			);
@@ -111,18 +113,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		316925C718EDF6AE005F235B /* RBCollectionViewInfoFolderLayout */ = {
+		316925C718EDF6AE005F235B /* Demo */ = {
 			isa = PBXGroup;
 			children = (
 				316925D018EDF6AE005F235B /* AppDelegate.h */,
 				316925D118EDF6AE005F235B /* AppDelegate.m */,
-				316925D318EDF6AE005F235B /* Main_iPhone.storyboard */,
-				316925D618EDF6AE005F235B /* Main_iPad.storyboard */,
+				316925D618EDF6AE005F235B /* Application.storyboard */,
 				316925D918EDF6AE005F235B /* ViewController.h */,
 				316925DA18EDF6AE005F235B /* ViewController.m */,
 				316925DC18EDF6AE005F235B /* Images.xcassets */,
 				316925C818EDF6AE005F235B /* Supporting Files */,
 			);
+			name = Demo;
 			path = RBCollectionViewInfoFolderLayout;
 			sourceTree = "<group>";
 		};
@@ -137,12 +139,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		316925E918EDF6AE005F235B /* RBCollectionViewInfoFolderLayoutTests */ = {
+		316925E918EDF6AE005F235B /* DemoTests */ = {
 			isa = PBXGroup;
 			children = (
 				316925EF18EDF6AE005F235B /* RBCollectionViewInfoFolderLayoutTests.m */,
 				316925EA18EDF6AE005F235B /* Supporting Files */,
 			);
+			name = DemoTests;
 			path = RBCollectionViewInfoFolderLayoutTests;
 			sourceTree = "<group>";
 		};
@@ -153,6 +156,16 @@
 				316925EC18EDF6AE005F235B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		316925FA18EDF885005F235B /* RBCollectionViewInfoFolderLayout */ = {
+			isa = PBXGroup;
+			children = (
+				316925FB18EDF8A5005F235B /* RBCollectionViewInfoFolderLayout.h */,
+				316925FC18EDF8A5005F235B /* RBCollectionViewInfoFolderLayout.m */,
+			);
+			name = RBCollectionViewInfoFolderLayout;
+			path = ../RBCollectionViewInfoFolderLayout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,9 +243,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				316925D818EDF6AE005F235B /* Main_iPad.storyboard in Resources */,
+				316925D818EDF6AE005F235B /* Application.storyboard in Resources */,
 				316925DD18EDF6AE005F235B /* Images.xcassets in Resources */,
-				316925D518EDF6AE005F235B /* Main_iPhone.storyboard in Resources */,
 				316925CC18EDF6AE005F235B /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,6 +266,7 @@
 			files = (
 				316925DB18EDF6AE005F235B /* ViewController.m in Sources */,
 				316925D218EDF6AE005F235B /* AppDelegate.m in Sources */,
+				316925FD18EDF8A5005F235B /* RBCollectionViewInfoFolderLayout.m in Sources */,
 				316925CE18EDF6AE005F235B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,20 +298,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		316925D318EDF6AE005F235B /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				316925D418EDF6AE005F235B /* Base */,
-			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		316925D618EDF6AE005F235B /* Main_iPad.storyboard */ = {
+		316925D618EDF6AE005F235B /* Application.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				316925D718EDF6AE005F235B /* Base */,
 			);
-			name = Main_iPad.storyboard;
+			name = Application.storyboard;
 			sourceTree = "<group>";
 		};
 		316925EC18EDF6AE005F235B /* InfoPlist.strings */ = {
@@ -469,6 +474,7 @@
 				316925F518EDF6AE005F235B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		316925F618EDF6AE005F235B /* Build configuration list for PBXNativeTarget "RBCollectionViewInfoFolderLayoutTests" */ = {
 			isa = XCConfigurationList;
@@ -477,6 +483,7 @@
 				316925F818EDF6AE005F235B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
