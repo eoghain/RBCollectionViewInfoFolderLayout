@@ -48,9 +48,9 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 @property (strong, nonatomic) NSMutableDictionary * cellsPerRowInSection;
 @property (strong, nonatomic) NSMutableDictionary * visibleFolderInSection;
 
-@property (nonatomic, strong) NSMutableArray * insertIndexPaths;
-@property (nonatomic, strong) NSMutableArray * deleteIndexPaths;
-@property (nonatomic, strong) NSMutableArray * reloadIndexPaths;
+@property (strong, nonatomic) NSMutableArray * insertIndexPaths;
+@property (strong, nonatomic) NSMutableArray * deleteIndexPaths;
+@property (strong, nonatomic) NSMutableArray * reloadIndexPaths;
 
 @end
 
@@ -136,12 +136,20 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 - (void)toggleFolderViewForIndexPath:(NSIndexPath *)indexPath
 {
 	NSIndexPath * visibleFolder = self.visibleFolderInSection[@( indexPath.section )];
+	NSInteger openFolderRow = [self rowForIndexPath:visibleFolder];
+	NSInteger selectedFolderRow = [self rowForIndexPath:indexPath];
 
-	// Ugly Hack to get folders to close
+	// Ugly Hack to get folders to animate closeing
+	/*
+	 * A. if user selected an item in a different row than currently open folder's row
+	 *
+	 * B. if user selected the item that has folder already open
+	 *		1. close folder by shrinking height
+	 *		2. re-size folder so it can be open again later
+	 */
 	if (visibleFolder)
 	{
-		// Only close if indexPath and visibleFolder are the same or aren't in the same row
-		if ([indexPath isEqual:visibleFolder] || [self rowForIndexPath:indexPath] != [self rowForIndexPath:visibleFolder])
+		if ([indexPath isEqual:visibleFolder] || selectedFolderRow != openFolderRow) // A & B
 		{
 			UICollectionViewLayoutAttributes * attributes = self.layoutInformation[RBCollectionViewInfoFolderFolderKind][visibleFolder];
 
@@ -151,21 +159,19 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 				if ([subview isKindOfClass:[UICollectionReusableView class]] && CGRectEqualToRect(subview.frame, attributes.frame))
 				{
 					CGRect origFrame = subview.frame;
-					UIView * superView = subview.superview;
 
-					// Shrink folder
+					// Close folder A & B.1
 					[UIView animateWithDuration:0.2 animations:^{
 						CGRect frame = subview.frame;
 						frame.size.height = 0;
 						subview.frame = frame;
 					} completion:^(BOOL finished) {
-						// Remove folder - so UI looks nice
-						[subview removeFromSuperview];
-						// Replace folder so we can re-open same item
-						dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-							[superView addSubview:subview];
-							subview.frame = origFrame;
-						});
+						if ([indexPath isEqual:visibleFolder]) // B.2
+						{
+							dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+								subview.frame = origFrame;
+							});
+						}
 					}];
 				}
 			}
@@ -181,7 +187,16 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 		self.visibleFolderInSection[@( indexPath.section )] = indexPath;
 	}
 
-	[self.collectionView reloadItemsAtIndexPaths:@[ indexPath ]]; // makes animations happen
+	// If we are opening a row below an already open row reload the visible item
+	if (selectedFolderRow > openFolderRow)
+	{
+		[self.collectionView reloadItemsAtIndexPaths:@[ visibleFolder ]];
+	}
+	else // reload the selected item
+	{
+		[self.collectionView reloadItemsAtIndexPaths:@[ indexPath ]];
+	}
+
 	[self invalidateLayout]; // makes closed folder stay disappeared
 }
 
@@ -259,14 +274,11 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 
 			// Folder
 
-//			if ([indexPath isEqual:self.visibleFolderInSection[@( section )]])
-//			{
-				UICollectionViewLayoutAttributes * folderAttributes = [self layoutAttributesForSupplementaryViewOfKind:RBCollectionViewInfoFolderFolderKind atIndexPath:indexPath];
-				if (folderAttributes)
-				{
-					[folderLayoutDictionary setObject:folderAttributes forKey:indexPath];
-				}
-//			}
+			UICollectionViewLayoutAttributes * folderAttributes = [self layoutAttributesForSupplementaryViewOfKind:RBCollectionViewInfoFolderFolderKind atIndexPath:indexPath];
+			if (folderAttributes)
+			{
+				[folderLayoutDictionary setObject:folderAttributes forKey:indexPath];
+			}
 
 			// TODO: figure out decorations
 //			// Decorations
@@ -453,7 +465,6 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 		}];
 	}];
 
-
 	// TODO: figure out decorations
 	// Add our decoration views to open folders
 //	[self.decorations enumerateKeysAndObjectsUsingBlock:^(NSIndexPath *indexPath, UICollectionViewLayoutAttributes *layoutAttributes, BOOL *stop) {
@@ -522,34 +533,6 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 }
 
 // TODO: figure out how to make appearing supplimentary view animate with the layout movement
-//- (UICollectionViewLayoutAttributes *)initialLayoutAttributesForAppearingSupplementaryElementOfKind:(NSString *)elementKind atIndexPath:(NSIndexPath *)elementIndexPath
-//{
-//	UICollectionViewLayoutAttributes * attributes = [super initialLayoutAttributesForAppearingSupplementaryElementOfKind:elementKind atIndexPath:elementIndexPath];
-//	
-//	if (elementKind == RBCollectionViewInfoFolderFolderKind)
-//	{
-//		CGRect frame = attributes.frame;
-//		frame.size.height = 0;
-//		attributes.frame = frame;
-//	}
-//	
-//	return attributes;
-//}
-//
-//- (UICollectionViewLayoutAttributes *)finalLayoutAttributesForDisappearingSupplementaryElementOfKind:(NSString *)elementKind atIndexPath:(NSIndexPath *)elementIndexPath
-//{
-//	UICollectionViewLayoutAttributes * attributes = [super finalLayoutAttributesForDisappearingSupplementaryElementOfKind:elementKind atIndexPath:elementIndexPath];
-//	
-//	if (elementKind == RBCollectionViewInfoFolderFolderKind)
-//	{
-//		CGRect frame = attributes.frame;
-//		frame.size.height = 0;
-//		attributes.frame = frame;
-//	}
-//	
-//	return attributes;
-//}
-
 - (void)prepareForCollectionViewUpdates:(NSArray *)updateItems
 {
 	// Keep track of insert and delete index paths
