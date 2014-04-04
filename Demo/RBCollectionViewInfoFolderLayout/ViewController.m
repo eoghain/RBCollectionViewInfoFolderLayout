@@ -25,8 +25,8 @@
 	self.imageCache = [[NSCache alloc] init];
 
 	RBCollectionViewInfoFolderLayout * layout = (id)self.collectionView.collectionViewLayout;
-	layout.headerSize = CGSizeMake(320, 50);
-	layout.footerSize = CGSizeMake(320, 50);
+	layout.headerSize = CGSizeMake(self.view.bounds.size.width, 50);
+	layout.footerSize = CGSizeMake(self.view.bounds.size.width, 25);
 
 	[self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:RBCollectionViewInfoFolderHeaderKind withReuseIdentifier:@"header"];
 	[self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:RBCollectionViewInfoFolderFooterKind withReuseIdentifier:@"footer"];
@@ -62,6 +62,16 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillLayoutSubviews
+{
+	[super viewWillLayoutSubviews];
+	
+	// Keep headers full width
+	RBCollectionViewInfoFolderLayout * layout = (id)self.collectionView.collectionViewLayout;
+	layout.headerSize = CGSizeMake(self.view.bounds.size.width, 50);
+	layout.footerSize = CGSizeMake(self.view.bounds.size.width, 25);
 }
 
 #pragma mark - UICollectionViewDelegate
