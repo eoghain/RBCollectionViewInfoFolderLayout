@@ -140,18 +140,34 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 	// Ugly Hack to get folders to close
 	if (visibleFolder)
 	{
-		UICollectionViewLayoutAttributes * attributes = self.layoutInformation[RBCollectionViewInfoFolderFolderKind][indexPath];
-		for (UIView *subview in [self.collectionView subviews])
+		// Only close if indexPath and visibleFolder are the same or aren't in the same row
+		if ([indexPath isEqual:visibleFolder] || [self rowForIndexPath:indexPath] != [self rowForIndexPath:visibleFolder])
 		{
-			if ([subview isKindOfClass:[UICollectionReusableView class]] && CGRectEqualToRect(subview.frame, attributes.frame))
+			UICollectionViewLayoutAttributes * attributes = self.layoutInformation[RBCollectionViewInfoFolderFolderKind][visibleFolder];
+
+			for (UIView *subview in [self.collectionView subviews])
 			{
-				[UIView animateWithDuration:0.2 animations:^{
-					CGRect frame = subview.frame;
-					frame.size.height = 0;
-					subview.frame = frame;
-				} completion:^(BOOL finished) {
-					[subview removeFromSuperview];
-				}];
+				// Find subview for our visible folder
+				if ([subview isKindOfClass:[UICollectionReusableView class]] && CGRectEqualToRect(subview.frame, attributes.frame))
+				{
+					CGRect origFrame = subview.frame;
+					UIView * superView = subview.superview;
+
+					// Shrink folder
+					[UIView animateWithDuration:0.2 animations:^{
+						CGRect frame = subview.frame;
+						frame.size.height = 0;
+						subview.frame = frame;
+					} completion:^(BOOL finished) {
+						// Remove folder - so UI looks nice
+						[subview removeFromSuperview];
+						// Replace folder so we can re-open same item
+						dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+							[superView addSubview:subview];
+							subview.frame = origFrame;
+						});
+					}];
+				}
 			}
 		}
 	}
@@ -165,11 +181,19 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 		self.visibleFolderInSection[@( indexPath.section )] = indexPath;
 	}
 
-	[self.collectionView reloadItemsAtIndexPaths:@[ indexPath ]]; // makes animation happen
-	[self invalidateLayout]; // makes folder disappear
+	[self.collectionView reloadItemsAtIndexPaths:@[ indexPath ]]; // makes animations happen
+	[self invalidateLayout]; // makes closed folder stay disappeared
 }
 
 #pragma mark - Helpers
+
+- (NSInteger)rowForIndexPath:(NSIndexPath *)indexPath
+{
+	NSInteger cellsPerRowInSection = [self.cellsPerRowInSection[@( indexPath.section )] integerValue];
+	NSInteger row = (indexPath.row / cellsPerRowInSection);
+
+	return row;
+}
 
 - (CGFloat)heightForSection:(NSInteger)section
 {
@@ -235,15 +259,15 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 
 			// Folder
 
-			if ([indexPath isEqual:self.visibleFolderInSection[@( section )]])
-			{
+//			if ([indexPath isEqual:self.visibleFolderInSection[@( section )]])
+//			{
 				UICollectionViewLayoutAttributes * folderAttributes = [self layoutAttributesForSupplementaryViewOfKind:RBCollectionViewInfoFolderFolderKind atIndexPath:indexPath];
 				if (folderAttributes)
 				{
 					[folderLayoutDictionary setObject:folderAttributes forKey:indexPath];
 				}
-			}
-			
+//			}
+
 			// TODO: figure out decorations
 //			// Decorations
 //			UICollectionViewLayoutAttributes * decorationAttributes = [self layoutAttributesForDecorationViewOfKind:RBCollectionViewInfoFolderDecorationKind atIndexPath:indexPath];
@@ -566,12 +590,6 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 {
 	UICollectionViewLayoutAttributes * attributes = [super initialLayoutAttributesForAppearingSupplementaryElementOfKind:elementKind atIndexPath:elementIndexPath];
 
-	if (elementKind == RBCollectionViewInfoFolderFolderKind)
-	{
-		CGRect frame = attributes.frame;
-		frame.size.height = 0;
-		attributes.frame = frame;
-	}
 	attributes.alpha = 1.0;
 
 	return attributes;
@@ -581,12 +599,6 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 {
 	UICollectionViewLayoutAttributes * attributes = [super finalLayoutAttributesForDisappearingSupplementaryElementOfKind:elementKind atIndexPath:elementIndexPath];
 
-	if (elementKind == RBCollectionViewInfoFolderFolderKind)
-	{
-		CGRect frame = attributes.frame;
-		frame.size.height = 0;
-		attributes.frame = frame;
-	}
 	attributes.alpha = 1.0;
 
 	return attributes;
