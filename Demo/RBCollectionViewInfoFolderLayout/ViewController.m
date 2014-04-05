@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "RBCollectionViewInfoFolderLayout.h"
+#import "ComicData.h"
+#import "ComicDataView.h"
 
 @interface ViewController ()
 
@@ -27,35 +29,18 @@
 	RBCollectionViewInfoFolderLayout * layout = (id)self.collectionView.collectionViewLayout;
 	layout.headerSize = CGSizeMake(self.view.bounds.size.width, 50);
 	layout.footerSize = CGSizeMake(self.view.bounds.size.width, 25);
+	layout.cellSize = CGSizeMake(216, 325);
+	layout.folderHeight = 175;
+	layout.interItemSpacingY = 25;
 
 	[self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:RBCollectionViewInfoFolderHeaderKind withReuseIdentifier:@"header"];
 	[self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:RBCollectionViewInfoFolderFooterKind withReuseIdentifier:@"footer"];
-	[self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:RBCollectionViewInfoFolderFolderKind withReuseIdentifier:@"folder"];
+	[self.collectionView registerClass:[ComicDataView class] forSupplementaryViewOfKind:RBCollectionViewInfoFolderFolderKind withReuseIdentifier:@"folder"];
 
-	// TODO: Change this data structure to some comics and metadata
-	// Setup Data - I know ugly data structure, but this is just a demo
-	self.dataKeys = @[ @"Heroes", @"Villains"];
-	self.data = @{ self.dataKeys[0] :	@[
-						   @{ @"name" : @"Archangel", @"path" : @"http://i.annihil.us/u/prod/marvel/i/mg/8/03/526165ed93180" },
-						   @{ @"name" : @"Colossus", @"path" : @"http://i.annihil.us/u/prod/marvel/i/mg/6/e0/51127cf4b996f" },
-						   @{ @"name" : @"Cyclops", @"path" : @"http://i.annihil.us/u/prod/marvel/i/mg/6/70/526547e2d90ad" },
-						   @{ @"name" : @"Domino", @"path" : @"http://i.annihil.us/u/prod/marvel/i/mg/f/60/526031dc10516" },
-						   @{ @"name" : @"Emma Frost", @"path" : @"http://i.annihil.us/u/prod/marvel/i/mg/9/80/51151ef7cf4c8" },
-						   @{ @"name" : @"Gambit", @"path" : @"http://i.annihil.us/u/prod/marvel/i/mg/a/40/52696aa8aee99" },
-						   @{ @"name" : @"Ghost Rider (Johnny Blaze)", @"path" : @"http://i.annihil.us/u/prod/marvel/i/mg/3/80/52696ba1353e7" },
-						   @{ @"name" : @"Jubilee", @"path" : @"http://i.annihil.us/u/prod/marvel/i/mg/6/c0/4e7a2148b6e59" },
-						   @{ @"name": @"Iceman", @"path": @"http://i.annihil.us/u/prod/marvel/i/mg/1/d0/52696c836898c"},
-						   ],
-				   self.dataKeys[1] : @[
-						   @{ @"name" : @"Doctor Doom", @"path" : @"http://i.annihil.us/u/prod/marvel/i/mg/8/90/5273cac0ac417" },
-						   @{ @"name": @"Sabretooth (Ultimate)", @"path": @"http://i.annihil.us/u/prod/marvel/i/mg/8/c0/4c0033dfc318e" },
-						   @{ @"name": @"Magneto", @"path": @"http://i.annihil.us/u/prod/marvel/i/mg/3/b0/5261a7e53f827" },
-						   @{ @"name": @"Mastermind", @"path": @"http://i.annihil.us/u/prod/marvel/i/mg/7/d0/4c003d43b02ab" },
-						   @{ @"name": @"Black Cat (Ultimate)", @"path": @"http://i.annihil.us/u/prod/marvel/i/mg/5/80/4c00357da502e" },
-						   @{ @"name" : @"Dracula", @"path" : @"http://i.annihil.us/u/prod/marvel/i/mg/a/03/526955af18612" },
-						   @{ @"name": @"Scalphunter", @"path": @"http://i.annihil.us/u/prod/marvel/i/mg/9/10/4ce5a473b81b3" },
-						   ]
-				   };
+	self.collectionView.backgroundColor = [UIColor colorWithRed:0xee/255.0 green:0xee/255.0 blue:0xee/255.0 alpha:1.0];
+
+	self.data = [ComicData data];
+	self.dataKeys = [self.data allKeys];
 }
 
 - (void)didReceiveMemoryWarning
@@ -83,7 +68,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-	return [self.data[self.dataKeys[section]] count];
+	return [self.data[self.dataKeys[section]][@"results"] count];
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
@@ -94,7 +79,7 @@
 	{
 		reuseView = [self.collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"header" forIndexPath:indexPath];
 
-		reuseView.backgroundColor = (indexPath.section == 0) ? [UIColor whiteColor] : [UIColor blackColor];
+		reuseView.backgroundColor = [UIColor whiteColor];
 
 		UILabel * label = (id)[reuseView viewWithTag:1];
 		if (label == nil)
@@ -108,18 +93,14 @@
 		}
 
 		label.text = self.dataKeys[indexPath.section];
-		label.textColor = [UIColor blackColor];
-		if (indexPath.section == 1)
-		{
-			label.textColor = [UIColor whiteColor];
-		}
+		label.textColor = [UIColor colorWithRed:0x33/250.0 green:0x33/250.0 blue:0x33/250.0 alpha:1.0];
 	}
 
 	if (kind == RBCollectionViewInfoFolderFooterKind)
 	{
 		reuseView = [self.collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"footer" forIndexPath:indexPath];
 
-		reuseView.backgroundColor = [UIColor colorWithRed:0xdc/255.0 green:0xdc/255.0 blue:0xdc/255.0 alpha:1];
+		reuseView.backgroundColor = [UIColor clearColor];
 
 		UILabel * label = (id)[reuseView viewWithTag:1];
 		if (label == nil)
@@ -137,9 +118,9 @@
 
 	if (kind == RBCollectionViewInfoFolderFolderKind)
 	{
-		reuseView = [self.collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"folder" forIndexPath:indexPath];
+		ComicDataView * comicDataView = (id)[self.collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"folder" forIndexPath:indexPath];
 
-		reuseView.backgroundColor = [UIColor lightGrayColor];
+		comicDataView.backgroundColor = [UIColor colorWithRed:0x88/255.0 green:0xc2/255.0 blue:0xc4/255.0 alpha:1.0];
 
 		UILabel * label = (id)[reuseView viewWithTag:1];
 		if (label == nil)
@@ -152,7 +133,11 @@
 			[reuseView addSubview:label];
 		}
 
-		label.text = self.data[self.dataKeys[indexPath.section]][indexPath.row][@"name"];
+		comicDataView.title.text = self.data[self.dataKeys[indexPath.section]][@"results"][indexPath.row][@"title"];
+		comicDataView.desc.text = self.data[self.dataKeys[indexPath.section]][@"results"][indexPath.row][@"description"];
+		comicDataView.upc.text = self.data[self.dataKeys[indexPath.section]][@"results"][indexPath.row][@"upc"];
+
+		reuseView = comicDataView;
 	}
 
 	return reuseView;
@@ -162,10 +147,13 @@
 {
 	UICollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
 
-	NSDictionary * portrait;
-	portrait = self.data[self.dataKeys[indexPath.section]][indexPath.row];
+	NSDictionary * data;
+	data = self.data[self.dataKeys[indexPath.section]][@"results"][indexPath.row];
 
-	NSURL * imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/standard_fantastic.jpg", portrait[@"path"]]];
+	NSString * imagePath = data[@"thumbnail"][@"path"];
+	imagePath = [imagePath stringByAppendingString:@"/portrait_incredible."];
+	imagePath = [imagePath stringByAppendingString:data[@"thumbnail"][@"extension"]];
+	NSURL * imageURL = [NSURL URLWithString:imagePath];
 
 	if ([self.imageCache objectForKey:imageURL] == nil)
 	{

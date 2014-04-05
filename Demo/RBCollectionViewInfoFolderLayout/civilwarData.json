@@ -1,0 +1,1497 @@
+{
+	"code": 200,
+	"status": "Ok",
+	"copyright": "© 2014 MARVEL",
+	"attributionText": "Data provided by Marvel. © 2014 MARVEL",
+	"attributionHTML": "<a href=\"http://marvel.com\">Data provided by Marvel. © 2014 MARVEL</a>",
+	"etag": "85dc8c7356c33849839e3cb07cb96236226ece92",
+	"data": {
+		"offset": 0,
+		"limit": 20,
+		"total": 7,
+		"count": 7,
+		"results": [
+					{
+					"id": 4216,
+					"digitalId": 5486,
+					"title": "Civil War (2006) #1",
+					"issueNumber": 1,
+					"variantDescription": "",
+					"description": "THE LANDSCAPE OF THE MARVEL U IS CHANGING AND IT’S TIME TO DECIDE: WHOSE SIDE ARE YOU ON? A conflict has been brewing in the Marvel Universe, threatening to pit friend against friend, brother against brother--and all it will take is a single misstep to cost thousands their lives and ignite the fuse!  As the war claims its first victims, no one is safe as teams, friendships, and families begin to fall apart. Starring Spider-Man, the New Avengers, the Fantastic Four, the X-Men and the entirety of the Marvel pantheon! ",
+					"modified": "2013-02-05T14:00:05-0500",
+					"isbn": "",
+					"upc": "5960605921-00111",
+					"diamondCode": "",
+					"ean": "",
+					"issn": "",
+					"format": "Comic",
+					"pageCount": 0,
+					"textObjects": [
+									{
+									"type": "issue_preview_text",
+									"language": "en-us",
+									"text": "THE LANDSCAPE OF THE MARVEL U IS CHANGING AND IT’S TIME TO DECIDE: WHOSE SIDE ARE YOU ON? A conflict has been brewing in the Marvel Universe, threatening to pit friend against friend, brother against brother--and all it will take is a single misstep to cost thousands their lives and ignite the fuse!  As the war claims its first victims, no one is safe as teams, friendships, and families begin to fall apart. Starring Spider-Man, the New Avengers, the Fantastic Four, the X-Men and the entirety of the Marvel pantheon! "
+									},
+									{
+									"type": "70th_winner_desc",
+									"language": "en-us",
+									"text": "Walt Simonson's THOR run reinvigorated the Thunder God, but it was the introduction of Thor's horse-faced temporary replacement that still keeps us buzzing."
+									},
+									{
+									"type": "issue_solicit_text",
+									"language": "en-us",
+									"text": "THE LANDSCAPE OF THE MARVEL U IS CHANGING AND IT’S TIME TO DECIDE: WHOSE SIDE ARE YOU ON?  \r<br>A conflict has been brewing in the Marvel Universe for over a year, threatening to pit friend against friend, brother against brother--and all it will take is a single misstep to cost thousands their lives and ignite the fuse!  As the war claims its first victims, no one is safe as teams, friendships, and families begin to fall apart.  Civil War, a Marvel Comics event in seven parts, stars Spider-Man, the New Avengers, the Fantastic Four, the X-Men and the entirety of the Marvel pantheon!  Civil War – the cross-over that rewrites the rules - begins here in this double-sized first issue!\r<br>48 PGS./Rated T+ ...$3.99\r<br>"
+									}
+									],
+					"resourceURI": "http://gateway.marvel.com/v1/public/comics/4216",
+					"urls": [
+							 {
+							 "type": "detail",
+							 "url": "http://marvel.com/comics/issue/4216/civil_war_2006_1?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "purchase",
+							 "url": "http://comicstore.marvel.com/Civil-War-1/digital-comic/5486?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "reader",
+							 "url": "http://marvel.com/digitalcomics/view.htm?iid=5486&utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "inAppLink",
+							 "url": "http://applink.marvel.com/issue/5486?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 }
+							 ],
+					"series": {
+					"resourceURI": "http://gateway.marvel.com/v1/public/series/1067",
+					"name": "Civil War (2006 - 2007)"
+					},
+					"variants": [
+								 {
+								 "resourceURI": "http://gateway.marvel.com/v1/public/comics/4514",
+								 "name": "Civil War (2006) #1 (sketch variant)"
+								 },
+								 {
+								 "resourceURI": "http://gateway.marvel.com/v1/public/comics/4217",
+								 "name": "Civil War (2006) #1 (Turner Variant)"
+								 }
+								 ],
+					"collections": [
+									{
+									"resourceURI": "http://gateway.marvel.com/v1/public/comics/6133",
+									"name": "Civil War (Trade Paperback)"
+									},
+									{
+									"resourceURI": "http://gateway.marvel.com/v1/public/comics/6415",
+									"name": "Civil War (Trade Paperback)"
+									}
+									],
+					"collectedIssues": [],
+					"dates": [
+							  {
+							  "type": "onsaleDate",
+							  "date": "2006-05-03T00:00:00-0400"
+							  },
+							  {
+							  "type": "focDate",
+							  "date": "-0001-11-30T00:00:00-0500"
+							  },
+							  {
+							  "type": "unlimitedDate",
+							  "date": "2009-08-13T00:00:00-0400"
+							  },
+							  {
+							  "type": "digitalPurchaseDate",
+							  "date": "2009-11-02T00:00:00-0500"
+							  }
+							  ],
+					"prices": [
+							   {
+							   "type": "printPrice",
+							   "price": 3.99
+							   },
+							   {
+							   "type": "digitalPurchasePrice",
+							   "price": 1.99
+							   }
+							   ],
+					"thumbnail": {
+					"path": "http://i.annihil.us/u/prod/marvel/i/mg/e/f0/511307b2f1200",
+					"extension": "jpg"
+					},
+					"images": [
+							   {
+							   "path": "http://i.annihil.us/u/prod/marvel/i/mg/e/f0/511307b2f1200",
+							   "extension": "jpg"
+							   },
+							   {
+							   "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/f0/4f75b393338cf",
+							   "extension": "jpg"
+							   }
+							   ],
+					"creators": {
+					"available": 5,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/4216/creators",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/452",
+							  "name": "Chris Eliopoulos",
+							  "role": "letterer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/774",
+							  "name": "Morry Hollowell",
+							  "role": "colorist"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/9484",
+							  "name": "Steve McNiven",
+							  "role": "penciller (cover)"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/88",
+							  "name": "Mark Millar",
+							  "role": "writer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/471",
+							  "name": "Dexter Vines",
+							  "role": "inker"
+							  }
+							  ],
+					"returned": 5
+					},
+					"characters": {
+					"available": 21,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/4216/characters",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009220",
+							  "name": "Captain America"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009241",
+							  "name": "Cloak"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009258",
+							  "name": "Dagger"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009262",
+							  "name": "Daredevil"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009297",
+							  "name": "Falcon"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009299",
+							  "name": "Fantastic Four"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1010927",
+							  "name": "Goliath (Bill Foster)"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009356",
+							  "name": "Human Torch"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009362",
+							  "name": "Iceman"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009366",
+							  "name": "Invisible Woman"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009367",
+							  "name": "Iron Fist (Danny Rand)"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009368",
+							  "name": "Iron Man"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009215",
+							  "name": "Luke Cage"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009459",
+							  "name": "Mr. Fantastic"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009492",
+							  "name": "Patriot"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009583",
+							  "name": "She-Hulk (Jennifer Walters)"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009610",
+							  "name": "Spider-Man"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009608",
+							  "name": "Spider-Woman (Jessica Drew)"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1010791",
+							  "name": "Sub-Mariner"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009662",
+							  "name": "Thing"
+							  }
+							  ],
+					"returned": 20
+					},
+					"stories": {
+					"available": 2,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/4216/stories",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/5872",
+							  "name": "1 of 7 - 7XLS",
+							  "type": "cover"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/5873",
+							  "name": "1 of 7 - 7XLS",
+							  "type": "interiorStory"
+							  }
+							  ],
+					"returned": 2
+					},
+					"events": {
+					"available": 1,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/4216/events",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/events/238",
+							  "name": "Civil War"
+							  }
+							  ],
+					"returned": 1
+					}
+					},
+					{
+					"id": 4313,
+					"digitalId": 5487,
+					"title": "Civil War (2006) #2",
+					"issueNumber": 2,
+					"variantDescription": "",
+					"description": "The super-heroes split as the CIVIL WAR heats up! Registration has become law, household names have gone rogue and a Marvel legend makes a decision that will change a life forever. Featuring the NEW AVENGERS, the FANTASTIC FOUR, the YOUNG AVENGERS and pretty much everybody else! And, no fooling, true believer... this issue features one of the most shocking climaxes in Marvel Comics history.",
+					"modified": "2013-02-06T20:49:18-0500",
+					"isbn": "",
+					"upc": "5960605921-00211",
+					"diamondCode": "",
+					"ean": "",
+					"issn": "",
+					"format": "Comic",
+					"pageCount": 0,
+					"textObjects": [
+									{
+									"type": "issue_preview_text",
+									"language": "en-us",
+									"text": "The super-heroes split as the CIVIL WAR heats up! Registration has become law, household names have gone rogue and a Marvel legend makes a decision that will change a life forever. Featuring the NEW AVENGERS, the FANTASTIC FOUR, the YOUNG AVENGERS and pretty much everybody else! And, no fooling, true believer... this issue features one of the most shocking climaxes in Marvel Comics history."
+									},
+									{
+									"type": "70th_winner_desc",
+									"language": "en-us",
+									"text": "Sure, the war was ramping up in this issue, but it achieved its epic status thanks to the final page where Spider-Man revealed his true identity to the world."
+									},
+									{
+									"type": "issue_solicit_text",
+									"language": "en-us",
+									"text": "The super-heroes split as the CIVIL WAR heats up! Registration has become law, household names have gone rogue and a Marvel legend makes a decision that will change a life forever. Featuring the NEW AVENGERS, the FANTASTIC FOUR, the YOUNG AVENGERS and pretty much everybody else!\r\n<br>And, no fooling, true believer... this issue features one of the most shocking climaxes in Marvel Comics history. Miss THIS one and you might just regret it for the rest of your life!\r\n<br>32 PGS./Rated T  ...$2.99\r\n<br>"
+									}
+									],
+					"resourceURI": "http://gateway.marvel.com/v1/public/comics/4313",
+					"urls": [
+							 {
+							 "type": "detail",
+							 "url": "http://marvel.com/comics/issue/4313/civil_war_2006_2?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "purchase",
+							 "url": "http://comicstore.marvel.com/Civil-War-2/digital-comic/5487?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "reader",
+							 "url": "http://marvel.com/digitalcomics/view.htm?iid=5487&utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "inAppLink",
+							 "url": "http://applink.marvel.com/issue/5487?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 }
+							 ],
+					"series": {
+					"resourceURI": "http://gateway.marvel.com/v1/public/series/1067",
+					"name": "Civil War (2006 - 2007)"
+					},
+					"variants": [],
+					"collections": [
+									{
+									"resourceURI": "http://gateway.marvel.com/v1/public/comics/6133",
+									"name": "Civil War (Trade Paperback)"
+									},
+									{
+									"resourceURI": "http://gateway.marvel.com/v1/public/comics/6415",
+									"name": "Civil War (Trade Paperback)"
+									}
+									],
+					"collectedIssues": [],
+					"dates": [
+							  {
+							  "type": "onsaleDate",
+							  "date": "2006-06-14T00:00:00-0400"
+							  },
+							  {
+							  "type": "focDate",
+							  "date": "-0001-11-30T00:00:00-0500"
+							  },
+							  {
+							  "type": "unlimitedDate",
+							  "date": "2012-01-05T11:28:39-0500"
+							  },
+							  {
+							  "type": "digitalPurchaseDate",
+							  "date": "2010-04-01T00:00:00-0400"
+							  }
+							  ],
+					"prices": [
+							   {
+							   "type": "printPrice",
+							   "price": 2.99
+							   },
+							   {
+							   "type": "digitalPurchasePrice",
+							   "price": 1.99
+							   }
+							   ],
+					"thumbnail": {
+					"path": "http://i.annihil.us/u/prod/marvel/i/mg/8/f0/511307fb3f7bc",
+					"extension": "jpg"
+					},
+					"images": [
+							   {
+							   "path": "http://i.annihil.us/u/prod/marvel/i/mg/8/f0/511307fb3f7bc",
+							   "extension": "jpg"
+							   },
+							   {
+							   "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/90/4f75b41a6269c",
+							   "extension": "jpg"
+							   }
+							   ],
+					"creators": {
+					"available": 5,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/4313/creators",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/452",
+							  "name": "Chris Eliopoulos",
+							  "role": "letterer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/774",
+							  "name": "Morry Hollowell",
+							  "role": "colorist"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/9484",
+							  "name": "Steve McNiven",
+							  "role": "penciller (cover)"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/88",
+							  "name": "Mark Millar",
+							  "role": "writer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/471",
+							  "name": "Dexter Vines",
+							  "role": "inker"
+							  }
+							  ],
+					"returned": 5
+					},
+					"characters": {
+					"available": 8,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/4313/characters",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009220",
+							  "name": "Captain America"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1010808",
+							  "name": "Hawkeye (Kate Bishop)"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009355",
+							  "name": "Hulkling"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009368",
+							  "name": "Iron Man"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009492",
+							  "name": "Patriot"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009610",
+							  "name": "Spider-Man"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009714",
+							  "name": "Wiccan"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1010698",
+							  "name": "Young Avengers"
+							  }
+							  ],
+					"returned": 8
+					},
+					"stories": {
+					"available": 2,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/4313/stories",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/5876",
+							  "name": "2 of 7 - 7XLS",
+							  "type": "cover"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/5877",
+							  "name": "2 of 7 - 7XLS",
+							  "type": "interiorStory"
+							  }
+							  ],
+					"returned": 2
+					},
+					"events": {
+					"available": 1,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/4313/events",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/events/238",
+							  "name": "Civil War"
+							  }
+							  ],
+					"returned": 1
+					}
+					},
+					{
+					"id": 4468,
+					"digitalId": 5488,
+					"title": "Civil War (2006) #3",
+					"issueNumber": 3,
+					"variantDescription": "",
+					"description": "The battle lines are drawn as the conflict between the Super Hero Registration Initiative and the Underground Resistance fighters explodes in a live fire fight as the future of the Marvel Universe is decided! But before the dust settles, a familiar figure will emerge from a strike of lightning to change the odds--and the sides! Witness teams and families torn apart as the Civil War rolls on!",
+					"modified": "2013-02-06T20:51:59-0500",
+					"isbn": "",
+					"upc": "5960605921-00311",
+					"diamondCode": "",
+					"ean": "",
+					"issn": "",
+					"format": "Comic",
+					"pageCount": 0,
+					"textObjects": [
+									{
+									"type": "issue_preview_text",
+									"language": "en-us",
+									"text": "The battle lines are drawn as the conflict between the Super Hero Registration Initiative and the Underground Resistance fighters explodes in a live fire fight as the future of the Marvel Universe is decided! But before the dust settles, a familiar figure will emerge from a strike of lightning to change the odds--and the sides! Witness teams and families torn apart as the Civil War rolls on!"
+									},
+									{
+									"type": "70th_winner_desc",
+									"language": "en-us",
+									"text": "Artist Steve McNiven makes it clear that neither hero, neither side is pulling any punches in the Civil War."
+									},
+									{
+									"type": "issue_solicit_text",
+									"language": "en-us",
+									"text": "The battle lines are drawn as the conflict between the Super Hero Registration Initiative and the Underground Resistance fighters explodes in a live fire fight as the future of the Marvel Universe is decided! But before the dust settles, a familiar figure will emerge from a strike of lightning to change the odds--and the sides! Witness teams and families torn apart as the Civil War touches all and the momentous events of last issue changes the world as our heroes understand it!\r<br>32 PGS./Rated T+ ...$2.99\r<br>"
+									}
+									],
+					"resourceURI": "http://gateway.marvel.com/v1/public/comics/4468",
+					"urls": [
+							 {
+							 "type": "detail",
+							 "url": "http://marvel.com/comics/issue/4468/civil_war_2006_3?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "purchase",
+							 "url": "http://comicstore.marvel.com/Civil-War-3/digital-comic/5488?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "reader",
+							 "url": "http://marvel.com/digitalcomics/view.htm?iid=5488&utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "inAppLink",
+							 "url": "http://applink.marvel.com/issue/5488?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 }
+							 ],
+					"series": {
+					"resourceURI": "http://gateway.marvel.com/v1/public/series/1067",
+					"name": "Civil War (2006 - 2007)"
+					},
+					"variants": [
+								 {
+								 "resourceURI": "http://gateway.marvel.com/v1/public/comics/4469",
+								 "name": "Civil War (2006) #3 (Turner Variant)"
+								 }
+								 ],
+					"collections": [
+									{
+									"resourceURI": "http://gateway.marvel.com/v1/public/comics/6133",
+									"name": "Civil War (Trade Paperback)"
+									},
+									{
+									"resourceURI": "http://gateway.marvel.com/v1/public/comics/6415",
+									"name": "Civil War (Trade Paperback)"
+									}
+									],
+					"collectedIssues": [],
+					"dates": [
+							  {
+							  "type": "onsaleDate",
+							  "date": "2006-07-19T00:00:00-0400"
+							  },
+							  {
+							  "type": "focDate",
+							  "date": "-0001-11-30T00:00:00-0500"
+							  },
+							  {
+							  "type": "unlimitedDate",
+							  "date": "2009-12-01T00:00:00-0500"
+							  },
+							  {
+							  "type": "digitalPurchaseDate",
+							  "date": "2010-04-01T00:00:00-0400"
+							  }
+							  ],
+					"prices": [
+							   {
+							   "type": "printPrice",
+							   "price": 2.99
+							   },
+							   {
+							   "type": "digitalPurchasePrice",
+							   "price": 1.99
+							   }
+							   ],
+					"thumbnail": {
+					"path": "http://i.annihil.us/u/prod/marvel/i/mg/5/b0/5113089c2a2cd",
+					"extension": "jpg"
+					},
+					"images": [
+							   {
+							   "path": "http://i.annihil.us/u/prod/marvel/i/mg/5/b0/5113089c2a2cd",
+							   "extension": "jpg"
+							   },
+							   {
+							   "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/10/4f75b4abadd7a",
+							   "extension": "jpg"
+							   }
+							   ],
+					"creators": {
+					"available": 5,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/4468/creators",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/452",
+							  "name": "Chris Eliopoulos",
+							  "role": "letterer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/774",
+							  "name": "Morry Hollowell",
+							  "role": "colorist"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/9484",
+							  "name": "Steve McNiven",
+							  "role": "penciller"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/88",
+							  "name": "Mark Millar",
+							  "role": "writer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/471",
+							  "name": "Dexter Vines",
+							  "role": "inker"
+							  }
+							  ],
+					"returned": 5
+					},
+					"characters": {
+					"available": 2,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/4468/characters",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009220",
+							  "name": "Captain America"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009368",
+							  "name": "Iron Man"
+							  }
+							  ],
+					"returned": 2
+					},
+					"stories": {
+					"available": 2,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/4468/stories",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/5878",
+							  "name": "3 of 7 - 7XLS",
+							  "type": "cover"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/5879",
+							  "name": "3 of 7 - 7XLS",
+							  "type": "interiorStory"
+							  }
+							  ],
+					"returned": 2
+					},
+					"events": {
+					"available": 1,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/4468/events",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/events/238",
+							  "name": "Civil War"
+							  }
+							  ],
+					"returned": 1
+					}
+					},
+					{
+					"id": 4786,
+					"digitalId": 5489,
+					"title": "Civil War (2006) #4",
+					"issueNumber": 4,
+					"variantDescription": "",
+					"description": "A death! A funeral! A betrayal! And a team reborn as the war takes a deadly turn!",
+					"modified": "2013-02-06T20:51:44-0500",
+					"isbn": "",
+					"upc": "5960605921-00411",
+					"diamondCode": "",
+					"ean": "",
+					"issn": "",
+					"format": "Comic",
+					"pageCount": 0,
+					"textObjects": [
+									{
+									"type": "issue_solicit_text",
+									"language": "en-us",
+									"text": "A death! A funeral! A betrayal! And a team reborn as the war takes a deadly turn! \r<br>32 PGS./Rated T+ ...$2.99\r<br>"
+									},
+									{
+									"type": "issue_preview_text",
+									"language": "en-us",
+									"text": "A death! A funeral! A betrayal! And a team reborn as the war takes a deadly turn!"
+									}
+									],
+					"resourceURI": "http://gateway.marvel.com/v1/public/comics/4786",
+					"urls": [
+							 {
+							 "type": "detail",
+							 "url": "http://marvel.com/comics/issue/4786/civil_war_2006_4?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "purchase",
+							 "url": "http://comicstore.marvel.com/Civil-War-4/digital-comic/5489?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "reader",
+							 "url": "http://marvel.com/digitalcomics/view.htm?iid=5489&utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "inAppLink",
+							 "url": "http://applink.marvel.com/issue/5489?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 }
+							 ],
+					"series": {
+					"resourceURI": "http://gateway.marvel.com/v1/public/series/1067",
+					"name": "Civil War (2006 - 2007)"
+					},
+					"variants": [
+								 {
+								 "resourceURI": "http://gateway.marvel.com/v1/public/comics/4787",
+								 "name": "Civil War (2006) #4 (Michael Turner Variant Cover)"
+								 }
+								 ],
+					"collections": [
+									{
+									"resourceURI": "http://gateway.marvel.com/v1/public/comics/6415",
+									"name": "Civil War (Trade Paperback)"
+									},
+									{
+									"resourceURI": "http://gateway.marvel.com/v1/public/comics/6133",
+									"name": "Civil War (Trade Paperback)"
+									}
+									],
+					"collectedIssues": [],
+					"dates": [
+							  {
+							  "type": "onsaleDate",
+							  "date": "2006-09-20T00:00:00-0400"
+							  },
+							  {
+							  "type": "focDate",
+							  "date": "-0001-11-30T00:00:00-0500"
+							  },
+							  {
+							  "type": "unlimitedDate",
+							  "date": "2007-04-28T00:00:00-0400"
+							  },
+							  {
+							  "type": "digitalPurchaseDate",
+							  "date": "2009-11-02T00:00:00-0500"
+							  }
+							  ],
+					"prices": [
+							   {
+							   "type": "printPrice",
+							   "price": 2.99
+							   },
+							   {
+							   "type": "digitalPurchasePrice",
+							   "price": 1.99
+							   }
+							   ],
+					"thumbnail": {
+					"path": "http://i.annihil.us/u/prod/marvel/i/mg/3/80/5113086a9cc96",
+					"extension": "jpg"
+					},
+					"images": [
+							   {
+							   "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/80/5113086a9cc96",
+							   "extension": "jpg"
+							   },
+							   {
+							   "path": "http://i.annihil.us/u/prod/marvel/i/mg/f/90/4bc5cf9f7ed20",
+							   "extension": "jpg"
+							   }
+							   ],
+					"creators": {
+					"available": 5,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/4786/creators",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/452",
+							  "name": "Chris Eliopoulos",
+							  "role": "letterer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/774",
+							  "name": "Morry Hollowell",
+							  "role": "colorist"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/9484",
+							  "name": "Steve McNiven",
+							  "role": "penciller (cover)"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/88",
+							  "name": "Mark Millar",
+							  "role": "writer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/471",
+							  "name": "Dexter Vines",
+							  "role": "inker"
+							  }
+							  ],
+					"returned": 5
+					},
+					"characters": {
+					"available": 4,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/4786/characters",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011490",
+							  "name": "Hank Pym"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009664",
+							  "name": "Thor"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009670",
+							  "name": "Tigra (Greer Nelson)"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009707",
+							  "name": "Wasp"
+							  }
+							  ],
+					"returned": 4
+					},
+					"stories": {
+					"available": 2,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/4786/stories",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/5884",
+							  "name": "4 of 7 - 7XLS",
+							  "type": "cover"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/5885",
+							  "name": "4 of 7 - 7XLS",
+							  "type": "interiorStory"
+							  }
+							  ],
+					"returned": 2
+					},
+					"events": {
+					"available": 1,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/4786/events",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/events/238",
+							  "name": "Civil War"
+							  }
+							  ],
+					"returned": 1
+					}
+					},
+					{
+					"id": 5075,
+					"digitalId": 5490,
+					"title": "Civil War (2006) #5",
+					"issueNumber": 5,
+					"variantDescription": "",
+					"description": "Featuring villains, villains, villains! Sides change and chaos reigns as the evildoers of the Marvel Universe make their presence felt in a new and shocking way!  But when the underworld gets involved, can the Punisher be far behind?",
+					"modified": "2013-02-05T14:00:06-0500",
+					"isbn": "",
+					"upc": "5960605921-00511",
+					"diamondCode": "",
+					"ean": "",
+					"issn": "",
+					"format": "Comic",
+					"pageCount": 0,
+					"textObjects": [
+									{
+									"type": "issue_preview_text",
+									"language": "en-us",
+									"text": "Featuring villains, villains, villains! Sides change and chaos reigns as the evildoers of the Marvel Universe make their presence felt in a new and shocking way!  But when the underworld gets involved, can the Punisher be far behind?"
+									},
+									{
+									"type": "issue_solicit_text",
+									"language": "en-us",
+									"text": "Featuring villains, villains, villains! Sides change and chaos reigns as the evildoers of the Marvel Universe make their presence felt in a new and shocking way!  But when the underworld gets involved, can the Punisher be far behind?\r<br>32 PGS./Cardstock Cover/ Rated T+ ...$2.99\r<br>"
+									}
+									],
+					"resourceURI": "http://gateway.marvel.com/v1/public/comics/5075",
+					"urls": [
+							 {
+							 "type": "detail",
+							 "url": "http://marvel.com/comics/issue/5075/civil_war_2006_5?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "purchase",
+							 "url": "http://comicstore.marvel.com/Civil-War-5/digital-comic/5490?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "reader",
+							 "url": "http://marvel.com/digitalcomics/view.htm?iid=5490&utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "inAppLink",
+							 "url": "http://applink.marvel.com/issue/5490?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 }
+							 ],
+					"series": {
+					"resourceURI": "http://gateway.marvel.com/v1/public/series/1067",
+					"name": "Civil War (2006 - 2007)"
+					},
+					"variants": [
+								 {
+								 "resourceURI": "http://gateway.marvel.com/v1/public/comics/5077",
+								 "name": "Civil War (2006) #5 (TURNER VARIANT)"
+								 },
+								 {
+								 "resourceURI": "http://gateway.marvel.com/v1/public/comics/5142",
+								 "name": "Civil War (2006) #5 (TURNER SKETCH VARIANT)"
+								 },
+								 {
+								 "resourceURI": "http://gateway.marvel.com/v1/public/comics/5467",
+								 "name": "Civil War (2006) #5 (TURNER SKETCH VARIANT)"
+								 },
+								 {
+								 "resourceURI": "http://gateway.marvel.com/v1/public/comics/5528",
+								 "name": "Civil War (2006) #5 (Turner Variant)"
+								 }
+								 ],
+					"collections": [
+									{
+									"resourceURI": "http://gateway.marvel.com/v1/public/comics/6415",
+									"name": "Civil War (Trade Paperback)"
+									},
+									{
+									"resourceURI": "http://gateway.marvel.com/v1/public/comics/6133",
+									"name": "Civil War (Trade Paperback)"
+									}
+									],
+					"collectedIssues": [],
+					"dates": [
+							  {
+							  "type": "onsaleDate",
+							  "date": "2006-11-15T00:00:00-0500"
+							  },
+							  {
+							  "type": "focDate",
+							  "date": "1969-12-31T19:00:00-0500"
+							  },
+							  {
+							  "type": "unlimitedDate",
+							  "date": "2007-04-28T00:00:00-0400"
+							  },
+							  {
+							  "type": "digitalPurchaseDate",
+							  "date": "2010-04-01T00:00:00-0400"
+							  }
+							  ],
+					"prices": [
+							   {
+							   "type": "printPrice",
+							   "price": 2.99
+							   },
+							   {
+							   "type": "digitalPurchasePrice",
+							   "price": 1.99
+							   }
+							   ],
+					"thumbnail": {
+					"path": "http://i.annihil.us/u/prod/marvel/i/mg/f/e0/511309057cd07",
+					"extension": "jpg"
+					},
+					"images": [
+							   {
+							   "path": "http://i.annihil.us/u/prod/marvel/i/mg/f/e0/511309057cd07",
+							   "extension": "jpg"
+							   },
+							   {
+							   "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/b0/4bc3583f75d17",
+							   "extension": "jpg"
+							   }
+							   ],
+					"creators": {
+					"available": 5,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/5075/creators",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/452",
+							  "name": "Chris Eliopoulos",
+							  "role": "letterer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/774",
+							  "name": "Morry Hollowell",
+							  "role": "colorist"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/9484",
+							  "name": "Steve McNiven",
+							  "role": "penciller (cover)"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/88",
+							  "name": "Mark Millar",
+							  "role": "writer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/471",
+							  "name": "Dexter Vines",
+							  "role": "inker"
+							  }
+							  ],
+					"returned": 5
+					},
+					"characters": {
+					"available": 4,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/5075/characters",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009212",
+							  "name": "Bullseye"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009515",
+							  "name": "Punisher"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009610",
+							  "name": "Spider-Man"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1010788",
+							  "name": "Venom (Mac Gargan)"
+							  }
+							  ],
+					"returned": 4
+					},
+					"stories": {
+					"available": 2,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/5075/stories",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/5888",
+							  "name": "5 of 7 - 7XLS",
+							  "type": "cover"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/5889",
+							  "name": "5 of 7 - 7XLS",
+							  "type": "interiorStory"
+							  }
+							  ],
+					"returned": 2
+					},
+					"events": {
+					"available": 0,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/5075/events",
+					"items": [],
+					"returned": 0
+					}
+					},
+					{
+					"id": 5227,
+					"digitalId": 5491,
+					"title": "Civil War (2006) #6",
+					"issueNumber": 6,
+					"variantDescription": "",
+					"description": "Captain America’s depleted forces have determined the secret of File 42, setting them on a last-ditch collision course with Iron Man and the Pro-Registration heroes! It’s the beginning f the battle of the century—a conflict in which virtually every superhuman on Earth will be forced to choose a side to fight on!",
+					"modified": "2013-02-06T20:55:28-0500",
+					"isbn": "",
+					"upc": "5960605921-00611",
+					"diamondCode": "",
+					"ean": "",
+					"issn": "",
+					"format": "Comic",
+					"pageCount": 0,
+					"textObjects": [
+									{
+									"type": "issue_solicit_text",
+									"language": "en-us",
+									"text": "Captain America’s depleted forces have determined the secret of File 42, setting them on a last-ditch collision \r<br>course with Iron Man and the Pro-Registration heroes! It’s the beginning f the battle of the century—a conflict \r<br>in which virtually every superhuman on Earth will be forced to choose a side to fight on!\r<br>32 PGS./Rated T+ ...$2.99\r<br>"
+									},
+									{
+									"type": "issue_preview_text",
+									"language": "en-us",
+									"text": "Captain America’s depleted forces have determined the secret of File 42, setting them on a last-ditch collision course with Iron Man and the Pro-Registration heroes! It’s the beginning f the battle of the century—a conflict in which virtually every superhuman on Earth will be forced to choose a side to fight on!"
+									}
+									],
+					"resourceURI": "http://gateway.marvel.com/v1/public/comics/5227",
+					"urls": [
+							 {
+							 "type": "detail",
+							 "url": "http://marvel.com/comics/issue/5227/civil_war_2006_6?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "purchase",
+							 "url": "http://comicstore.marvel.com/Civil-War-6/digital-comic/5491?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "reader",
+							 "url": "http://marvel.com/digitalcomics/view.htm?iid=5491&utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "inAppLink",
+							 "url": "http://applink.marvel.com/issue/5491?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 }
+							 ],
+					"series": {
+					"resourceURI": "http://gateway.marvel.com/v1/public/series/1067",
+					"name": "Civil War (2006 - 2007)"
+					},
+					"variants": [
+								 {
+								 "resourceURI": "http://gateway.marvel.com/v1/public/comics/5229",
+								 "name": "Civil War (2006) #6 (Turner Variant)"
+								 },
+								 {
+								 "resourceURI": "http://gateway.marvel.com/v1/public/comics/5295",
+								 "name": "Civil War (2006) #6 (Turner Sketch Variant)"
+								 }
+								 ],
+					"collections": [
+									{
+									"resourceURI": "http://gateway.marvel.com/v1/public/comics/6133",
+									"name": "Civil War (Trade Paperback)"
+									},
+									{
+									"resourceURI": "http://gateway.marvel.com/v1/public/comics/6415",
+									"name": "Civil War (Trade Paperback)"
+									}
+									],
+					"collectedIssues": [],
+					"dates": [
+							  {
+							  "type": "onsaleDate",
+							  "date": "2007-01-03T00:00:00-0500"
+							  },
+							  {
+							  "type": "focDate",
+							  "date": "-0001-11-30T00:00:00-0500"
+							  },
+							  {
+							  "type": "unlimitedDate",
+							  "date": "2007-04-28T00:00:00-0400"
+							  },
+							  {
+							  "type": "digitalPurchaseDate",
+							  "date": "2010-04-01T00:00:00-0400"
+							  }
+							  ],
+					"prices": [
+							   {
+							   "type": "printPrice",
+							   "price": 2.99
+							   },
+							   {
+							   "type": "digitalPurchasePrice",
+							   "price": 1.99
+							   }
+							   ],
+					"thumbnail": {
+					"path": "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/51130945d1273",
+					"extension": "jpg"
+					},
+					"images": [
+							   {
+							   "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/51130945d1273",
+							   "extension": "jpg"
+							   },
+							   {
+							   "path": "http://i.annihil.us/u/prod/marvel/i/mg/a/60/4bb7b9e772e89",
+							   "extension": "jpg"
+							   }
+							   ],
+					"creators": {
+					"available": 5,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/5227/creators",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/452",
+							  "name": "Chris Eliopoulos",
+							  "role": "letterer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/774",
+							  "name": "Morry Hollowell",
+							  "role": "colorist"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/9484",
+							  "name": "Steve McNiven",
+							  "role": "penciller (cover)"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/88",
+							  "name": "Mark Millar",
+							  "role": "writer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/471",
+							  "name": "Dexter Vines",
+							  "role": "inker"
+							  }
+							  ],
+					"returned": 5
+					},
+					"characters": {
+					"available": 5,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/5227/characters",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009220",
+							  "name": "Captain America"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009241",
+							  "name": "Cloak"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009297",
+							  "name": "Falcon"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009366",
+							  "name": "Invisible Woman"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009697",
+							  "name": "Vision"
+							  }
+							  ],
+					"returned": 5
+					},
+					"stories": {
+					"available": 2,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/5227/stories",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/5894",
+							  "name": "6 of 7 - 7XLS",
+							  "type": "cover"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/5895",
+							  "name": "6 of 7 - 7XLS",
+							  "type": "interiorStory"
+							  }
+							  ],
+					"returned": 2
+					},
+					"events": {
+					"available": 1,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/5227/events",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/events/238",
+							  "name": "Civil War"
+							  }
+							  ],
+					"returned": 1
+					}
+					},
+					{
+					"id": 5793,
+					"digitalId": 5492,
+					"title": "Civil War (2006) #7",
+					"issueNumber": 7,
+					"variantDescription": "",
+					"description": "It all ends here! The startling battle that will determine the future of the Marvel Universe!",
+					"modified": "2013-02-06T20:57:44-0500",
+					"isbn": "",
+					"upc": "5960605921-00711",
+					"diamondCode": "",
+					"ean": "",
+					"issn": "",
+					"format": "Comic",
+					"pageCount": 0,
+					"textObjects": [
+									{
+									"type": "issue_preview_text",
+									"language": "en-us",
+									"text": "It all ends here! The startling battle that will determine the future of the Marvel Universe!"
+									},
+									{
+									"type": "70th_winner_desc",
+									"language": "en-us",
+									"text": "This is the big one. Millar and McNiven turned Manhattan into one of the biggest warzones in Marvel history, with heroes, villains, Atlanteans and mutants fighting tooth and nail."
+									},
+									{
+									"type": "issue_solicit_text",
+									"language": "en-us",
+									"text": "It all ends here! The startling battle that will determine the future of the Marvel Universe!\r<br>32 PGS./Rated T+ ...$2.99\r<br>"
+									}
+									],
+					"resourceURI": "http://gateway.marvel.com/v1/public/comics/5793",
+					"urls": [
+							 {
+							 "type": "detail",
+							 "url": "http://marvel.com/comics/issue/5793/civil_war_2006_7?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "purchase",
+							 "url": "http://comicstore.marvel.com/Civil-War-7/digital-comic/5492?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "reader",
+							 "url": "http://marvel.com/digitalcomics/view.htm?iid=5492&utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "inAppLink",
+							 "url": "http://applink.marvel.com/issue/5492?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 }
+							 ],
+					"series": {
+					"resourceURI": "http://gateway.marvel.com/v1/public/series/1067",
+					"name": "Civil War (2006 - 2007)"
+					},
+					"variants": [
+								 {
+								 "resourceURI": "http://gateway.marvel.com/v1/public/comics/5794",
+								 "name": "Civil War (2006) #7 (Turner Variant)"
+								 },
+								 {
+								 "resourceURI": "http://gateway.marvel.com/v1/public/comics/5859",
+								 "name": "Civil War (2006) #7 (Turner Sketch Variant)"
+								 }
+								 ],
+					"collections": [
+									{
+									"resourceURI": "http://gateway.marvel.com/v1/public/comics/6133",
+									"name": "Civil War (Trade Paperback)"
+									},
+									{
+									"resourceURI": "http://gateway.marvel.com/v1/public/comics/6415",
+									"name": "Civil War (Trade Paperback)"
+									}
+									],
+					"collectedIssues": [],
+					"dates": [
+							  {
+							  "type": "onsaleDate",
+							  "date": "2007-02-21T00:00:00-0500"
+							  },
+							  {
+							  "type": "focDate",
+							  "date": "-0001-11-30T00:00:00-0500"
+							  },
+							  {
+							  "type": "unlimitedDate",
+							  "date": "2007-04-28T00:00:00-0400"
+							  },
+							  {
+							  "type": "digitalPurchaseDate",
+							  "date": "2010-04-01T00:00:00-0400"
+							  }
+							  ],
+					"prices": [
+							   {
+							   "type": "printPrice",
+							   "price": 2.99
+							   },
+							   {
+							   "type": "digitalPurchasePrice",
+							   "price": 1.99
+							   }
+							   ],
+					"thumbnail": {
+					"path": "http://i.annihil.us/u/prod/marvel/i/mg/3/03/511309c4e9172",
+					"extension": "jpg"
+					},
+					"images": [
+							   {
+							   "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/03/511309c4e9172",
+							   "extension": "jpg"
+							   },
+							   {
+							   "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/c0/4f75b566c634b",
+							   "extension": "jpg"
+							   }
+							   ],
+					"creators": {
+					"available": 5,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/5793/creators",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/452",
+							  "name": "Chris Eliopoulos",
+							  "role": "letterer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/774",
+							  "name": "Morry Hollowell",
+							  "role": "colorist"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/9484",
+							  "name": "Steve McNiven",
+							  "role": "penciller (cover)"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/88",
+							  "name": "Mark Millar",
+							  "role": "writer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/471",
+							  "name": "Dexter Vines",
+							  "role": "inker"
+							  }
+							  ],
+					"returned": 5
+					},
+					"characters": {
+					"available": 9,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/5793/characters",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009220",
+							  "name": "Captain America"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1010338",
+							  "name": "Captain Marvel (Carol Danvers)"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009262",
+							  "name": "Daredevil"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011490",
+							  "name": "Hank Pym"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009355",
+							  "name": "Hulkling"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009366",
+							  "name": "Invisible Woman"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009368",
+							  "name": "Iron Man"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009459",
+							  "name": "Mr. Fantastic"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009610",
+							  "name": "Spider-Man"
+							  }
+							  ],
+					"returned": 9
+					},
+					"stories": {
+					"available": 2,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/5793/stories",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/5903",
+							  "name": "7 of 7 - 7XLS",
+							  "type": "cover"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/5904",
+							  "name": "7 of 7 - 7XLS",
+							  "type": "interiorStory"
+							  }
+							  ],
+					"returned": 2
+					},
+					"events": {
+					"available": 1,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/5793/events",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/events/238",
+							  "name": "Civil War"
+							  }
+							  ],
+					"returned": 1
+					}
+					}
+					]
+	}
+}

@@ -22,6 +22,10 @@
 		316925EE18EDF6AE005F235B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 316925EC18EDF6AE005F235B /* InfoPlist.strings */; };
 		316925F018EDF6AE005F235B /* RBCollectionViewInfoFolderLayoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 316925EF18EDF6AE005F235B /* RBCollectionViewInfoFolderLayoutTests.m */; };
 		316925FD18EDF8A5005F235B /* RBCollectionViewInfoFolderLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 316925FC18EDF8A5005F235B /* RBCollectionViewInfoFolderLayout.m */; };
+		319AB16218EF6AE00034C97A /* ComicData.m in Sources */ = {isa = PBXBuildFile; fileRef = 319AB16118EF6AE00034C97A /* ComicData.m */; };
+		319AB16418EF72230034C97A /* xmenData.json in Resources */ = {isa = PBXBuildFile; fileRef = 319AB16318EF72230034C97A /* xmenData.json */; };
+		319AB16618EF72440034C97A /* civilwarData.json in Resources */ = {isa = PBXBuildFile; fileRef = 319AB16518EF72440034C97A /* civilwarData.json */; };
+		319AB16918EF783E0034C97A /* ComicDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 319AB16818EF783E0034C97A /* ComicDataView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,12 @@
 		316925EF18EDF6AE005F235B /* RBCollectionViewInfoFolderLayoutTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RBCollectionViewInfoFolderLayoutTests.m; sourceTree = "<group>"; };
 		316925FB18EDF8A5005F235B /* RBCollectionViewInfoFolderLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBCollectionViewInfoFolderLayout.h; sourceTree = "<group>"; };
 		316925FC18EDF8A5005F235B /* RBCollectionViewInfoFolderLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBCollectionViewInfoFolderLayout.m; sourceTree = "<group>"; };
+		319AB16018EF6AE00034C97A /* ComicData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComicData.h; sourceTree = "<group>"; };
+		319AB16118EF6AE00034C97A /* ComicData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComicData.m; sourceTree = "<group>"; };
+		319AB16318EF72230034C97A /* xmenData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = xmenData.json; sourceTree = "<group>"; };
+		319AB16518EF72440034C97A /* civilwarData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = civilwarData.json; sourceTree = "<group>"; };
+		319AB16718EF783E0034C97A /* ComicDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComicDataView.h; sourceTree = "<group>"; };
+		319AB16818EF783E0034C97A /* ComicDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComicDataView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +126,10 @@
 		316925C718EDF6AE005F235B /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				319AB16018EF6AE00034C97A /* ComicData.h */,
+				319AB16118EF6AE00034C97A /* ComicData.m */,
+				319AB16718EF783E0034C97A /* ComicDataView.h */,
+				319AB16818EF783E0034C97A /* ComicDataView.m */,
 				316925D018EDF6AE005F235B /* AppDelegate.h */,
 				316925D118EDF6AE005F235B /* AppDelegate.m */,
 				316925D618EDF6AE005F235B /* Application.storyboard */,
@@ -123,6 +137,8 @@
 				316925DA18EDF6AE005F235B /* ViewController.m */,
 				316925DC18EDF6AE005F235B /* Images.xcassets */,
 				316925C818EDF6AE005F235B /* Supporting Files */,
+				319AB16318EF72230034C97A /* xmenData.json */,
+				319AB16518EF72440034C97A /* civilwarData.json */,
 			);
 			name = Demo;
 			path = RBCollectionViewInfoFolderLayout;
@@ -246,6 +262,8 @@
 				316925D818EDF6AE005F235B /* Application.storyboard in Resources */,
 				316925DD18EDF6AE005F235B /* Images.xcassets in Resources */,
 				316925CC18EDF6AE005F235B /* InfoPlist.strings in Resources */,
+				319AB16418EF72230034C97A /* xmenData.json in Resources */,
+				319AB16618EF72440034C97A /* civilwarData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +282,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				319AB16918EF783E0034C97A /* ComicDataView.m in Sources */,
 				316925DB18EDF6AE005F235B /* ViewController.m in Sources */,
+				319AB16218EF6AE00034C97A /* ComicData.m in Sources */,
 				316925D218EDF6AE005F235B /* AppDelegate.m in Sources */,
 				316925FD18EDF8A5005F235B /* RBCollectionViewInfoFolderLayout.m in Sources */,
 				316925CE18EDF6AE005F235B /* main.m in Sources */,

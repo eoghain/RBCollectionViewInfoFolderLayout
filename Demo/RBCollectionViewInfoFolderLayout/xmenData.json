@@ -1,0 +1,3385 @@
+{
+	"code": 200,
+	"status": "Ok",
+	"copyright": "© 2014 MARVEL",
+	"attributionText": "Data provided by Marvel. © 2014 MARVEL",
+	"attributionHTML": "<a href=\"http://marvel.com\">Data provided by Marvel. © 2014 MARVEL</a>",
+	"etag": "0861b2de42dfc695aed75294c0090267be71e732",
+	"data": {
+		"offset": 0,
+		"limit": 20,
+		"total": 51,
+		"count": 20,
+		"results": [
+					{
+					"id": 659,
+					"digitalId": 7769,
+					"title": "X-Men (2004) #157",
+					"issueNumber": 157,
+					"variantDescription": "",
+					"description": "\"DAY OF THE ATOM\" PART 1 (OF 4) It's an all-new team of X-Men and a last page reveal you need to read to believe!",
+					"modified": "-0001-11-30T00:00:00-0500",
+					"isbn": "",
+					"upc": "5960601772-15711",
+					"diamondCode": "",
+					"ean": "",
+					"issn": "",
+					"format": "Comic",
+					"pageCount": 0,
+					"textObjects": [
+									{
+									"type": "issue_solicit_text",
+									"language": "en-us",
+									"text": "\"DAY OF THE ATOM\" PART 1 (OF 4) UNCANNY X-MEN scribe CHUCK AUSTEN moves to X-MEN (formerly NEW X-MEN) to team up with new regular artist SALVADOR LARROCA as part of X-MEN: RELOAD!"
+									},
+									{
+									"type": "issue_preview_text",
+									"language": "en-us",
+									"text": "\"DAY OF THE ATOM\" PART 1 (OF 4) It's an all-new team of X-Men and a last page reveal you need to read to believe!"
+									}
+									],
+					"resourceURI": "http://gateway.marvel.com/v1/public/comics/659",
+					"urls": [
+							 {
+							 "type": "detail",
+							 "url": "http://marvel.com/comics/issue/659/x-men_2004_157?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "purchase",
+							 "url": "http://comicstore.marvel.com/X-Men-157/digital-comic/7769?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "reader",
+							 "url": "http://marvel.com/digitalcomics/view.htm?iid=7769&utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "inAppLink",
+							 "url": "http://applink.marvel.com/issue/7769?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 }
+							 ],
+					"series": {
+					"resourceURI": "http://gateway.marvel.com/v1/public/series/403",
+					"name": "X-Men (2004 - 2007)"
+					},
+					"variants": [],
+					"collections": [
+									{
+									"resourceURI": "http://gateway.marvel.com/v1/public/comics/1641",
+									"name": "X-Men: Day of the Atom (Trade Paperback)"
+									}
+									],
+					"collectedIssues": [],
+					"dates": [
+							  {
+							  "type": "onsaleDate",
+							  "date": "2004-05-19T00:00:00-0400"
+							  },
+							  {
+							  "type": "focDate",
+							  "date": "-0001-11-30T00:00:00-0500"
+							  },
+							  {
+							  "type": "unlimitedDate",
+							  "date": "2010-01-06T00:00:00-0500"
+							  },
+							  {
+							  "type": "digitalPurchaseDate",
+							  "date": "2010-04-13T00:00:00-0400"
+							  }
+							  ],
+					"prices": [
+							   {
+							   "type": "printPrice",
+							   "price": 2.25
+							   },
+							   {
+							   "type": "digitalPurchasePrice",
+							   "price": 1.99
+							   }
+							   ],
+					"thumbnail": {
+					"path": "http://i.annihil.us/u/prod/marvel/i/mg/1/20/4bc6863279258",
+					"extension": "jpg"
+					},
+					"images": [
+							   {
+							   "path": "http://i.annihil.us/u/prod/marvel/i/mg/1/20/4bc6863279258",
+							   "extension": "jpg"
+							   }
+							   ],
+					"creators": {
+					"available": 5,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/659/creators",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11",
+							  "name": "Chuck Austen",
+							  "role": "writer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/30",
+							  "name": "Stan Lee",
+							  "role": "writer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/424",
+							  "name": "Udon Comics",
+							  "role": "colorist"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11757",
+							  "name": "Salvador Larroca",
+							  "role": "penciller (cover)"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11553",
+							  "name": "Danny K. Miki",
+							  "role": "inker"
+							  }
+							  ],
+					"returned": 5
+					},
+					"characters": {
+					"available": 1,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/659/characters",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009726",
+							  "name": "X-Men"
+							  }
+							  ],
+					"returned": 1
+					},
+					"stories": {
+					"available": 2,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/659/stories",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/616",
+							  "name": "Cover #616",
+							  "type": "cover"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/617",
+							  "name": "Interior #617",
+							  "type": "interiorStory"
+							  }
+							  ],
+					"returned": 2
+					},
+					"events": {
+					"available": 0,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/659/events",
+					"items": [],
+					"returned": 0
+					}
+					},
+					{
+					"id": 720,
+					"digitalId": 7770,
+					"title": "X-Men (2004) #158",
+					"issueNumber": 158,
+					"variantDescription": "",
+					"description": "\"DAY OF THE ATOM\" PART 2 (OF 4) Last issue’s surprise ending should have X-fans talking for months! Will the return of this character prove to be the saving grace of the X-Men, or will it doom them forever? Plus: a surprise twist in the life of Gambit!",
+					"modified": "-0001-11-30T00:00:00-0500",
+					"isbn": "",
+					"upc": "5960601772-15811",
+					"diamondCode": "",
+					"ean": "",
+					"issn": "",
+					"format": "Comic",
+					"pageCount": 0,
+					"textObjects": [
+									{
+									"type": "issue_solicit_text",
+									"language": "en-us",
+									"text": "\"DAY OF THE ATOM\" PART 2 (OF 4) Last issue’s surprise ending should have X-fans talking for months! Will the return of this character prove to be the saving grace of the X-Men, or will it doom them forever? Plus: a surprise twist in the life of Gambit!"
+									},
+									{
+									"type": "issue_preview_text",
+									"language": "en-us",
+									"text": "\"DAY OF THE ATOM\" PART 2 (OF 4) Last issue’s surprise ending should have X-fans talking for months! Will the return of this character prove to be the saving grace of the X-Men, or will it doom them forever? Plus: a surprise twist in the life of Gambit!"
+									}
+									],
+					"resourceURI": "http://gateway.marvel.com/v1/public/comics/720",
+					"urls": [
+							 {
+							 "type": "detail",
+							 "url": "http://marvel.com/comics/issue/720/x-men_2004_158?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "purchase",
+							 "url": "http://comicstore.marvel.com/X-Men-158/digital-comic/7770?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "reader",
+							 "url": "http://marvel.com/digitalcomics/view.htm?iid=7770&utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "inAppLink",
+							 "url": "http://applink.marvel.com/issue/7770?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 }
+							 ],
+					"series": {
+					"resourceURI": "http://gateway.marvel.com/v1/public/series/403",
+					"name": "X-Men (2004 - 2007)"
+					},
+					"variants": [],
+					"collections": [
+									{
+									"resourceURI": "http://gateway.marvel.com/v1/public/comics/1641",
+									"name": "X-Men: Day of the Atom (Trade Paperback)"
+									}
+									],
+					"collectedIssues": [],
+					"dates": [
+							  {
+							  "type": "onsaleDate",
+							  "date": "2004-06-16T00:00:00-0400"
+							  },
+							  {
+							  "type": "focDate",
+							  "date": "-0001-11-30T00:00:00-0500"
+							  },
+							  {
+							  "type": "unlimitedDate",
+							  "date": "2010-01-13T00:00:00-0500"
+							  },
+							  {
+							  "type": "digitalPurchaseDate",
+							  "date": "2010-04-13T00:00:00-0400"
+							  }
+							  ],
+					"prices": [
+							   {
+							   "type": "printPrice",
+							   "price": 2.25
+							   },
+							   {
+							   "type": "digitalPurchasePrice",
+							   "price": 1.99
+							   }
+							   ],
+					"thumbnail": {
+					"path": "http://i.annihil.us/u/prod/marvel/i/mg/2/d0/4bc6815155c10",
+					"extension": "jpg"
+					},
+					"images": [
+							   {
+							   "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/d0/4bc6815155c10",
+							   "extension": "jpg"
+							   }
+							   ],
+					"creators": {
+					"available": 5,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/720/creators",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11",
+							  "name": "Chuck Austen",
+							  "role": "writer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/30",
+							  "name": "Stan Lee",
+							  "role": "writer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/424",
+							  "name": "Udon Comics",
+							  "role": "colorist"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11757",
+							  "name": "Salvador Larroca",
+							  "role": "penciller (cover)"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11553",
+							  "name": "Danny K. Miki",
+							  "role": "inker"
+							  }
+							  ],
+					"returned": 5
+					},
+					"characters": {
+					"available": 1,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/720/characters",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009726",
+							  "name": "X-Men"
+							  }
+							  ],
+					"returned": 1
+					},
+					"stories": {
+					"available": 2,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/720/stories",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/618",
+							  "name": "Cover #618",
+							  "type": "cover"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/619",
+							  "name": "Interior #619",
+							  "type": "interiorStory"
+							  }
+							  ],
+					"returned": 2
+					},
+					"events": {
+					"available": 0,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/720/events",
+					"items": [],
+					"returned": 0
+					}
+					},
+					{
+					"id": 528,
+					"digitalId": 7771,
+					"title": "X-Men (2004) #159",
+					"issueNumber": 159,
+					"variantDescription": "",
+					"description": "“DAY OF THE ATOM” PART 3 (OF 4) The shocking return of an enemy thought dead rocks the X-Men to their very core! Can they overcome an adversary more powerful than they imagined, or will internal strife within the team itself tear them apart first?",
+					"modified": "-0001-11-30T00:00:00-0500",
+					"isbn": "",
+					"upc": "5960601772-15911",
+					"diamondCode": "",
+					"ean": "",
+					"issn": "",
+					"format": "Comic",
+					"pageCount": 0,
+					"textObjects": [
+									{
+									"type": "issue_solicit_text",
+									"language": "en-us",
+									"text": "“DAY OF THE ATOM” PART 3 (OF 4) The shocking return of an enemy thought dead rocks the X-Men to their very core! Can they overcome an adversary more powerful than they imagined, or will internal strife within the team itself tear them apart first?"
+									},
+									{
+									"type": "issue_preview_text",
+									"language": "en-us",
+									"text": "â€œDAY OF THE ATOMâ€ PART 3 (OF 4) The shocking return of an enemy thought dead rocks the X-Men to their very core! Can they overcome an adversary more powerful than they imagined, or will internal strife within the team itself tear them apart first?"
+									}
+									],
+					"resourceURI": "http://gateway.marvel.com/v1/public/comics/528",
+					"urls": [
+							 {
+							 "type": "detail",
+							 "url": "http://marvel.com/comics/issue/528/x-men_2004_159?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "purchase",
+							 "url": "http://comicstore.marvel.com/X-Men-159/digital-comic/7771?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "reader",
+							 "url": "http://marvel.com/digitalcomics/view.htm?iid=7771&utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "inAppLink",
+							 "url": "http://applink.marvel.com/issue/7771?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 }
+							 ],
+					"series": {
+					"resourceURI": "http://gateway.marvel.com/v1/public/series/403",
+					"name": "X-Men (2004 - 2007)"
+					},
+					"variants": [],
+					"collections": [
+									{
+									"resourceURI": "http://gateway.marvel.com/v1/public/comics/1641",
+									"name": "X-Men: Day of the Atom (Trade Paperback)"
+									}
+									],
+					"collectedIssues": [],
+					"dates": [
+							  {
+							  "type": "onsaleDate",
+							  "date": "2004-07-21T00:00:00-0400"
+							  },
+							  {
+							  "type": "focDate",
+							  "date": "-0001-11-30T00:00:00-0500"
+							  },
+							  {
+							  "type": "unlimitedDate",
+							  "date": "2010-01-20T00:00:00-0500"
+							  },
+							  {
+							  "type": "digitalPurchaseDate",
+							  "date": "2010-04-13T00:00:00-0400"
+							  }
+							  ],
+					"prices": [
+							   {
+							   "type": "printPrice",
+							   "price": 2.25
+							   },
+							   {
+							   "type": "digitalPurchasePrice",
+							   "price": 1.99
+							   }
+							   ],
+					"thumbnail": {
+					"path": "http://i.annihil.us/u/prod/marvel/i/mg/7/10/4bc68f92375d5",
+					"extension": "jpg"
+					},
+					"images": [
+							   {
+							   "path": "http://i.annihil.us/u/prod/marvel/i/mg/7/10/4bc68f92375d5",
+							   "extension": "jpg"
+							   }
+							   ],
+					"creators": {
+					"available": 5,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/528/creators",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11",
+							  "name": "Chuck Austen",
+							  "role": "writer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/30",
+							  "name": "Stan Lee",
+							  "role": "writer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/424",
+							  "name": "Udon Comics",
+							  "role": "colorist"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11757",
+							  "name": "Salvador Larroca",
+							  "role": "penciller (cover)"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11553",
+							  "name": "Danny K. Miki",
+							  "role": "inker"
+							  }
+							  ],
+					"returned": 5
+					},
+					"characters": {
+					"available": 1,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/528/characters",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009726",
+							  "name": "X-Men"
+							  }
+							  ],
+					"returned": 1
+					},
+					"stories": {
+					"available": 2,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/528/stories",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/614",
+							  "name": "Cover #614",
+							  "type": "cover"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/615",
+							  "name": "Interior #615",
+							  "type": "interiorStory"
+							  }
+							  ],
+					"returned": 2
+					},
+					"events": {
+					"available": 0,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/528/events",
+					"items": [],
+					"returned": 0
+					}
+					},
+					{
+					"id": 762,
+					"digitalId": 7772,
+					"title": "X-Men (2004) #160",
+					"issueNumber": 160,
+					"variantDescription": "",
+					"description": "\"DAY OF THE ATOM\" PART 4 (OF 4) The return of... Xorn",
+					"modified": "-0001-11-30T00:00:00-0500",
+					"isbn": "",
+					"upc": "5960601772-16011",
+					"diamondCode": "",
+					"ean": "",
+					"issn": "",
+					"format": "Comic",
+					"pageCount": 0,
+					"textObjects": [
+									{
+									"type": "issue_solicit_text",
+									"language": "en-us",
+									"text": "\"DAY OF THE ATOM\" PART 4 (OF 4) The return of... Xorn!"
+									},
+									{
+									"type": "issue_preview_text",
+									"language": "en-us",
+									"text": "\"DAY OF THE ATOM\" PART 4 (OF 4) The return of... Xorn"
+									}
+									],
+					"resourceURI": "http://gateway.marvel.com/v1/public/comics/762",
+					"urls": [
+							 {
+							 "type": "detail",
+							 "url": "http://marvel.com/comics/issue/762/x-men_2004_160?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "purchase",
+							 "url": "http://comicstore.marvel.com/X-Men-160/digital-comic/7772?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "reader",
+							 "url": "http://marvel.com/digitalcomics/view.htm?iid=7772&utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "inAppLink",
+							 "url": "http://applink.marvel.com/issue/7772?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 }
+							 ],
+					"series": {
+					"resourceURI": "http://gateway.marvel.com/v1/public/series/403",
+					"name": "X-Men (2004 - 2007)"
+					},
+					"variants": [],
+					"collections": [
+									{
+									"resourceURI": "http://gateway.marvel.com/v1/public/comics/1641",
+									"name": "X-Men: Day of the Atom (Trade Paperback)"
+									}
+									],
+					"collectedIssues": [],
+					"dates": [
+							  {
+							  "type": "onsaleDate",
+							  "date": "2004-08-18T00:00:00-0400"
+							  },
+							  {
+							  "type": "focDate",
+							  "date": "-0001-11-30T00:00:00-0500"
+							  },
+							  {
+							  "type": "unlimitedDate",
+							  "date": "2010-02-10T00:00:00-0500"
+							  },
+							  {
+							  "type": "digitalPurchaseDate",
+							  "date": "2010-04-13T00:00:00-0400"
+							  }
+							  ],
+					"prices": [
+							   {
+							   "type": "printPrice",
+							   "price": 2.25
+							   },
+							   {
+							   "type": "digitalPurchasePrice",
+							   "price": 1.99
+							   }
+							   ],
+					"thumbnail": {
+					"path": "http://i.annihil.us/u/prod/marvel/i/mg/f/20/4bc67ebaa6e07",
+					"extension": "jpg"
+					},
+					"images": [
+							   {
+							   "path": "http://i.annihil.us/u/prod/marvel/i/mg/f/20/4bc67ebaa6e07",
+							   "extension": "jpg"
+							   }
+							   ],
+					"creators": {
+					"available": 5,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/762/creators",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11",
+							  "name": "Chuck Austen",
+							  "role": "writer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/30",
+							  "name": "Stan Lee",
+							  "role": "writer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/424",
+							  "name": "Udon Comics",
+							  "role": "colorist"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11757",
+							  "name": "Salvador Larroca",
+							  "role": "penciller (cover)"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11553",
+							  "name": "Danny K. Miki",
+							  "role": "inker"
+							  }
+							  ],
+					"returned": 5
+					},
+					"characters": {
+					"available": 1,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/762/characters",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009726",
+							  "name": "X-Men"
+							  }
+							  ],
+					"returned": 1
+					},
+					"stories": {
+					"available": 2,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/762/stories",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/620",
+							  "name": "Cover #620",
+							  "type": "cover"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/621",
+							  "name": "Interior #621",
+							  "type": "interiorStory"
+							  }
+							  ],
+					"returned": 2
+					},
+					"events": {
+					"available": 0,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/762/events",
+					"items": [],
+					"returned": 0
+					}
+					},
+					{
+					"id": 835,
+					"digitalId": 7773,
+					"title": "X-Men (2004) #161",
+					"issueNumber": 161,
+					"variantDescription": "",
+					"description": "\"HEROES AND VILLIANS\" PART 1 (OF 4) The Brotherhood of Mutants is back with Nocturne from the Exiles, and a surprise shocker of a member!",
+					"modified": "-0001-11-30T00:00:00-0500",
+					"isbn": "",
+					"upc": "5960601772-16111",
+					"diamondCode": "",
+					"ean": "",
+					"issn": "",
+					"format": "Comic",
+					"pageCount": 0,
+					"textObjects": [
+									{
+									"type": "issue_solicit_text",
+									"language": "en-us",
+									"text": "\"HEROES AND VILLIANS\" PART 1 (OF 4) Brand-new story arc! The Brotherhood of Mutants is back with Nocturne from the Exiles, and a surprise shocker of a member!"
+									},
+									{
+									"type": "issue_preview_text",
+									"language": "en-us",
+									"text": "\"HEROES AND VILLIANS\" PART 1 (OF 4) The Brotherhood of Mutants is back with Nocturne from the Exiles, and a surprise shocker of a member!"
+									}
+									],
+					"resourceURI": "http://gateway.marvel.com/v1/public/comics/835",
+					"urls": [
+							 {
+							 "type": "detail",
+							 "url": "http://marvel.com/comics/issue/835/x-men_2004_161?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "purchase",
+							 "url": "http://comicstore.marvel.com/X-Men-161/digital-comic/7773?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "reader",
+							 "url": "http://marvel.com/digitalcomics/view.htm?iid=7773&utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "inAppLink",
+							 "url": "http://applink.marvel.com/issue/7773?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 }
+							 ],
+					"series": {
+					"resourceURI": "http://gateway.marvel.com/v1/public/series/403",
+					"name": "X-Men (2004 - 2007)"
+					},
+					"variants": [],
+					"collections": [
+									{
+									"resourceURI": "http://gateway.marvel.com/v1/public/comics/1641",
+									"name": "X-Men: Day of the Atom (Trade Paperback)"
+									}
+									],
+					"collectedIssues": [],
+					"dates": [
+							  {
+							  "type": "onsaleDate",
+							  "date": "2004-09-15T00:00:00-0400"
+							  },
+							  {
+							  "type": "focDate",
+							  "date": "-0001-11-30T00:00:00-0500"
+							  },
+							  {
+							  "type": "unlimitedDate",
+							  "date": "2010-02-24T00:00:00-0500"
+							  },
+							  {
+							  "type": "digitalPurchaseDate",
+							  "date": "2010-04-13T00:00:00-0400"
+							  }
+							  ],
+					"prices": [
+							   {
+							   "type": "printPrice",
+							   "price": 2.25
+							   },
+							   {
+							   "type": "digitalPurchasePrice",
+							   "price": 1.99
+							   }
+							   ],
+					"thumbnail": {
+					"path": "http://i.annihil.us/u/prod/marvel/i/mg/9/80/4bc67852ae0d8",
+					"extension": "jpg"
+					},
+					"images": [
+							   {
+							   "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/80/4bc67852ae0d8",
+							   "extension": "jpg"
+							   }
+							   ],
+					"creators": {
+					"available": 6,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/835/creators",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11",
+							  "name": "Chuck Austen",
+							  "role": "writer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/30",
+							  "name": "Stan Lee",
+							  "role": "writer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/424",
+							  "name": "Udon Comics",
+							  "role": "colorist"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11757",
+							  "name": "Salvador Larroca",
+							  "role": "penciller (cover)"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11553",
+							  "name": "Danny K. Miki",
+							  "role": "inker"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/410",
+							  "name": "Rus Wooton",
+							  "role": "letterer"
+							  }
+							  ],
+					"returned": 6
+					},
+					"characters": {
+					"available": 1,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/835/characters",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009726",
+							  "name": "X-Men"
+							  }
+							  ],
+					"returned": 1
+					},
+					"stories": {
+					"available": 2,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/835/stories",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/622",
+							  "name": "\"HEROES AND VILLIANS\" PART 1 (OF 4) Brand-new story arc! The Brotherhood of Mutants is back with Nocturne from the Exiles, and a",
+							  "type": "cover"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/623",
+							  "name": "\"HEROES AND VILLIANS\" PART 1 (OF 4) Brand-new story arc! The Brotherhood of Mutants is back with Nocturne from the Exiles, and a",
+							  "type": "interiorStory"
+							  }
+							  ],
+					"returned": 2
+					},
+					"events": {
+					"available": 0,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/835/events",
+					"items": [],
+					"returned": 0
+					}
+					},
+					{
+					"id": 851,
+					"digitalId": 7774,
+					"title": "X-Men (2004) #162",
+					"issueNumber": 162,
+					"variantDescription": "",
+					"description": "\"HEROES AND VILLIANS\" PART 2 (OF 4) The Brotherhood of Mutants attack and the X-Men are sent reeling!",
+					"modified": "-0001-11-30T00:00:00-0500",
+					"isbn": "",
+					"upc": "5960601772-16211",
+					"diamondCode": "",
+					"ean": "",
+					"issn": "",
+					"format": "Comic",
+					"pageCount": 0,
+					"textObjects": [
+									{
+									"type": "issue_solicit_text",
+									"language": "en-us",
+									"text": "\"HEROES AND VILLIANS\" PART 1 (OF 4) \r<br>Brand-new story arc! The Brotherhood of Mutants is back with Nocturne from the Exiles, and a surprise shocker of a member!"
+									},
+									{
+									"type": "issue_preview_text",
+									"language": "en-us",
+									"text": "\"HEROES AND VILLIANS\" PART 2 (OF 4) The Brotherhood of Mutants attack and the X-Men are sent reeling!"
+									}
+									],
+					"resourceURI": "http://gateway.marvel.com/v1/public/comics/851",
+					"urls": [
+							 {
+							 "type": "detail",
+							 "url": "http://marvel.com/comics/issue/851/x-men_2004_162?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "purchase",
+							 "url": "http://comicstore.marvel.com/X-Men-162/digital-comic/7774?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "reader",
+							 "url": "http://marvel.com/digitalcomics/view.htm?iid=7774&utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "inAppLink",
+							 "url": "http://applink.marvel.com/issue/7774?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 }
+							 ],
+					"series": {
+					"resourceURI": "http://gateway.marvel.com/v1/public/series/403",
+					"name": "X-Men (2004 - 2007)"
+					},
+					"variants": [],
+					"collections": [
+									{
+									"resourceURI": "http://gateway.marvel.com/v1/public/comics/1641",
+									"name": "X-Men: Day of the Atom (Trade Paperback)"
+									}
+									],
+					"collectedIssues": [],
+					"dates": [
+							  {
+							  "type": "onsaleDate",
+							  "date": "2004-09-29T00:00:00-0400"
+							  },
+							  {
+							  "type": "focDate",
+							  "date": "-0001-11-30T00:00:00-0500"
+							  },
+							  {
+							  "type": "unlimitedDate",
+							  "date": "2010-04-07T00:00:00-0400"
+							  },
+							  {
+							  "type": "digitalPurchaseDate",
+							  "date": "2010-04-13T00:00:00-0400"
+							  }
+							  ],
+					"prices": [
+							   {
+							   "type": "printPrice",
+							   "price": 2.25
+							   },
+							   {
+							   "type": "digitalPurchasePrice",
+							   "price": 1.99
+							   }
+							   ],
+					"thumbnail": {
+					"path": "http://i.annihil.us/u/prod/marvel/i/mg/6/70/4bc676c64c532",
+					"extension": "jpg"
+					},
+					"images": [
+							   {
+							   "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/70/4bc676c64c532",
+							   "extension": "jpg"
+							   }
+							   ],
+					"creators": {
+					"available": 6,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/851/creators",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11",
+							  "name": "Chuck Austen",
+							  "role": "writer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/30",
+							  "name": "Stan Lee",
+							  "role": "writer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/424",
+							  "name": "Udon Comics",
+							  "role": "colorist"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11757",
+							  "name": "Salvador Larroca",
+							  "role": "penciller (cover)"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11553",
+							  "name": "Danny K. Miki",
+							  "role": "inker"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/410",
+							  "name": "Rus Wooton",
+							  "role": "letterer"
+							  }
+							  ],
+					"returned": 6
+					},
+					"characters": {
+					"available": 1,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/851/characters",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009726",
+							  "name": "X-Men"
+							  }
+							  ],
+					"returned": 1
+					},
+					"stories": {
+					"available": 2,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/851/stories",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/624",
+							  "name": "\"HEROES AND VILLIANS\" PART 1 (OF 4) Brand-new story arc! The Brotherhood of Mutants is back with Nocturne from the Exiles, and a",
+							  "type": "cover"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/625",
+							  "name": "\"HEROES AND VILLIANS\" PART 1 (OF 4) Brand-new story arc! The Brotherhood of Mutants is back with Nocturne from the Exiles, and a",
+							  "type": "interiorStory"
+							  }
+							  ],
+					"returned": 2
+					},
+					"events": {
+					"available": 0,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/851/events",
+					"items": [],
+					"returned": 0
+					}
+					},
+					{
+					"id": 930,
+					"digitalId": 7775,
+					"title": "X-Men (2004) #163",
+					"issueNumber": 163,
+					"variantDescription": "",
+					"description": "\"HEROES AND VILLAINS\" PART 3 (OF 4) The Xavier Institute is under attack by The New Brotherhood of Mutants! With the X-Men down for the count, the only ally the students have to help keep these villains at bay is a blind Gambit!",
+					"modified": "-0001-11-30T00:00:00-0500",
+					"isbn": "",
+					"upc": "5960601772-16311",
+					"diamondCode": "",
+					"ean": "",
+					"issn": "",
+					"format": "Comic",
+					"pageCount": 0,
+					"textObjects": [
+									{
+									"type": "issue_solicit_text",
+									"language": "en-us",
+									"text": "\"HEROES AND VILLAINS\" PART 3 (OF 4) The Xavier Institute is under attack by The New Brotherhood of Mutants! With the X-Men down for the count, the only ally the students have to help keep these villains at bay is a blind Gambit!"
+									},
+									{
+									"type": "issue_preview_text",
+									"language": "en-us",
+									"text": "\"HEROES AND VILLAINS\" PART 3 (OF 4) The Xavier Institute is under attack by The New Brotherhood of Mutants! With the X-Men down for the count, the only ally the students have to help keep these villains at bay is a blind Gambit!"
+									}
+									],
+					"resourceURI": "http://gateway.marvel.com/v1/public/comics/930",
+					"urls": [
+							 {
+							 "type": "detail",
+							 "url": "http://marvel.com/comics/issue/930/x-men_2004_163?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "purchase",
+							 "url": "http://comicstore.marvel.com/X-Men-163/digital-comic/7775?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "reader",
+							 "url": "http://marvel.com/digitalcomics/view.htm?iid=7775&utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "inAppLink",
+							 "url": "http://applink.marvel.com/issue/7775?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 }
+							 ],
+					"series": {
+					"resourceURI": "http://gateway.marvel.com/v1/public/series/403",
+					"name": "X-Men (2004 - 2007)"
+					},
+					"variants": [],
+					"collections": [
+									{
+									"resourceURI": "http://gateway.marvel.com/v1/public/comics/1641",
+									"name": "X-Men: Day of the Atom (Trade Paperback)"
+									}
+									],
+					"collectedIssues": [],
+					"dates": [
+							  {
+							  "type": "onsaleDate",
+							  "date": "2004-10-27T00:00:00-0400"
+							  },
+							  {
+							  "type": "focDate",
+							  "date": "-0001-11-30T00:00:00-0500"
+							  },
+							  {
+							  "type": "unlimitedDate",
+							  "date": "2010-04-14T00:00:00-0400"
+							  },
+							  {
+							  "type": "digitalPurchaseDate",
+							  "date": "2010-04-13T00:00:00-0400"
+							  }
+							  ],
+					"prices": [
+							   {
+							   "type": "printPrice",
+							   "price": 2.25
+							   },
+							   {
+							   "type": "digitalPurchasePrice",
+							   "price": 1.99
+							   }
+							   ],
+					"thumbnail": {
+					"path": "http://i.annihil.us/u/prod/marvel/i/mg/3/40/4bc6725743c23",
+					"extension": "jpg"
+					},
+					"images": [
+							   {
+							   "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/40/4bc6725743c23",
+							   "extension": "jpg"
+							   }
+							   ],
+					"creators": {
+					"available": 6,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/930/creators",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11",
+							  "name": "Chuck Austen",
+							  "role": "writer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/30",
+							  "name": "Stan Lee",
+							  "role": "writer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/424",
+							  "name": "Udon Comics",
+							  "role": "colorist"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11757",
+							  "name": "Salvador Larroca",
+							  "role": "penciller (cover)"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11553",
+							  "name": "Danny K. Miki",
+							  "role": "inker"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/410",
+							  "name": "Rus Wooton",
+							  "role": "letterer"
+							  }
+							  ],
+					"returned": 6
+					},
+					"characters": {
+					"available": 1,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/930/characters",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009726",
+							  "name": "X-Men"
+							  }
+							  ],
+					"returned": 1
+					},
+					"stories": {
+					"available": 2,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/930/stories",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/626",
+							  "name": "\"HEROES AND VILLAINS\" PART 3 (OF 4) The Xavier Institute is under attack by The New Brotherhood of Mutants! With the X-Men down ",
+							  "type": "cover"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/627",
+							  "name": "\"HEROES AND VILLAINS\" PART 3 (OF 4) The Xavier Institute is under attack by The New Brotherhood of Mutants! With the X-Men down ",
+							  "type": "interiorStory"
+							  }
+							  ],
+					"returned": 2
+					},
+					"events": {
+					"available": 0,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/930/events",
+					"items": [],
+					"returned": 0
+					}
+					},
+					{
+					"id": 11,
+					"digitalId": 7776,
+					"title": "X-Men (2004) #164",
+					"issueNumber": 164,
+					"variantDescription": "",
+					"description": "\"HEROES AND VILLAINS\" PART 4 (OF 4) The explosive conclusion to the battle between the X-Men and the newly re-formed Brotherhood of Mutants! When the dust clears, will everyone remain standing?",
+					"modified": "-0001-11-30T00:00:00-0500",
+					"isbn": "",
+					"upc": "5960601772-16411",
+					"diamondCode": "",
+					"ean": "",
+					"issn": "",
+					"format": "Comic",
+					"pageCount": 0,
+					"textObjects": [
+									{
+									"type": "issue_solicit_text",
+									"language": "en-us",
+									"text": " &quot;HEROES AND VILLAINS&quot; PART 4 (OF 4)<br>The explosive conclusion to the battle between the X-Men and the newly re-formed Brotherhood of Mutants! When the dust clears, will everyone remain standing&#8212;<br> "
+									},
+									{
+									"type": "issue_preview_text",
+									"language": "en-us",
+									"text": "\"HEROES AND VILLAINS\" PART 4 (OF 4) The explosive conclusion to the battle between the X-Men and the newly re-formed Brotherhood of Mutants! When the dust clears, will everyone remain standing?"
+									}
+									],
+					"resourceURI": "http://gateway.marvel.com/v1/public/comics/11",
+					"urls": [
+							 {
+							 "type": "detail",
+							 "url": "http://marvel.com/comics/issue/11/x-men_2004_164?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "purchase",
+							 "url": "http://comicstore.marvel.com/X-Men-164/digital-comic/7776?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "reader",
+							 "url": "http://marvel.com/digitalcomics/view.htm?iid=7776&utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "inAppLink",
+							 "url": "http://applink.marvel.com/issue/7776?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 }
+							 ],
+					"series": {
+					"resourceURI": "http://gateway.marvel.com/v1/public/series/403",
+					"name": "X-Men (2004 - 2007)"
+					},
+					"variants": [],
+					"collections": [
+									{
+									"resourceURI": "http://gateway.marvel.com/v1/public/comics/1641",
+									"name": "X-Men: Day of the Atom (Trade Paperback)"
+									}
+									],
+					"collectedIssues": [],
+					"dates": [
+							  {
+							  "type": "onsaleDate",
+							  "date": "2004-11-17T00:00:00-0500"
+							  },
+							  {
+							  "type": "focDate",
+							  "date": "-0001-11-30T00:00:00-0500"
+							  },
+							  {
+							  "type": "unlimitedDate",
+							  "date": "2010-04-21T00:00:00-0400"
+							  },
+							  {
+							  "type": "digitalPurchaseDate",
+							  "date": "2010-04-13T00:00:00-0400"
+							  }
+							  ],
+					"prices": [
+							   {
+							   "type": "printPrice",
+							   "price": 2.25
+							   },
+							   {
+							   "type": "digitalPurchasePrice",
+							   "price": 1.99
+							   }
+							   ],
+					"thumbnail": {
+					"path": "http://i.annihil.us/u/prod/marvel/i/mg/1/d0/4bc6b6eca2a8a",
+					"extension": "jpg"
+					},
+					"images": [
+							   {
+							   "path": "http://i.annihil.us/u/prod/marvel/i/mg/1/d0/4bc6b6eca2a8a",
+							   "extension": "jpg"
+							   }
+							   ],
+					"creators": {
+					"available": 6,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/11/creators",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11",
+							  "name": "Chuck Austen",
+							  "role": "writer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/30",
+							  "name": "Stan Lee",
+							  "role": "writer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/409",
+							  "name": "Liquid Graphics",
+							  "role": "colorist"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11757",
+							  "name": "Salvador Larroca",
+							  "role": "penciller (cover)"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11553",
+							  "name": "Danny K. Miki",
+							  "role": "inker"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/410",
+							  "name": "Rus Wooton",
+							  "role": "letterer"
+							  }
+							  ],
+					"returned": 6
+					},
+					"characters": {
+					"available": 1,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/11/characters",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009726",
+							  "name": "X-Men"
+							  }
+							  ],
+					"returned": 1
+					},
+					"stories": {
+					"available": 2,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/11/stories",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/594",
+							  "name": "4 of 4 - Heroes and Villains",
+							  "type": "cover"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/595",
+							  "name": "4 of 4 - Heroes and Villains",
+							  "type": "interiorStory"
+							  }
+							  ],
+					"returned": 2
+					},
+					"events": {
+					"available": 0,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/11/events",
+					"items": [],
+					"returned": 0
+					}
+					},
+					{
+					"id": 1415,
+					"digitalId": 7777,
+					"title": "X-Men (2004) #165",
+					"issueNumber": 165,
+					"variantDescription": "",
+					"description": "It's a holiday blowout, X-Men style!  ",
+					"modified": "-0001-11-30T00:00:00-0500",
+					"isbn": "",
+					"upc": "5960601772-16511",
+					"diamondCode": "",
+					"ean": "",
+					"issn": "",
+					"format": "Comic",
+					"pageCount": 0,
+					"textObjects": [
+									{
+									"type": "issue_solicit_text",
+									"language": "en-us",
+									"text": "Chris Claremont & Salvador Larroca bring you a self-contained holiday blowout, X-Men style!  "
+									},
+									{
+									"type": "issue_preview_text",
+									"language": "en-us",
+									"text": "It's a holiday blowout, X-Men style!  "
+									}
+									],
+					"resourceURI": "http://gateway.marvel.com/v1/public/comics/1415",
+					"urls": [
+							 {
+							 "type": "detail",
+							 "url": "http://marvel.com/comics/issue/1415/x-men_2004_165?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "purchase",
+							 "url": "http://comicstore.marvel.com/X-Men-165/digital-comic/7777?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "reader",
+							 "url": "http://marvel.com/digitalcomics/view.htm?iid=7777&utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "inAppLink",
+							 "url": "http://applink.marvel.com/issue/7777?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 }
+							 ],
+					"series": {
+					"resourceURI": "http://gateway.marvel.com/v1/public/series/403",
+					"name": "X-Men (2004 - 2007)"
+					},
+					"variants": [],
+					"collections": [
+									{
+									"resourceURI": "http://gateway.marvel.com/v1/public/comics/1641",
+									"name": "X-Men: Day of the Atom (Trade Paperback)"
+									}
+									],
+					"collectedIssues": [],
+					"dates": [
+							  {
+							  "type": "onsaleDate",
+							  "date": "2004-12-15T00:00:00-0500"
+							  },
+							  {
+							  "type": "focDate",
+							  "date": "-0001-11-30T00:00:00-0500"
+							  },
+							  {
+							  "type": "unlimitedDate",
+							  "date": "2010-04-28T00:00:00-0400"
+							  },
+							  {
+							  "type": "digitalPurchaseDate",
+							  "date": "2010-04-13T00:00:00-0400"
+							  }
+							  ],
+					"prices": [
+							   {
+							   "type": "printPrice",
+							   "price": 2.25
+							   },
+							   {
+							   "type": "digitalPurchasePrice",
+							   "price": 1.99
+							   }
+							   ],
+					"thumbnail": {
+					"path": "http://i.annihil.us/u/prod/marvel/i/mg/c/40/4bc65f9ad512c",
+					"extension": "jpg"
+					},
+					"images": [
+							   {
+							   "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/40/4bc65f9ad512c",
+							   "extension": "jpg"
+							   }
+							   ],
+					"creators": {
+					"available": 6,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/1415/creators",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/44",
+							  "name": "Chris Claremont",
+							  "role": "writer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/409",
+							  "name": "Liquid Graphics",
+							  "role": "colorist"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/425",
+							  "name": "Greg Land",
+							  "role": "penciller (cover)"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11757",
+							  "name": "Salvador Larroca",
+							  "role": "penciller"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11553",
+							  "name": "Danny K. Miki",
+							  "role": "inker"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/410",
+							  "name": "Rus Wooton",
+							  "role": "letterer"
+							  }
+							  ],
+					"returned": 6
+					},
+					"characters": {
+					"available": 5,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/1415/characters",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009175",
+							  "name": "Beast"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009257",
+							  "name": "Cyclops"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009310",
+							  "name": "Emma Frost"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009718",
+							  "name": "Wolverine"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009726",
+							  "name": "X-Men"
+							  }
+							  ],
+					"returned": 5
+					},
+					"stories": {
+					"available": 2,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/1415/stories",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/628",
+							  "name": "1 of 1 - Holiday Issue",
+							  "type": "cover"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/629",
+							  "name": "1 of 1 - Holiday Issue",
+							  "type": "interiorStory"
+							  }
+							  ],
+					"returned": 2
+					},
+					"events": {
+					"available": 0,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/1415/events",
+					"items": [],
+					"returned": 0
+					}
+					},
+					{
+					"id": 1514,
+					"digitalId": 2809,
+					"title": "X-Men (2004) #166",
+					"issueNumber": 166,
+					"variantDescription": "",
+					"description": "\"GOLGOTHA\" Part 1 (of 5) The X-Men travel to Antarctica to respond to an S.O.S. from a colony of mutants…and what they find is far more shocking than they expected! Will the X-Men share the colony’s gruesome fate?",
+					"modified": "-0001-11-30T00:00:00-0500",
+					"isbn": "",
+					"upc": "5960601772-16611",
+					"diamondCode": "",
+					"ean": "",
+					"issn": "",
+					"format": "Comic",
+					"pageCount": 0,
+					"textObjects": [
+									{
+									"type": "issue_solicit_text",
+									"language": "en-us",
+									"text": "\"GOLGOTHA\" Part 1 (of 5)\r<br>A great big Marvel welcome to new writer Peter Milligan! The X-Men travel to Antarctica to respond to an S.O.S. from a colony of mutants…and what they find is far more shocking than they expected! Will the X-Men share the colony’s gruesome fate?\r<br>"
+									},
+									{
+									"type": "issue_preview_text",
+									"language": "en-us",
+									"text": "\"GOLGOTHA\" Part 1 (of 5) The X-Men travel to Antarctica to respond to an S.O.S. from a colony of mutants…and what they find is far more shocking than they expected! Will the X-Men share the colony’s gruesome fate?"
+									}
+									],
+					"resourceURI": "http://gateway.marvel.com/v1/public/comics/1514",
+					"urls": [
+							 {
+							 "type": "detail",
+							 "url": "http://marvel.com/comics/issue/1514/x-men_2004_166?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "purchase",
+							 "url": "http://comicstore.marvel.com/X-Men-166/digital-comic/2809?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "reader",
+							 "url": "http://marvel.com/digitalcomics/view.htm?iid=2809&utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "inAppLink",
+							 "url": "http://applink.marvel.com/issue/2809?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 }
+							 ],
+					"series": {
+					"resourceURI": "http://gateway.marvel.com/v1/public/series/403",
+					"name": "X-Men (2004 - 2007)"
+					},
+					"variants": [],
+					"collections": [
+									{
+									"resourceURI": "http://gateway.marvel.com/v1/public/comics/2175",
+									"name": "X-Men: Golgotha (Trade Paperback)"
+									}
+									],
+					"collectedIssues": [],
+					"dates": [
+							  {
+							  "type": "onsaleDate",
+							  "date": "2005-01-19T00:00:00-0500"
+							  },
+							  {
+							  "type": "focDate",
+							  "date": "-0001-11-30T00:00:00-0500"
+							  },
+							  {
+							  "type": "unlimitedDate",
+							  "date": "2007-11-13T00:00:00-0500"
+							  },
+							  {
+							  "type": "digitalPurchaseDate",
+							  "date": "2010-04-13T00:00:00-0400"
+							  }
+							  ],
+					"prices": [
+							   {
+							   "type": "printPrice",
+							   "price": 2.25
+							   },
+							   {
+							   "type": "digitalPurchasePrice",
+							   "price": 1.99
+							   }
+							   ],
+					"thumbnail": {
+					"path": "http://i.annihil.us/u/prod/marvel/i/mg/9/c0/4bc658f6a663c",
+					"extension": "jpg"
+					},
+					"images": [
+							   {
+							   "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/c0/4bc658f6a663c",
+							   "extension": "jpg"
+							   }
+							   ],
+					"creators": {
+					"available": 5,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/1514/creators",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/409",
+							  "name": "Liquid Graphics",
+							  "role": "colorist"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11757",
+							  "name": "Salvador Larroca",
+							  "role": "penciller (cover)"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11553",
+							  "name": "Danny K. Miki",
+							  "role": "inker"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/94",
+							  "name": "Peter Milligan",
+							  "role": "writer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/410",
+							  "name": "Rus Wooton",
+							  "role": "letterer"
+							  }
+							  ],
+					"returned": 5
+					},
+					"characters": {
+					"available": 5,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/1514/characters",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009337",
+							  "name": "Havok"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009362",
+							  "name": "Iceman"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009499",
+							  "name": "Polaris"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009718",
+							  "name": "Wolverine"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009726",
+							  "name": "X-Men"
+							  }
+							  ],
+					"returned": 5
+					},
+					"stories": {
+					"available": 2,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/1514/stories",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/630",
+							  "name": "1 of 5 - Golgotha",
+							  "type": "cover"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/631",
+							  "name": "1 of 5 - Golgotha",
+							  "type": "interiorStory"
+							  }
+							  ],
+					"returned": 2
+					},
+					"events": {
+					"available": 0,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/1514/events",
+					"items": [],
+					"returned": 0
+					}
+					},
+					{
+					"id": 1614,
+					"digitalId": 2810,
+					"title": "X-Men (2004) #167",
+					"issueNumber": 167,
+					"variantDescription": "",
+					"description": "\"GOLGOTHA\" Part 2 (of 5) While the X-Men think they’ve saved the day, a greater danger, unbeknownst to them, is growing right in their own backyard. ",
+					"modified": "-0001-11-30T00:00:00-0500",
+					"isbn": "",
+					"upc": "5960601772-16711",
+					"diamondCode": "",
+					"ean": "",
+					"issn": "",
+					"format": "Comic",
+					"pageCount": 0,
+					"textObjects": [
+									{
+									"type": "issue_solicit_text",
+									"language": "en-us",
+									"text": "\"GOLGOTHA\"! \r<br>While the X-Men think they’ve saved the day, a greater danger, unbeknownst to them, is growing right in their own backyard. Part 2 (of 5).\r<br>"
+									},
+									{
+									"type": "issue_preview_text",
+									"language": "en-us",
+									"text": "\"GOLGOTHA\" Part 2 (of 5) While the X-Men think they’ve saved the day, a greater danger, unbeknownst to them, is growing right in their own backyard. "
+									}
+									],
+					"resourceURI": "http://gateway.marvel.com/v1/public/comics/1614",
+					"urls": [
+							 {
+							 "type": "detail",
+							 "url": "http://marvel.com/comics/issue/1614/x-men_2004_167?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "purchase",
+							 "url": "http://comicstore.marvel.com/X-Men-167/digital-comic/2810?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "reader",
+							 "url": "http://marvel.com/digitalcomics/view.htm?iid=2810&utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "inAppLink",
+							 "url": "http://applink.marvel.com/issue/2810?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 }
+							 ],
+					"series": {
+					"resourceURI": "http://gateway.marvel.com/v1/public/series/403",
+					"name": "X-Men (2004 - 2007)"
+					},
+					"variants": [],
+					"collections": [
+									{
+									"resourceURI": "http://gateway.marvel.com/v1/public/comics/2175",
+									"name": "X-Men: Golgotha (Trade Paperback)"
+									}
+									],
+					"collectedIssues": [],
+					"dates": [
+							  {
+							  "type": "onsaleDate",
+							  "date": "2005-02-23T00:00:00-0500"
+							  },
+							  {
+							  "type": "focDate",
+							  "date": "-0001-11-30T00:00:00-0500"
+							  },
+							  {
+							  "type": "unlimitedDate",
+							  "date": "2007-11-13T00:00:00-0500"
+							  },
+							  {
+							  "type": "digitalPurchaseDate",
+							  "date": "2010-04-13T00:00:00-0400"
+							  }
+							  ],
+					"prices": [
+							   {
+							   "type": "printPrice",
+							   "price": 2.25
+							   },
+							   {
+							   "type": "digitalPurchasePrice",
+							   "price": 1.99
+							   }
+							   ],
+					"thumbnail": {
+					"path": "http://i.annihil.us/u/prod/marvel/i/mg/b/c0/4bc6530e2c4bd",
+					"extension": "jpg"
+					},
+					"images": [
+							   {
+							   "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/c0/4bc6530e2c4bd",
+							   "extension": "jpg"
+							   }
+							   ],
+					"creators": {
+					"available": 5,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/1614/creators",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/409",
+							  "name": "Liquid Graphics",
+							  "role": "colorist"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11757",
+							  "name": "Salvador Larroca",
+							  "role": "penciller (cover)"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11553",
+							  "name": "Danny K. Miki",
+							  "role": "inker"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/94",
+							  "name": "Peter Milligan",
+							  "role": "writer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/410",
+							  "name": "Rus Wooton",
+							  "role": "letterer"
+							  }
+							  ],
+					"returned": 5
+					},
+					"characters": {
+					"available": 2,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/1614/characters",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009310",
+							  "name": "Emma Frost"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009726",
+							  "name": "X-Men"
+							  }
+							  ],
+					"returned": 2
+					},
+					"stories": {
+					"available": 2,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/1614/stories",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/632",
+							  "name": "2 of 5 - Golgotha",
+							  "type": "cover"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/633",
+							  "name": "2 of 5 - Golgotha",
+							  "type": "interiorStory"
+							  }
+							  ],
+					"returned": 2
+					},
+					"events": {
+					"available": 0,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/1614/events",
+					"items": [],
+					"returned": 0
+					}
+					},
+					{
+					"id": 1710,
+					"digitalId": 2811,
+					"title": "X-Men (2004) #168",
+					"issueNumber": 168,
+					"variantDescription": "",
+					"description": "\"GOLGOTHA\" Part 3 (of 5) A strange madness is striking mutants in Los Angeles, driving them to commit unspeakable acts. The X-Men must discover the cause and stop it…before it strikes them as well!",
+					"modified": "-0001-11-30T00:00:00-0500",
+					"isbn": "",
+					"upc": "5960601772-16811",
+					"diamondCode": "",
+					"ean": "",
+					"issn": "",
+					"format": "Comic",
+					"pageCount": 0,
+					"textObjects": [
+									{
+									"type": "issue_solicit_text",
+									"language": "en-us",
+									"text": "\"GOLGOTHA\"\r<br>A strange madness is striking mutants in Los Angeles, driving them to commit unspeakable acts. The X-Men must discover the cause and stop it…before it strikes them as well!\r<br>Part 3 (of 5).\r<br>32 PGS./Marvel PSR …$2.25\r<br>"
+									},
+									{
+									"type": "issue_preview_text",
+									"language": "en-us",
+									"text": "\"GOLGOTHA\" Part 3 (of 5) A strange madness is striking mutants in Los Angeles, driving them to commit unspeakable acts. The X-Men must discover the cause and stop it…before it strikes them as well!"
+									}
+									],
+					"resourceURI": "http://gateway.marvel.com/v1/public/comics/1710",
+					"urls": [
+							 {
+							 "type": "detail",
+							 "url": "http://marvel.com/comics/issue/1710/x-men_2004_168?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "purchase",
+							 "url": "http://comicstore.marvel.com/X-Men-168/digital-comic/2811?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "reader",
+							 "url": "http://marvel.com/digitalcomics/view.htm?iid=2811&utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "inAppLink",
+							 "url": "http://applink.marvel.com/issue/2811?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 }
+							 ],
+					"series": {
+					"resourceURI": "http://gateway.marvel.com/v1/public/series/403",
+					"name": "X-Men (2004 - 2007)"
+					},
+					"variants": [],
+					"collections": [
+									{
+									"resourceURI": "http://gateway.marvel.com/v1/public/comics/2175",
+									"name": "X-Men: Golgotha (Trade Paperback)"
+									}
+									],
+					"collectedIssues": [],
+					"dates": [
+							  {
+							  "type": "onsaleDate",
+							  "date": "2005-03-23T00:00:00-0500"
+							  },
+							  {
+							  "type": "focDate",
+							  "date": "-0001-11-30T00:00:00-0500"
+							  },
+							  {
+							  "type": "unlimitedDate",
+							  "date": "2007-11-13T00:00:00-0500"
+							  },
+							  {
+							  "type": "digitalPurchaseDate",
+							  "date": "2010-04-13T00:00:00-0400"
+							  }
+							  ],
+					"prices": [
+							   {
+							   "type": "printPrice",
+							   "price": 2.25
+							   },
+							   {
+							   "type": "digitalPurchasePrice",
+							   "price": 1.99
+							   }
+							   ],
+					"thumbnail": {
+					"path": "http://i.annihil.us/u/prod/marvel/i/mg/9/90/4bc64c829cb19",
+					"extension": "jpg"
+					},
+					"images": [
+							   {
+							   "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/90/4bc64c829cb19",
+							   "extension": "jpg"
+							   }
+							   ],
+					"creators": {
+					"available": 5,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/1710/creators",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/409",
+							  "name": "Liquid Graphics",
+							  "role": "colorist"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11757",
+							  "name": "Salvador Larroca",
+							  "role": "penciller (cover)"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11553",
+							  "name": "Danny K. Miki",
+							  "role": "inker"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/94",
+							  "name": "Peter Milligan",
+							  "role": "writer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/410",
+							  "name": "Rus Wooton",
+							  "role": "letterer"
+							  }
+							  ],
+					"returned": 5
+					},
+					"characters": {
+					"available": 1,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/1710/characters",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009726",
+							  "name": "X-Men"
+							  }
+							  ],
+					"returned": 1
+					},
+					"stories": {
+					"available": 2,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/1710/stories",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/634",
+							  "name": "3 of 5 - Golgotha",
+							  "type": "cover"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/635",
+							  "name": "3 of 5 - Golgotha",
+							  "type": "interiorStory"
+							  }
+							  ],
+					"returned": 2
+					},
+					"events": {
+					"available": 0,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/1710/events",
+					"items": [],
+					"returned": 0
+					}
+					},
+					{
+					"id": 1864,
+					"digitalId": 2812,
+					"title": "X-Men (2004) #169",
+					"issueNumber": 169,
+					"variantDescription": "",
+					"description": "\"GOLGOTHA\" Part 4 (of 5) The strange madness the X-Men discovered in Antarctica has come to the X-Mansion. Are the X-Men prepared to face what’s inside them…or will they be defeated by their own inner demons?",
+					"modified": "1969-12-31T19:00:00-0500",
+					"isbn": "",
+					"upc": "5960601772-16911",
+					"diamondCode": "",
+					"ean": "",
+					"issn": "",
+					"format": "Comic",
+					"pageCount": 0,
+					"textObjects": [
+									{
+									"type": "issue_solicit_text",
+									"language": "en-us",
+									"text": "\"GOLGOTHA\"\r<br>The strange madness the X-Men discovered in Antarctica has come to the X-Mansion. Are the X-Men prepared to face what’s inside them…or will they be defeated by their own inner demons?\r<br>Part 4 (of 5).\r<br>32 PGS./Marvel PSR …$2.25\r<br>"
+									},
+									{
+									"type": "issue_preview_text",
+									"language": "en-us",
+									"text": "\"GOLGOTHA\" Part 4 (of 5) The strange madness the X-Men discovered in Antarctica has come to the X-Mansion. Are the X-Men prepared to face what’s inside them…or will they be defeated by their own inner demons?"
+									}
+									],
+					"resourceURI": "http://gateway.marvel.com/v1/public/comics/1864",
+					"urls": [
+							 {
+							 "type": "detail",
+							 "url": "http://marvel.com/comics/issue/1864/x-men_2004_169?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "purchase",
+							 "url": "http://comicstore.marvel.com/X-Men-169/digital-comic/2812?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "reader",
+							 "url": "http://marvel.com/digitalcomics/view.htm?iid=2812&utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "inAppLink",
+							 "url": "http://applink.marvel.com/issue/2812?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 }
+							 ],
+					"series": {
+					"resourceURI": "http://gateway.marvel.com/v1/public/series/403",
+					"name": "X-Men (2004 - 2007)"
+					},
+					"variants": [],
+					"collections": [
+									{
+									"resourceURI": "http://gateway.marvel.com/v1/public/comics/2175",
+									"name": "X-Men: Golgotha (Trade Paperback)"
+									}
+									],
+					"collectedIssues": [],
+					"dates": [
+							  {
+							  "type": "onsaleDate",
+							  "date": "2005-04-20T00:00:00-0400"
+							  },
+							  {
+							  "type": "focDate",
+							  "date": "1969-12-31T19:00:00-0500"
+							  },
+							  {
+							  "type": "unlimitedDate",
+							  "date": "2007-11-13T00:00:00-0500"
+							  },
+							  {
+							  "type": "digitalPurchaseDate",
+							  "date": "2010-04-13T00:00:00-0400"
+							  }
+							  ],
+					"prices": [
+							   {
+							   "type": "printPrice",
+							   "price": 2.25
+							   },
+							   {
+							   "type": "digitalPurchasePrice",
+							   "price": 1.99
+							   }
+							   ],
+					"thumbnail": {
+					"path": "http://i.annihil.us/u/prod/marvel/i/mg/f/40/4bc641b08fcff",
+					"extension": "jpg"
+					},
+					"images": [
+							   {
+							   "path": "http://i.annihil.us/u/prod/marvel/i/mg/f/40/4bc641b08fcff",
+							   "extension": "jpg"
+							   }
+							   ],
+					"creators": {
+					"available": 5,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/1864/creators",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/409",
+							  "name": "Liquid Graphics",
+							  "role": "colorist"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11757",
+							  "name": "Salvador Larroca",
+							  "role": "penciller (cover)"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11553",
+							  "name": "Danny K. Miki",
+							  "role": "inker"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/94",
+							  "name": "Peter Milligan",
+							  "role": "writer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/361",
+							  "name": "Cory Petit",
+							  "role": "letterer"
+							  }
+							  ],
+					"returned": 5
+					},
+					"characters": {
+					"available": 1,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/1864/characters",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009726",
+							  "name": "X-Men"
+							  }
+							  ],
+					"returned": 1
+					},
+					"stories": {
+					"available": 2,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/1864/stories",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/636",
+							  "name": "4 of 5 - Golgotha",
+							  "type": "cover"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/637",
+							  "name": "4 of 5 - Golgotha",
+							  "type": "interiorStory"
+							  }
+							  ],
+					"returned": 2
+					},
+					"events": {
+					"available": 0,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/1864/events",
+					"items": [],
+					"returned": 0
+					}
+					},
+					{
+					"id": 1971,
+					"digitalId": 2813,
+					"title": "X-Men (2004) #170",
+					"issueNumber": 170,
+					"variantDescription": "",
+					"description": "\"GOLGOTHA\" Part 5 (of 5) The final confrontation with the hideous Golgotha happens here! Can the X-Men get over their inner demons and finally destroy this creature for good?!",
+					"modified": "1969-12-31T19:00:00-0500",
+					"isbn": "",
+					"upc": "5960601772-17011",
+					"diamondCode": "",
+					"ean": "",
+					"issn": "",
+					"format": "Comic",
+					"pageCount": 0,
+					"textObjects": [
+									{
+									"type": "issue_solicit_text",
+									"language": "en-us",
+									"text": "\"GOLGOTHA\"\r<br>The final confrontation with the hideous Golgotha happens here! Can the X-Men get over their inner demons and finally destroy this creature for good?!\r<br>Part 5 (of 5).\r<br>"
+									},
+									{
+									"type": "issue_preview_text",
+									"language": "en-us",
+									"text": "\"GOLGOTHA\" Part 5 (of 5) The final confrontation with the hideous Golgotha happens here! Can the X-Men get over their inner demons and finally destroy this creature for good?!"
+									}
+									],
+					"resourceURI": "http://gateway.marvel.com/v1/public/comics/1971",
+					"urls": [
+							 {
+							 "type": "detail",
+							 "url": "http://marvel.com/comics/issue/1971/x-men_2004_170?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "purchase",
+							 "url": "http://comicstore.marvel.com/X-Men-170/digital-comic/2813?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "reader",
+							 "url": "http://marvel.com/digitalcomics/view.htm?iid=2813&utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "inAppLink",
+							 "url": "http://applink.marvel.com/issue/2813?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 }
+							 ],
+					"series": {
+					"resourceURI": "http://gateway.marvel.com/v1/public/series/403",
+					"name": "X-Men (2004 - 2007)"
+					},
+					"variants": [],
+					"collections": [
+									{
+									"resourceURI": "http://gateway.marvel.com/v1/public/comics/2175",
+									"name": "X-Men: Golgotha (Trade Paperback)"
+									}
+									],
+					"collectedIssues": [],
+					"dates": [
+							  {
+							  "type": "onsaleDate",
+							  "date": "2005-05-25T00:00:00-0400"
+							  },
+							  {
+							  "type": "focDate",
+							  "date": "1969-12-31T19:00:00-0500"
+							  },
+							  {
+							  "type": "unlimitedDate",
+							  "date": "2007-11-13T00:00:00-0500"
+							  },
+							  {
+							  "type": "digitalPurchaseDate",
+							  "date": "2010-04-13T00:00:00-0400"
+							  }
+							  ],
+					"prices": [
+							   {
+							   "type": "printPrice",
+							   "price": 2.25
+							   },
+							   {
+							   "type": "digitalPurchasePrice",
+							   "price": 1.99
+							   }
+							   ],
+					"thumbnail": {
+					"path": "http://i.annihil.us/u/prod/marvel/i/mg/9/90/4bc63b4783b7e",
+					"extension": "jpg"
+					},
+					"images": [
+							   {
+							   "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/90/4bc63b4783b7e",
+							   "extension": "jpg"
+							   }
+							   ],
+					"creators": {
+					"available": 5,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/1971/creators",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/409",
+							  "name": "Liquid Graphics",
+							  "role": "colorist"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11757",
+							  "name": "Salvador Larroca",
+							  "role": "penciller (cover)"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11553",
+							  "name": "Danny K. Miki",
+							  "role": "inker"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/94",
+							  "name": "Peter Milligan",
+							  "role": "writer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/361",
+							  "name": "Cory Petit",
+							  "role": "letterer"
+							  }
+							  ],
+					"returned": 5
+					},
+					"characters": {
+					"available": 1,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/1971/characters",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009726",
+							  "name": "X-Men"
+							  }
+							  ],
+					"returned": 1
+					},
+					"stories": {
+					"available": 2,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/1971/stories",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/638",
+							  "name": "5 of 5 - Golgotha",
+							  "type": "cover"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/639",
+							  "name": "5 of 5 - Golgotha",
+							  "type": "interiorStory"
+							  }
+							  ],
+					"returned": 2
+					},
+					"events": {
+					"available": 0,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/1971/events",
+					"items": [],
+					"returned": 0
+					}
+					},
+					{
+					"id": 2075,
+					"digitalId": 2814,
+					"title": "X-Men (2004) #171",
+					"issueNumber": 171,
+					"variantDescription": "",
+					"description": "\"BIZARRE LOVE TRIANGLE\" Part 1 (of 4). A new student has arrived at the Xavier Institute. She’s sexy, sassy, and has the hots for Gambit! Will Gambit be seduced by this little Lolita, or will Rogue do the unthinkable to keep her man?!",
+					"modified": "-0001-11-30T00:00:00-0500",
+					"isbn": "",
+					"upc": "5960601772-17111",
+					"diamondCode": "",
+					"ean": "",
+					"issn": "",
+					"format": "Comic",
+					"pageCount": 0,
+					"textObjects": [
+									{
+									"type": "issue_solicit_text",
+									"language": "en-us",
+									"text": "\"BIZARRE LOVE TRIANGLE\" Part 1 (of 4).\r<br>A new student has arrived at the Xavier Institute. She’s sexy, sassy, and has the hots for Gambit! Will Gambit be seduced by this little Lolita, or will Rogue do the unthinkable to keep her man?!\r<br>32 PGS./T+ Suggested for Teens and Up …$2.50 \r<br>"
+									},
+									{
+									"type": "issue_preview_text",
+									"language": "en-us",
+									"text": "\"BIZARRE LOVE TRIANGLE\" Part 1 (of 4). A new student has arrived at the Xavier Institute. She’s sexy, sassy, and has the hots for Gambit! Will Gambit be seduced by this little Lolita, or will Rogue do the unthinkable to keep her man?!"
+									}
+									],
+					"resourceURI": "http://gateway.marvel.com/v1/public/comics/2075",
+					"urls": [
+							 {
+							 "type": "detail",
+							 "url": "http://marvel.com/comics/issue/2075/x-men_2004_171?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "purchase",
+							 "url": "http://comicstore.marvel.com/X-Men-171/digital-comic/2814?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "reader",
+							 "url": "http://marvel.com/digitalcomics/view.htm?iid=2814&utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "inAppLink",
+							 "url": "http://applink.marvel.com/issue/2814?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 }
+							 ],
+					"series": {
+					"resourceURI": "http://gateway.marvel.com/v1/public/series/403",
+					"name": "X-Men (2004 - 2007)"
+					},
+					"variants": [],
+					"collections": [
+									{
+									"resourceURI": "http://gateway.marvel.com/v1/public/comics/2411",
+									"name": "X-Men: Bizarre Love Triangle (Trade Paperback)"
+									}
+									],
+					"collectedIssues": [],
+					"dates": [
+							  {
+							  "type": "onsaleDate",
+							  "date": "2005-06-08T00:00:00-0400"
+							  },
+							  {
+							  "type": "focDate",
+							  "date": "-0001-11-30T00:00:00-0500"
+							  },
+							  {
+							  "type": "unlimitedDate",
+							  "date": "2007-11-13T00:00:00-0500"
+							  },
+							  {
+							  "type": "digitalPurchaseDate",
+							  "date": "2010-04-13T00:00:00-0400"
+							  }
+							  ],
+					"prices": [
+							   {
+							   "type": "printPrice",
+							   "price": 2.5
+							   },
+							   {
+							   "type": "digitalPurchasePrice",
+							   "price": 1.99
+							   }
+							   ],
+					"thumbnail": {
+					"path": "http://i.annihil.us/u/prod/marvel/i/mg/3/20/4bc6356a08452",
+					"extension": "jpg"
+					},
+					"images": [
+							   {
+							   "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/20/4bc6356a08452",
+							   "extension": "jpg"
+							   }
+							   ],
+					"creators": {
+					"available": 5,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/2075/creators",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/409",
+							  "name": "Liquid Graphics",
+							  "role": "colorist"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11757",
+							  "name": "Salvador Larroca",
+							  "role": "penciller (cover)"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11553",
+							  "name": "Danny K. Miki",
+							  "role": "inker"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/94",
+							  "name": "Peter Milligan",
+							  "role": "writer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/361",
+							  "name": "Cory Petit",
+							  "role": "letterer"
+							  }
+							  ],
+					"returned": 5
+					},
+					"characters": {
+					"available": 5,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/2075/characters",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009310",
+							  "name": "Emma Frost"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009313",
+							  "name": "Gambit"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009337",
+							  "name": "Havok"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009546",
+							  "name": "Rogue"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009726",
+							  "name": "X-Men"
+							  }
+							  ],
+					"returned": 5
+					},
+					"stories": {
+					"available": 2,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/2075/stories",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/640",
+							  "name": "1 of 4 - Bizarre Love Triangle",
+							  "type": "cover"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/641",
+							  "name": "1 of 4 - Bizarre Love Triangle",
+							  "type": "interiorStory"
+							  }
+							  ],
+					"returned": 2
+					},
+					"events": {
+					"available": 0,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/2075/events",
+					"items": [],
+					"returned": 0
+					}
+					},
+					{
+					"id": 2076,
+					"digitalId": 2815,
+					"title": "X-Men (2004) #172",
+					"issueNumber": 172,
+					"variantDescription": "",
+					"description": "\"BIZARRE LOVE TRIANGLE\" Part 2 (of 4)  A new student tries to seduce Gambit and you better bet Rogue is going to want some words with the young lady.",
+					"modified": "-0001-11-30T00:00:00-0500",
+					"isbn": "",
+					"upc": "5960601772-17211",
+					"diamondCode": "",
+					"ean": "",
+					"issn": "",
+					"format": "Comic",
+					"pageCount": 0,
+					"textObjects": [
+									{
+									"type": "issue_solicit_text",
+									"language": "en-us",
+									"text": "\"BIZARRE LOVE TRIANGLE\" Part 2 (of 4).\r<br>A new student has arrived at the Xavier Institute. She’s sexy, sassy, and has the hots for Gambit! Will Gambit be seduced by this little Lolita, or will Rogue do the unthinkable to keep her man?!\r<br>32 PGS./T+ Suggested for Teens and Up …$2.50 \r<br>"
+									},
+									{
+									"type": "issue_preview_text",
+									"language": "en-us",
+									"text": "\"BIZARRE LOVE TRIANGLE\" Part 2 (of 4)  A new student tries to seduce Gambit and you better bet Rogue is going to want some words with the young lady."
+									}
+									],
+					"resourceURI": "http://gateway.marvel.com/v1/public/comics/2076",
+					"urls": [
+							 {
+							 "type": "detail",
+							 "url": "http://marvel.com/comics/issue/2076/x-men_2004_172?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "purchase",
+							 "url": "http://comicstore.marvel.com/X-Men-172/digital-comic/2815?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "reader",
+							 "url": "http://marvel.com/digitalcomics/view.htm?iid=2815&utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "inAppLink",
+							 "url": "http://applink.marvel.com/issue/2815?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 }
+							 ],
+					"series": {
+					"resourceURI": "http://gateway.marvel.com/v1/public/series/403",
+					"name": "X-Men (2004 - 2007)"
+					},
+					"variants": [],
+					"collections": [
+									{
+									"resourceURI": "http://gateway.marvel.com/v1/public/comics/2411",
+									"name": "X-Men: Bizarre Love Triangle (Trade Paperback)"
+									}
+									],
+					"collectedIssues": [],
+					"dates": [
+							  {
+							  "type": "onsaleDate",
+							  "date": "2005-06-29T00:00:00-0400"
+							  },
+							  {
+							  "type": "focDate",
+							  "date": "-0001-11-30T00:00:00-0500"
+							  },
+							  {
+							  "type": "unlimitedDate",
+							  "date": "2007-11-13T00:00:00-0500"
+							  },
+							  {
+							  "type": "digitalPurchaseDate",
+							  "date": "2010-04-13T00:00:00-0400"
+							  }
+							  ],
+					"prices": [
+							   {
+							   "type": "printPrice",
+							   "price": 2.5
+							   },
+							   {
+							   "type": "digitalPurchasePrice",
+							   "price": 1.99
+							   }
+							   ],
+					"thumbnail": {
+					"path": "http://i.annihil.us/u/prod/marvel/i/mg/9/60/4bc46e28734ad",
+					"extension": "jpg"
+					},
+					"images": [
+							   {
+							   "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/60/4bc46e28734ad",
+							   "extension": "jpg"
+							   }
+							   ],
+					"creators": {
+					"available": 5,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/2076/creators",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/409",
+							  "name": "Liquid Graphics",
+							  "role": "colorist"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11757",
+							  "name": "Salvador Larroca",
+							  "role": "penciller (cover)"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11553",
+							  "name": "Danny K. Miki",
+							  "role": "inker"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/94",
+							  "name": "Peter Milligan",
+							  "role": "writer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/361",
+							  "name": "Cory Petit",
+							  "role": "letterer"
+							  }
+							  ],
+					"returned": 5
+					},
+					"characters": {
+					"available": 1,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/2076/characters",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009726",
+							  "name": "X-Men"
+							  }
+							  ],
+					"returned": 1
+					},
+					"stories": {
+					"available": 2,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/2076/stories",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/642",
+							  "name": "2 of 4 - Bizarre Love Triangle",
+							  "type": "cover"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/643",
+							  "name": "2 of 4 - Bizarre Love Triangle",
+							  "type": "interiorStory"
+							  }
+							  ],
+					"returned": 2
+					},
+					"events": {
+					"available": 0,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/2076/events",
+					"items": [],
+					"returned": 0
+					}
+					},
+					{
+					"id": 2182,
+					"digitalId": 2816,
+					"title": "X-Men (2004) #173",
+					"issueNumber": 173,
+					"variantDescription": "",
+					"description": "\"BIZARRE LOVE TRIANGLE\" Part 3 (of 4) Gambit and Rogueâ€™s tumultuous relationship reaches its ultimate breaking point! Will Gambit give in to his desires and find love in the arms of another woman? Also, the X-Men consider a new member â€“ one of their greatest foes of all time! ",
+					"modified": "-0001-11-30T00:00:00-0500",
+					"isbn": "",
+					"upc": "5960601772-17311",
+					"diamondCode": "",
+					"ean": "",
+					"issn": "",
+					"format": "Comic",
+					"pageCount": 0,
+					"textObjects": [
+									{
+									"type": "issue_solicit_text",
+									"language": "en-us",
+									"text": "\"BIZARRE LOVE TRIANGLE\"\r<br>Gambit and Rogue’s tumultuous relationship reaches its ultimate breaking point! Will Gambit give in to his desires and find love in the arms of another woman? Also, the X-Men consider a new member – one of their greatest foes of all time! Part 3 (of 3).\r<br>32 PGS./T+ SUGGESTED FOR TEENS AND UP ...$2.50\r<br>"
+									},
+									{
+									"type": "issue_preview_text",
+									"language": "en-us",
+									"text": "\"BIZARRE LOVE TRIANGLE\" Part 3 (of 4) Gambit and Rogueâ€™s tumultuous relationship reaches its ultimate breaking point! Will Gambit give in to his desires and find love in the arms of another woman? Also, the X-Men consider a new member â€“ one of their greatest foes of all time! "
+									}
+									],
+					"resourceURI": "http://gateway.marvel.com/v1/public/comics/2182",
+					"urls": [
+							 {
+							 "type": "detail",
+							 "url": "http://marvel.com/comics/issue/2182/x-men_2004_173?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "purchase",
+							 "url": "http://comicstore.marvel.com/X-Men-173/digital-comic/2816?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "reader",
+							 "url": "http://marvel.com/digitalcomics/view.htm?iid=2816&utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "inAppLink",
+							 "url": "http://applink.marvel.com/issue/2816?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 }
+							 ],
+					"series": {
+					"resourceURI": "http://gateway.marvel.com/v1/public/series/403",
+					"name": "X-Men (2004 - 2007)"
+					},
+					"variants": [],
+					"collections": [
+									{
+									"resourceURI": "http://gateway.marvel.com/v1/public/comics/2411",
+									"name": "X-Men: Bizarre Love Triangle (Trade Paperback)"
+									}
+									],
+					"collectedIssues": [],
+					"dates": [
+							  {
+							  "type": "onsaleDate",
+							  "date": "2005-07-27T00:00:00-0400"
+							  },
+							  {
+							  "type": "focDate",
+							  "date": "-0001-11-30T00:00:00-0500"
+							  },
+							  {
+							  "type": "unlimitedDate",
+							  "date": "2007-11-13T00:00:00-0500"
+							  },
+							  {
+							  "type": "digitalPurchaseDate",
+							  "date": "2010-04-13T00:00:00-0400"
+							  }
+							  ],
+					"prices": [
+							   {
+							   "type": "printPrice",
+							   "price": 2.5
+							   },
+							   {
+							   "type": "digitalPurchasePrice",
+							   "price": 1.99
+							   }
+							   ],
+					"thumbnail": {
+					"path": "http://i.annihil.us/u/prod/marvel/i/mg/3/10/4bc6305536e42",
+					"extension": "jpg"
+					},
+					"images": [
+							   {
+							   "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/10/4bc6305536e42",
+							   "extension": "jpg"
+							   }
+							   ],
+					"creators": {
+					"available": 5,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/2182/creators",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/409",
+							  "name": "Liquid Graphics",
+							  "role": "colorist"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11757",
+							  "name": "Salvador Larroca",
+							  "role": "penciller (cover)"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11553",
+							  "name": "Danny K. Miki",
+							  "role": "inker"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/94",
+							  "name": "Peter Milligan",
+							  "role": "writer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/361",
+							  "name": "Cory Petit",
+							  "role": "letterer"
+							  }
+							  ],
+					"returned": 5
+					},
+					"characters": {
+					"available": 1,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/2182/characters",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009726",
+							  "name": "X-Men"
+							  }
+							  ],
+					"returned": 1
+					},
+					"stories": {
+					"available": 2,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/2182/stories",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/644",
+							  "name": "3 of 4 - Bizarre Love Triangle",
+							  "type": "cover"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/645",
+							  "name": "3 of 4 - Bizarre Love Triangle",
+							  "type": "interiorStory"
+							  }
+							  ],
+					"returned": 2
+					},
+					"events": {
+					"available": 0,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/2182/events",
+					"items": [],
+					"returned": 0
+					}
+					},
+					{
+					"id": 2302,
+					"digitalId": 2817,
+					"title": "X-Men (2004) #174",
+					"issueNumber": 174,
+					"variantDescription": "",
+					"description": "\"BIZARRE LOVE TRIANGLE\" Part 4 (of 4) A figure from the X-Men’s past has returned to the mansion seeking sanctuary within the walls of Xavier’s home. The guest, however, isn’t getting the warmest welcome. Could the X-Men really turn away this desperate mutant and will they be able to forgive themselves if they do?",
+					"modified": "-0001-11-30T00:00:00-0500",
+					"isbn": "",
+					"upc": "5960601772-17411",
+					"diamondCode": "",
+					"ean": "",
+					"issn": "",
+					"format": "Comic",
+					"pageCount": 0,
+					"textObjects": [
+									{
+									"type": "issue_solicit_text",
+									"language": "en-us",
+									"text": "\"BIZARRE LOVE TRIANGLE\"\r<br>A figure from the X-Men’s past has returned to the mansion seeking sanctuary within the walls of Xavier’s home. The guest, however, isn’t getting the warmest welcome. Could the X-Men really turn away this desperate mutant and will they be able to forgive themselves if they do? Part 4 (of 4)!\r<br>32 PGS./T+ SUGGESTED FOR TEENS AND UP …$2.50\r<br>"
+									},
+									{
+									"type": "issue_preview_text",
+									"language": "en-us",
+									"text": "\"BIZARRE LOVE TRIANGLE\" Part 4 (of 4) A figure from the X-Men’s past has returned to the mansion seeking sanctuary within the walls of Xavier’s home. The guest, however, isn’t getting the warmest welcome. Could the X-Men really turn away this desperate mutant and will they be able to forgive themselves if they do?"
+									}
+									],
+					"resourceURI": "http://gateway.marvel.com/v1/public/comics/2302",
+					"urls": [
+							 {
+							 "type": "detail",
+							 "url": "http://marvel.com/comics/issue/2302/x-men_2004_174?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "purchase",
+							 "url": "http://comicstore.marvel.com/X-Men-174/digital-comic/2817?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "reader",
+							 "url": "http://marvel.com/digitalcomics/view.htm?iid=2817&utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "inAppLink",
+							 "url": "http://applink.marvel.com/issue/2817?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 }
+							 ],
+					"series": {
+					"resourceURI": "http://gateway.marvel.com/v1/public/series/403",
+					"name": "X-Men (2004 - 2007)"
+					},
+					"variants": [],
+					"collections": [
+									{
+									"resourceURI": "http://gateway.marvel.com/v1/public/comics/2411",
+									"name": "X-Men: Bizarre Love Triangle (Trade Paperback)"
+									}
+									],
+					"collectedIssues": [],
+					"dates": [
+							  {
+							  "type": "onsaleDate",
+							  "date": "2005-08-10T00:00:00-0400"
+							  },
+							  {
+							  "type": "focDate",
+							  "date": "-0001-11-30T00:00:00-0500"
+							  },
+							  {
+							  "type": "unlimitedDate",
+							  "date": "2007-11-13T00:00:00-0500"
+							  },
+							  {
+							  "type": "digitalPurchaseDate",
+							  "date": "2010-04-13T00:00:00-0400"
+							  }
+							  ],
+					"prices": [
+							   {
+							   "type": "printPrice",
+							   "price": 2.5
+							   },
+							   {
+							   "type": "digitalPurchasePrice",
+							   "price": 1.99
+							   }
+							   ],
+					"thumbnail": {
+					"path": "http://i.annihil.us/u/prod/marvel/i/mg/9/70/4bc62a8685c0f",
+					"extension": "jpg"
+					},
+					"images": [
+							   {
+							   "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/70/4bc62a8685c0f",
+							   "extension": "jpg"
+							   }
+							   ],
+					"creators": {
+					"available": 5,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/2302/creators",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/409",
+							  "name": "Liquid Graphics",
+							  "role": "colorist"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11757",
+							  "name": "Salvador Larroca",
+							  "role": "penciller (cover)"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11553",
+							  "name": "Danny K. Miki",
+							  "role": "inker"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/94",
+							  "name": "Peter Milligan",
+							  "role": "writer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/361",
+							  "name": "Cory Petit",
+							  "role": "letterer"
+							  }
+							  ],
+					"returned": 5
+					},
+					"characters": {
+					"available": 1,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/2302/characters",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009726",
+							  "name": "X-Men"
+							  }
+							  ],
+					"returned": 1
+					},
+					"stories": {
+					"available": 2,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/2302/stories",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/646",
+							  "name": "4 of 4 - Bizarre Love Triangle",
+							  "type": "cover"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/647",
+							  "name": "4 of 4 - Bizarre Love Triangle",
+							  "type": "interiorStory"
+							  }
+							  ],
+					"returned": 2
+					},
+					"events": {
+					"available": 0,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/2302/events",
+					"items": [],
+					"returned": 0
+					}
+					},
+					{
+					"id": 2410,
+					"digitalId": 2818,
+					"title": "X-Men (2004) #175",
+					"issueNumber": 175,
+					"variantDescription": "",
+					"description": "WILD KINGDOM Part 1\nThe X-Men travel deep to the heart of Africa to investigate reports of strange, mutated animals roaming wild near Wakanda. But what happens when their discoveries lead them to the King of Wakanda himself—the Black Panther?!",
+					"modified": "-0001-11-30T00:00:00-0500",
+					"isbn": "",
+					"upc": "5960601772-17511",
+					"diamondCode": "",
+					"ean": "",
+					"issn": "",
+					"format": "Comic",
+					"pageCount": 0,
+					"textObjects": [
+									{
+									"type": "issue_solicit_text",
+									"language": "en-us",
+									"text": "Parts 1 of a 4-part crossover with BLACK PANTHER!\r<br>\r<br>The X-Men travel deep to the heart of Africa to investigate reports of strange, mutated animals roaming wild near Wakanda. But what happens when their discoveries lead them to the King of Wakanda himself—T’Challa, the Black Panther?!\r<br>This issue leads into BLACK PANTHER #8!\r<br>\r<br>32 PGS. /T+ SUGGESTES FOR TEENS AND UP …$2.50 \r<br>"
+									},
+									{
+									"type": "issue_preview_text",
+									"language": "en-us",
+									"text": "WILD KINGDOM Part 1\nThe X-Men travel deep to the heart of Africa to investigate reports of strange, mutated animals roaming wild near Wakanda. But what happens when their discoveries lead them to the King of Wakanda himself—the Black Panther?!"
+									}
+									],
+					"resourceURI": "http://gateway.marvel.com/v1/public/comics/2410",
+					"urls": [
+							 {
+							 "type": "detail",
+							 "url": "http://marvel.com/comics/issue/2410/x-men_2004_175?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "purchase",
+							 "url": "http://comicstore.marvel.com/X-Men-175/digital-comic/2818?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "reader",
+							 "url": "http://marvel.com/digitalcomics/view.htm?iid=2818&utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "inAppLink",
+							 "url": "http://applink.marvel.com/issue/2818?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 }
+							 ],
+					"series": {
+					"resourceURI": "http://gateway.marvel.com/v1/public/series/403",
+					"name": "X-Men (2004 - 2007)"
+					},
+					"variants": [],
+					"collections": [
+									{
+									"resourceURI": "http://gateway.marvel.com/v1/public/comics/3365",
+									"name": "X-Men/Black Panther (Trade Paperback)"
+									}
+									],
+					"collectedIssues": [],
+					"dates": [
+							  {
+							  "type": "onsaleDate",
+							  "date": "2005-09-14T00:00:00-0400"
+							  },
+							  {
+							  "type": "focDate",
+							  "date": "-0001-11-30T00:00:00-0500"
+							  },
+							  {
+							  "type": "unlimitedDate",
+							  "date": "2007-11-13T00:00:00-0500"
+							  },
+							  {
+							  "type": "digitalPurchaseDate",
+							  "date": "2010-07-20T00:00:00-0400"
+							  }
+							  ],
+					"prices": [
+							   {
+							   "type": "printPrice",
+							   "price": 2.5
+							   },
+							   {
+							   "type": "digitalPurchasePrice",
+							   "price": 1.99
+							   }
+							   ],
+					"thumbnail": {
+					"path": "http://i.annihil.us/u/prod/marvel/i/mg/8/b0/4bc6241c423ec",
+					"extension": "jpg"
+					},
+					"images": [
+							   {
+							   "path": "http://i.annihil.us/u/prod/marvel/i/mg/8/b0/4bc6241c423ec",
+							   "extension": "jpg"
+							   }
+							   ],
+					"creators": {
+					"available": 5,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/2410/creators",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/409",
+							  "name": "Liquid Graphics",
+							  "role": "colorist"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11757",
+							  "name": "Salvador Larroca",
+							  "role": "penciller (cover)"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11553",
+							  "name": "Danny K. Miki",
+							  "role": "inker"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/94",
+							  "name": "Peter Milligan",
+							  "role": "writer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/361",
+							  "name": "Cory Petit",
+							  "role": "letterer"
+							  }
+							  ],
+					"returned": 5
+					},
+					"characters": {
+					"available": 7,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/2410/characters",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009313",
+							  "name": "Gambit"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009337",
+							  "name": "Havok"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009362",
+							  "name": "Iceman"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009499",
+							  "name": "Polaris"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009546",
+							  "name": "Rogue"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009629",
+							  "name": "Storm"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009726",
+							  "name": "X-Men"
+							  }
+							  ],
+					"returned": 7
+					},
+					"stories": {
+					"available": 2,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/2410/stories",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/648",
+							  "name": "1 of 2- Black Panther crossover",
+							  "type": "cover"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/649",
+							  "name": "1 of 2- Black Panther crossover",
+							  "type": "interiorStory"
+							  }
+							  ],
+					"returned": 2
+					},
+					"events": {
+					"available": 0,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/2410/events",
+					"items": [],
+					"returned": 0
+					}
+					},
+					{
+					"id": 2465,
+					"digitalId": 2819,
+					"title": "X-Men (2004) #176",
+					"issueNumber": 176,
+					"variantDescription": "",
+					"description": "WILD KINGDOM Part 3\nThe X-Men’s team-up with Black Panther continues! With the X-Men captured, Storm and Black Panther are going to have to put their differences aside and work together before all of Africa is overrun with mutated monstrosities! ",
+					"modified": "-0001-11-30T00:00:00-0500",
+					"isbn": "",
+					"upc": "5960601772-17611",
+					"diamondCode": "",
+					"ean": "",
+					"issn": "",
+					"format": "Comic",
+					"pageCount": 0,
+					"textObjects": [
+									{
+									"type": "issue_solicit_text",
+									"language": "en-us",
+									"text": "“WILD KINGDOM”\r<br>\r<br>The X-Men’s team-up with Black Panther continues! With the X-Men captured, Storm and Black Panther are going to have to put their differences aside and work together before all of Africa is overrun with mutated monstrosities! Part 3 (of 4)!\r<br>\r<br>32 PGS./T+ SUGGESTED FOR TEENS AND UP …$2.50\r<br>"
+									},
+									{
+									"type": "issue_preview_text",
+									"language": "en-us",
+									"text": "WILD KINGDOM Part 3\nThe X-Menâ€™s team-up with Black Panther continues! With the X-Men captured, Storm and Black Panther are going to have to put their differences aside and work together before all of Africa is overrun with mutated monstrosities! "
+									}
+									],
+					"resourceURI": "http://gateway.marvel.com/v1/public/comics/2465",
+					"urls": [
+							 {
+							 "type": "detail",
+							 "url": "http://marvel.com/comics/issue/2465/x-men_2004_176?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "purchase",
+							 "url": "http://comicstore.marvel.com/X-Men-176/digital-comic/2819?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "reader",
+							 "url": "http://marvel.com/digitalcomics/view.htm?iid=2819&utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 },
+							 {
+							 "type": "inAppLink",
+							 "url": "http://applink.marvel.com/issue/2819?utm_campaign=apiRef&utm_source=da535f62e1826e46ca6f51149cef4363"
+							 }
+							 ],
+					"series": {
+					"resourceURI": "http://gateway.marvel.com/v1/public/series/403",
+					"name": "X-Men (2004 - 2007)"
+					},
+					"variants": [],
+					"collections": [
+									{
+									"resourceURI": "http://gateway.marvel.com/v1/public/comics/3365",
+									"name": "X-Men/Black Panther (Trade Paperback)"
+									}
+									],
+					"collectedIssues": [],
+					"dates": [
+							  {
+							  "type": "onsaleDate",
+							  "date": "2005-10-19T00:00:00-0400"
+							  },
+							  {
+							  "type": "focDate",
+							  "date": "-0001-11-30T00:00:00-0500"
+							  },
+							  {
+							  "type": "unlimitedDate",
+							  "date": "2007-11-13T00:00:00-0500"
+							  },
+							  {
+							  "type": "digitalPurchaseDate",
+							  "date": "2010-07-20T00:00:00-0400"
+							  }
+							  ],
+					"prices": [
+							   {
+							   "type": "printPrice",
+							   "price": 2.5
+							   },
+							   {
+							   "type": "digitalPurchasePrice",
+							   "price": 1.99
+							   }
+							   ],
+					"thumbnail": {
+					"path": "http://i.annihil.us/u/prod/marvel/i/mg/6/80/4bc620d8f3629",
+					"extension": "jpg"
+					},
+					"images": [
+							   {
+							   "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/80/4bc620d8f3629",
+							   "extension": "jpg"
+							   }
+							   ],
+					"creators": {
+					"available": 5,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/2465/creators",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/409",
+							  "name": "Liquid Graphics",
+							  "role": "colorist"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11757",
+							  "name": "Salvador Larroca",
+							  "role": "penciller (cover)"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/11553",
+							  "name": "Danny K. Miki",
+							  "role": "inker"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/94",
+							  "name": "Peter Milligan",
+							  "role": "writer"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/creators/361",
+							  "name": "Cory Petit",
+							  "role": "letterer"
+							  }
+							  ],
+					"returned": 5
+					},
+					"characters": {
+					"available": 3,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/2465/characters",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009187",
+							  "name": "Black Panther"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009629",
+							  "name": "Storm"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009726",
+							  "name": "X-Men"
+							  }
+							  ],
+					"returned": 3
+					},
+					"stories": {
+					"available": 2,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/2465/stories",
+					"items": [
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/650",
+							  "name": "2 of 2- Black Panther crossover",
+							  "type": "cover"
+							  },
+							  {
+							  "resourceURI": "http://gateway.marvel.com/v1/public/stories/651",
+							  "name": "2 of 2- Black Panther crossover",
+							  "type": "interiorStory"
+							  }
+							  ],
+					"returned": 2
+					},
+					"events": {
+					"available": 0,
+					"collectionURI": "http://gateway.marvel.com/v1/public/comics/2465/events",
+					"items": [],
+					"returned": 0
+					}
+					}
+					]
+	}
+}
