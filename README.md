@@ -9,8 +9,9 @@ A UICollectionViewLayout that uses a supplimental view to display a folder below
 
 ####TODO
 
-- [ ] Imlement decoration view that places a caret over opened item linking it to the folder
+- [X] Imlement decoration view that places a caret over opened item linking it to the folder
 - [ ] Figure out why position of the folder animates open, but the view just pops in
-- [ ] Implement sticky headers
+- [X] Implement sticky headers
 - [ ] Refactor deltaX calculation into prepareLayout so it isn't re-done for every item 
 - [ ] Allow for per item folder heights.
+- [ ] Implement delegate methods to allow per-section headers/footers
