@@ -9,38 +9,41 @@
 #import "RBCollectionViewInfoFolderLayout.h"
 
 static NSString *const RBCollectionViewInfoFolderCellKind = @"RBCollectionViewInfoFolderCellKind";
-static NSString *const RBCollectionViewInfoFolderDecorationKind = @"RBCollectionViewInfoFolderDecorationKind";
+NSString *const RBCollectionViewInfoFolderDimpleKind = @"RBCollectionViewInfoFolderDimpleKind";
 NSString *const RBCollectionViewInfoFolderHeaderKind = @"RBCollectionViewInfoFolderHeaderKind";
 NSString *const RBCollectionViewInfoFolderFooterKind = @"RBCollectionViewInfoFolderFooterKind";
 NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFolderFolderKind";
 
-// TODO: figure out decorations
-//@interface RBCollectionViewInfoFolderDecoration : UICollectionReusableView
-//
-//@end
-//
-//@implementation RBCollectionViewInfoFolderDecoration
-//
-//+ (NSString *)kind
-//{
-//    return RBCollectionViewInfoFolderDecorationKind;
-//}
-//// TODO: Create a nice view with a caret that will go over the cell and connect to the folder
-//- (void)drawRect:(CGRect)rect
-//{
-//	UIBezierPath* polygonPath = [UIBezierPath bezierPath];
-//	[polygonPath moveToPoint: CGPointMake(22, -0.5)];
-//	[polygonPath addLineToPoint: CGPointMake(43.22, 26.5)];
-//	[polygonPath addLineToPoint: CGPointMake(0.78, 26.5)];
-//	[polygonPath closePath];
-//	[[UIColor blueColor] setFill];
-//	[polygonPath fill];
-//	[[UIColor blackColor] setStroke];
-//	polygonPath.lineWidth = 1;
-//	[polygonPath stroke];
-//}
-//
-//@end
+
+@implementation RBCollectionViewInfoFolderDimple
+
++ (NSString *)kind
+{
+    return RBCollectionViewInfoFolderDimpleKind;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.backgroundColor = [UIColor clearColor];
+		self.color = [UIColor whiteColor];
+    }
+    return self;
+}
+
+- (void)drawRect:(CGRect)rect
+{
+	UIBezierPath* polygonPath = [UIBezierPath bezierPath];
+	[polygonPath moveToPoint: CGPointMake(rect.size.width/2, -0.5)];
+	[polygonPath addLineToPoint: CGPointMake(rect.size.width, rect.size.height)];
+	[polygonPath addLineToPoint: CGPointMake(0, rect.size.height)];
+	[polygonPath closePath];
+	[self.color setFill];
+	[polygonPath fill];
+}
+
+@end
 
 @interface RBCollectionViewInfoFolderLayout ()
 
@@ -83,13 +86,9 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 	self.footerSize = CGSizeZero;
 	self.folderHeight = 100.0;
 	self.interItemSpacingY = 5.0;
-	self.interItemSpacingX = 25.0;
+	self.interItemSpacingX = 5.0;
 
 	self.visibleFolderInSection = [NSMutableDictionary dictionary];
-
-	// TODO: figure out decorations
-//	self.decorations = [NSMutableDictionary dictionary];
-//	[self registerClass:[RBCollectionViewInfoFolderDecoration class] forDecorationViewOfKind:RBCollectionViewInfoFolderDecorationKind];
 }
 
 
@@ -252,7 +251,7 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 	NSMutableDictionary * headerLayoutDictionary = [NSMutableDictionary dictionary];
 	NSMutableDictionary * footerLayoutDictionary = [NSMutableDictionary dictionary];
 	NSMutableDictionary * folderLayoutDictionary = [NSMutableDictionary dictionary];
-//	NSMutableDictionary * decorationLayoutDictionary = [NSMutableDictionary dictionary];
+	NSMutableDictionary * dimpleLayoutDictionary = [NSMutableDictionary dictionary];
 
 	NSInteger numSections = [self.collectionView numberOfSections];
 	self.cellsPerRowInSection = [NSMutableDictionary dictionaryWithCapacity:numSections];
@@ -290,15 +289,13 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 				[folderLayoutDictionary setObject:folderAttributes forKey:indexPath];
 			}
 
-			// TODO: figure out decorations
-//			// Decorations
-//			UICollectionViewLayoutAttributes * decorationAttributes = [self layoutAttributesForDecorationViewOfKind:RBCollectionViewInfoFolderDecorationKind atIndexPath:indexPath];
-//			
-//			if (decorationAttributes)
-//			{
-//				[decorationLayoutDictionary setObject:decorationAttributes forKey:indexPath];
-//				[self.decorations setObject:decorationAttributes forKey:indexPath];
-//			}
+			// Dimples
+			UICollectionViewLayoutAttributes * dimpleAttributes = [self layoutAttributesForSupplementaryViewOfKind:RBCollectionViewInfoFolderDimpleKind atIndexPath:indexPath];
+			
+			if (dimpleAttributes)
+			{
+				[dimpleLayoutDictionary setObject:dimpleAttributes forKey:indexPath];
+			}
 
 			// Footer
 			if(item == numItems - 1)
@@ -317,6 +314,7 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 	newLayoutDictionary[RBCollectionViewInfoFolderFolderKind] = folderLayoutDictionary;
 	newLayoutDictionary[RBCollectionViewInfoFolderHeaderKind] = headerLayoutDictionary;
 	newLayoutDictionary[RBCollectionViewInfoFolderFooterKind] = footerLayoutDictionary;
+	newLayoutDictionary[RBCollectionViewInfoFolderDimpleKind] = dimpleLayoutDictionary;
 
     self.layoutInformation = newLayoutDictionary;
 }
@@ -423,40 +421,36 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 //		attributes.zIndex = -10;
 	}
 
+	if (kind == RBCollectionViewInfoFolderDimpleKind)
+	{
+		NSInteger cellsPerRowInSection = [self.cellsPerRowInSection[@( indexPath.section )] integerValue];
+		NSInteger row = (indexPath.row / cellsPerRowInSection);
+
+		CGFloat totalWidthUsed = cellsPerRowInSection * self.cellSize.width;
+		CGFloat emptySpace = self.collectionView.bounds.size.width - totalWidthUsed;
+		CGFloat rightPadding = emptySpace / (cellsPerRowInSection - 1);
+		CGFloat deltaX = self.cellSize.width + rightPadding;
+
+		CGFloat height = self.interItemSpacingY + 10;
+		CGFloat width = (height / 3) * 5;
+
+		viewRect.origin.x = deltaX * (indexPath.row % cellsPerRowInSection) + self.cellSize.width / 2 - width / 2;
+		viewRect.origin.y += (self.cellSize.height * (1 + row)) + (self.interItemSpacingY * row);
+		viewRect.origin.y += self.headerSize.height * (1 + indexPath.section) + (self.interItemSpacingY * (1 + indexPath.section));
+		viewRect.size.height = height;
+		viewRect.size.width = width;
+
+		// pull dimple over cell
+		viewRect.origin.y -= 10;
+
+		attributes.zIndex = 100;
+
+	}
+
 	attributes.frame = viewRect;
 
 	return attributes;
 }
-
-// TODO: figure out decorations
-//- (UICollectionViewLayoutAttributes *)layoutAttributesForDecorationViewOfKind:(NSString *)decorationViewKind atIndexPath:(NSIndexPath *)indexPath
-//{
-//	UICollectionViewLayoutAttributes * attributes = [UICollectionViewLayoutAttributes layoutAttributesForSupplementaryViewOfKind:decorationViewKind withIndexPath:indexPath];
-//	
-//	CGRect decorationRect = CGRectZero;
-//    
-//	// Do this for all sections before us
-//	for (int i = 0; i < indexPath.section; i++)
-//	{
-//		decorationRect.origin.y += [self heightForSection:i];
-//	}
-//	
-//	NSInteger cellsPerRowInSection = [self.cellsPerRowInSection[@( indexPath.section )] integerValue];
-//	NSInteger row = (indexPath.row / cellsPerRowInSection);
-//	
-//	decorationRect.origin.y += (self.cellSize.height * (1 + row)) + (self.interItemSpacingY * row);
-//	decorationRect.origin.y += self.headerSize.height + (self.interItemSpacingY * 2);
-//	decorationRect.size.height = self.folderHeight;
-//	decorationRect.size.width = self.collectionView.bounds.size.width;
-//	
-//	// pull decoration over cell
-//	decorationRect.origin.y -= self.interItemSpacingY * 2;
-//	
-//	attributes.frame = decorationRect;
-//	attributes.zIndex = 100;
-//    
-//    return attributes;
-//}
 
 - (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect
 {
@@ -472,21 +466,14 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 				if (elementIdentifier == RBCollectionViewInfoFolderFolderKind && [indexPath isEqual:self.visibleFolderInSection[@( indexPath.section )]] == NO)
 					return;
 
+				// Only add dimple if the folder is visible
+				if (elementIdentifier == RBCollectionViewInfoFolderDimpleKind && [indexPath isEqual:self.visibleFolderInSection[@( indexPath.section )]] == NO)
+					return;
+
 				[attributes addObject:layoutAttributes];
 			}
 		}];
 	}];
-
-	// TODO: figure out decorations
-	// Add our decoration views to open folders
-//	[self.decorations enumerateKeysAndObjectsUsingBlock:^(NSIndexPath *indexPath, UICollectionViewLayoutAttributes *layoutAttributes, BOOL *stop) {
-//		
-//		if (CGRectIntersectsRect(rect, layoutAttributes.frame))
-//		{
-//			if ([indexPath isEqual:self.visibleFolderInSection[@( indexPath.section )]])
-//				[attributes addObject:layoutAttributes];
-//		}
-//	}];
 
 	// TODO: implement stickyHeaders
 //	if (self.stickyHeader == NO)

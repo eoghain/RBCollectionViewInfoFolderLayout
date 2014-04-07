@@ -31,11 +31,12 @@
 	layout.footerSize = CGSizeMake(self.view.bounds.size.width, 25);
 	layout.cellSize = CGSizeMake(216, 325);
 	layout.folderHeight = 175;
-	layout.interItemSpacingY = 25;
+	layout.interItemSpacingY = 10;
 
 	[self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:RBCollectionViewInfoFolderHeaderKind withReuseIdentifier:@"header"];
 	[self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:RBCollectionViewInfoFolderFooterKind withReuseIdentifier:@"footer"];
 	[self.collectionView registerClass:[ComicDataView class] forSupplementaryViewOfKind:RBCollectionViewInfoFolderFolderKind withReuseIdentifier:@"folder"];
+	[self.collectionView registerClass:[RBCollectionViewInfoFolderDimple class] forSupplementaryViewOfKind:RBCollectionViewInfoFolderDimpleKind withReuseIdentifier:@"dimple"];
 
 	self.collectionView.backgroundColor = [UIColor colorWithRed:0xee/255.0 green:0xee/255.0 blue:0xee/255.0 alpha:1.0];
 
@@ -138,6 +139,15 @@
 		comicDataView.upc.text = self.data[self.dataKeys[indexPath.section]][@"results"][indexPath.row][@"upc"];
 
 		reuseView = comicDataView;
+	}
+
+	if (kind == RBCollectionViewInfoFolderDimpleKind)
+	{
+		RBCollectionViewInfoFolderDimple * dimple = (id)[self.collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"dimple" forIndexPath:indexPath];
+
+		dimple.color = [UIColor colorWithRed:0x88/255.0 green:0xc2/255.0 blue:0xc4/255.0 alpha:1.0];
+
+		reuseView = dimple;
 	}
 
 	return reuseView;

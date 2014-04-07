@@ -11,6 +11,13 @@
 FOUNDATION_EXPORT NSString *const RBCollectionViewInfoFolderHeaderKind;
 FOUNDATION_EXPORT NSString *const RBCollectionViewInfoFolderFooterKind;
 FOUNDATION_EXPORT NSString *const RBCollectionViewInfoFolderFolderKind;
+FOUNDATION_EXPORT NSString *const RBCollectionViewInfoFolderDimpleKind;
+
+@interface RBCollectionViewInfoFolderDimple : UICollectionReusableView
+
+@property (strong, nonatomic) UIColor * color;
+
+@end
 
 @interface RBCollectionViewInfoFolderLayout : UICollectionViewLayout
 
