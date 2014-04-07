@@ -32,6 +32,7 @@
 	layout.cellSize = CGSizeMake(216, 325);
 	layout.folderHeight = 175;
 	layout.interItemSpacingY = 10;
+	layout.stickyHeaders = YES;
 
 	[self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:RBCollectionViewInfoFolderHeaderKind withReuseIdentifier:@"header"];
 	[self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:RBCollectionViewInfoFolderFooterKind withReuseIdentifier:@"footer"];

@@ -81,6 +81,7 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 
 - (void)setup
 {
+	self.stickyHeaders = NO;
 	self.cellSize = CGSizeMake(200, 200);
 	self.headerSize = CGSizeZero;
 	self.footerSize = CGSizeZero;
@@ -446,7 +447,7 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 
 		[elementsInfo enumerateKeysAndObjectsUsingBlock:^(NSIndexPath *indexPath, UICollectionViewLayoutAttributes *layoutAttributes, BOOL *innerStop) {
 
-			if (CGRectIntersectsRect(rect, layoutAttributes.frame))
+			if (CGRectIntersectsRect(rect, layoutAttributes.frame) || [elementIdentifier isEqualToString:RBCollectionViewInfoFolderHeaderKind])
 			{
 				// Only add folder if it's the visible folder for the section
 				if (elementIdentifier == RBCollectionViewInfoFolderFolderKind && [indexPath isEqual:self.visibleFolderInSection[@( indexPath.section )]] == NO)
@@ -462,38 +463,38 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 	}];
 
 	// TODO: implement stickyHeaders
-//	if (self.stickyHeader == NO)
-//	{
-//		return attributes;
-//	}
-//
-//	[attributes enumerateObjectsUsingBlock:^(UICollectionViewLayoutAttributes * layoutAttributes, NSUInteger idx, BOOL *stop) {
-//		if (layoutAttributes.representedElementKind == RBCollectionViewInfoFolderHeaderKind)
-//		{
-//			layoutAttributes.zIndex = 1024;
-//
-//			CGFloat top = MAX(layoutAttributes.frame.origin.y, self.collectionView.contentOffset.y);
-//			CGFloat left = layoutAttributes.frame.origin.x;
-//			CGFloat width = self.collectionView.bounds.size.width;
-//			CGFloat height = layoutAttributes.frame.size.height;
-//
-//			NSInteger section = layoutAttributes.indexPath.section;
-//			CGFloat bottomY = [self bottomYOfSection:section];
-//			top = MIN(top, bottomY - height);
-//
-//			layoutAttributes.frame = CGRectMake(left, top, width, height);
-//		}
-//	}];
+	if (self.stickyHeaders == NO)
+	{
+		return attributes;
+	}
+
+	[attributes enumerateObjectsUsingBlock:^(UICollectionViewLayoutAttributes * layoutAttributes, NSUInteger idx, BOOL *stop) {
+		if (layoutAttributes.representedElementKind == RBCollectionViewInfoFolderHeaderKind)
+		{
+			layoutAttributes.zIndex = 1024;
+
+			CGFloat top = MAX(layoutAttributes.frame.origin.y, self.collectionView.contentOffset.y);
+			CGFloat left = layoutAttributes.frame.origin.x;
+			CGFloat width = self.collectionView.bounds.size.width;
+			CGFloat height = layoutAttributes.frame.size.height;
+
+			NSInteger section = layoutAttributes.indexPath.section;
+			CGFloat bottomY = [self heightForSection:section] + layoutAttributes.frame.origin.y;
+			top = MIN(top, bottomY - height);
+
+			layoutAttributes.frame = CGRectMake(left, top, width, height);
+		}
+	}];
 
 	return attributes;
 }
 
 -(BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBound
 {
-//    if (self.stickyHeader)
-//    {
-//        return YES;
-//    }
+    if (self.stickyHeaders)
+    {
+        return YES;
+    }
 
     if (newBound.size.width != self.collectionView.bounds.size.width)
     {

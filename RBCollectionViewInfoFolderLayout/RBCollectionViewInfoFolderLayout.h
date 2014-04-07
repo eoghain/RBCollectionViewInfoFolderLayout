@@ -21,6 +21,7 @@ FOUNDATION_EXPORT NSString *const RBCollectionViewInfoFolderDimpleKind;
 
 @interface RBCollectionViewInfoFolderLayout : UICollectionViewLayout
 
+@property (assign, nonatomic) BOOL stickyHeaders;
 @property (assign, nonatomic) CGSize cellSize;
 @property (assign, nonatomic) CGSize headerSize;
 @property (assign, nonatomic) CGSize footerSize;
