@@ -20,7 +20,7 @@
 	data = [NSData dataWithContentsOfFile:path];
 	id xmen = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
 
-	return @{ @"Civil War":civilWar[@"data"], @"X-Men":xmen[@"data"] };
+	return @{ @"X-Men":xmen[@"data"], @"Civil War":civilWar[@"data"] };
 }
 
 @end

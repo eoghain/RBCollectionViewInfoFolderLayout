@@ -372,29 +372,22 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 
 	CGRect viewRect = CGRectZero;
 
+	// Do this for all sections before us
+	for (int i = 0; i < indexPath.section; i++)
+	{
+		viewRect.origin.y += [self heightForSection:i];
+	}
+
 	if (kind == RBCollectionViewInfoFolderHeaderKind)
 	{
-		viewRect.origin.y = 0;
-		if (indexPath.section != 0)
-		{
-			// Do this for all sections before us
-			for (int i = 0; i < indexPath.section; i++)
-			{
-				viewRect.origin.y += [self heightForSection:i];
-			}
-		}
-		
 		viewRect.origin.x = CGRectGetMidX(self.collectionView.bounds) - (self.headerSize.width / 2);
 		viewRect.size = self.headerSize;
 	}
 
 	if (kind == RBCollectionViewInfoFolderFooterKind)
 	{
-		// Do this for all sections including our own
-		for (int i = 0; i <= indexPath.section; i++)
-		{
-			viewRect.origin.y += [self heightForSection:i];
-		}
+		// Add our own sections height
+		viewRect.origin.y += [self heightForSection:indexPath.section];
 
 		// remove accidental addition of our own footer in [heightForSection:]
 		viewRect.origin.y -= self.footerSize.height + self.interItemSpacingY;
@@ -404,12 +397,6 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 
 	if (kind == RBCollectionViewInfoFolderFolderKind)
 	{
-		// Do this for all sections before us
-		for (int i = 0; i < indexPath.section; i++)
-		{
-			viewRect.origin.y += [self heightForSection:i];
-		}
-		
 		NSInteger cellsPerRowInSection = [self.cellsPerRowInSection[@( indexPath.section )] integerValue];
 		NSInteger row = (indexPath.row / cellsPerRowInSection);
 		
@@ -417,8 +404,6 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 		viewRect.origin.y += self.headerSize.height + (self.interItemSpacingY * 2);
 		viewRect.size.height = self.folderHeight;
 		viewRect.size.width = self.collectionView.bounds.size.width;
-
-//		attributes.zIndex = -10;
 	}
 
 	if (kind == RBCollectionViewInfoFolderDimpleKind)
@@ -431,20 +416,21 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 		CGFloat rightPadding = emptySpace / (cellsPerRowInSection - 1);
 		CGFloat deltaX = self.cellSize.width + rightPadding;
 
-		CGFloat height = self.interItemSpacingY + 10;
+		CGFloat additionalHeight = 10;
+		CGFloat height = self.interItemSpacingY + additionalHeight;
 		CGFloat width = (height / 3) * 5;
 
-		viewRect.origin.x = deltaX * (indexPath.row % cellsPerRowInSection) + self.cellSize.width / 2 - width / 2;
+		viewRect.origin.x = deltaX * (indexPath.row % cellsPerRowInSection) + (self.cellSize.width / 2) - (width / 2);
 		viewRect.origin.y += (self.cellSize.height * (1 + row)) + (self.interItemSpacingY * row);
-		viewRect.origin.y += self.headerSize.height * (1 + indexPath.section) + (self.interItemSpacingY * (1 + indexPath.section));
+		viewRect.origin.y += self.headerSize.height + self.interItemSpacingY;
 		viewRect.size.height = height;
 		viewRect.size.width = width;
 
 		// pull dimple over cell
-		viewRect.origin.y -= 10;
+		viewRect.origin.y -= additionalHeight;
 
+		// make sure dimple appears over cell
 		attributes.zIndex = 100;
-
 	}
 
 	attributes.frame = viewRect;
