@@ -111,7 +111,7 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 {
 	NSDictionary * openFolders = [self.visibleFolderInSection copy];
 
-	[[openFolders allKeys] enumerateObjectsUsingBlock:^(NSIndexPath * indexPath, NSUInteger idx, BOOL *stop) {
+	[openFolders enumerateKeysAndObjectsUsingBlock:^(id key, NSIndexPath * indexPath, BOOL *stop) {
 		[self toggleFolderViewForIndexPath:indexPath];
 	}];
 }
@@ -120,7 +120,7 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 {
 	NSDictionary * openFolders = [self.visibleFolderInSection copy];
 
-	[[openFolders allKeys] enumerateObjectsUsingBlock:^(NSIndexPath * indexPath, NSUInteger idx, BOOL *stop) {
+	[openFolders enumerateKeysAndObjectsUsingBlock:^(id key, NSIndexPath * indexPath, BOOL *stop) {
 		if (indexPath.section == section)
 			[self toggleFolderViewForIndexPath:indexPath];
 	}];
