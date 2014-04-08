@@ -19,7 +19,6 @@
 
 		self.title = [[UILabel alloc] init];
 		self.title.translatesAutoresizingMaskIntoConstraints = NO;
-//		self.title.textAlignment = NSTextAlignmentCenter;
 		self.title.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
 		self.title.textColor = [UIColor colorWithRed:0x33/250.0 green:0x33/250.0 blue:0x33/250.0 alpha:1.0];
 		
@@ -40,18 +39,21 @@
 
 		NSMutableArray * constraintsArray = [NSMutableArray array];
 
+		// title
 		[constraintsArray addObject: [NSLayoutConstraint constraintWithItem:self.title attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1.0 constant:20.0f]];
 
 		[constraintsArray addObject: [NSLayoutConstraint constraintWithItem:self.title attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeft multiplier:1.0 constant:10.0f]];
 
 		[constraintsArray addObject: [NSLayoutConstraint constraintWithItem:self.title attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeRight multiplier:1.0 constant:-10.0f]];
 
+		// description
 		[constraintsArray addObject: [NSLayoutConstraint constraintWithItem:self.desc attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.title attribute:NSLayoutAttributeLeading multiplier:1.0 constant:0.0f]];
 
 		[constraintsArray addObject: [NSLayoutConstraint constraintWithItem:self.desc attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.title attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:0.0f]];
 
 		[constraintsArray addObject: [NSLayoutConstraint constraintWithItem:self.desc attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.title attribute:NSLayoutAttributeBottom	multiplier:1.0 constant:5.0f]];
 
+		// upc
 		[constraintsArray addObject: [NSLayoutConstraint constraintWithItem:self.upc attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.desc attribute:NSLayoutAttributeLeading multiplier:1.0 constant:0.0f]];
 
 		[constraintsArray addObject: [NSLayoutConstraint constraintWithItem:self.upc attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.desc attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:0.0f]];

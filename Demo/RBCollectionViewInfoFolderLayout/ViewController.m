@@ -51,11 +51,6 @@
 - (void)viewWillLayoutSubviews
 {
 	[super viewWillLayoutSubviews];
-	
-	// Keep headers full width
-//	RBCollectionViewInfoFolderLayout * layout = (id)self.collectionView.collectionViewLayout;
-//	layout.headerSize = CGSizeMake(self.view.bounds.size.width, 50);
-//	layout.footerSize = CGSizeMake(self.view.bounds.size.width, 25);
 }
 
 #pragma mark - UICollectionViewDelegate
@@ -208,7 +203,25 @@
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(RBCollectionViewInfoFolderLayout *)collectionViewLayout heightForFolderAtIndexPath:(NSIndexPath *)indexPath
 {
-	return 175 * ((indexPath.row % 3) + 1);
+	__block CGFloat height = 0;
+	NSDictionary * fontsAndStrings = @{
+		UIFontTextStyleHeadline : self.data[self.dataKeys[indexPath.section]][@"results"][indexPath.row][@"title"],
+		UIFontTextStyleBody : self.data[self.dataKeys[indexPath.section]][@"results"][indexPath.row][@"description"],
+		UIFontTextStyleCaption2 : self.data[self.dataKeys[indexPath.section]][@"results"][indexPath.row][@"upc"]
+	  };
+
+	CGSize constrainedSize = CGSizeMake(self.collectionView.frame.size.width - 20, CGFLOAT_MAX);
+
+	[fontsAndStrings enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+		NSMutableAttributedString * string = [[NSMutableAttributedString alloc] initWithString:obj attributes:@{ NSFontAttributeName : [UIFont preferredFontForTextStyle:key] }];
+
+		CGRect requiredFrame = [string boundingRectWithSize:constrainedSize options:(NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading) context:nil];
+
+		height += requiredFrame.size.height;
+	}];
+	
+	// 20 == top padding, 10 == label separation, 5 == bottom padding
+	return height + 35;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(RBCollectionViewInfoFolderLayout *)collectionViewLayout sizeForFooterInSection:(NSInteger)section

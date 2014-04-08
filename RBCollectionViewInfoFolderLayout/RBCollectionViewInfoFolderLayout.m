@@ -143,20 +143,22 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 	NSInteger selectedFolderRow = [self rowForIndexPath:indexPath];
 	NSInteger openFolderRow = (visibleFolder) ? [self rowForIndexPath:visibleFolder] : selectedFolderRow;
 
-	// Ugly Hack to get folders to animate closeing
+	// Ugly Hack to get folders to animate closeing/changing size
 	/*
 	 * A. if user selected an item in a different row than currently open folder's row
 	 *
 	 * B. if user selected the item that has folder already open
 	 *		1. close folder by shrinking height
 	 *		2. re-size folder so it can be open again later
+	 *
+	 * C. if toggle is on the same row but different item & items folder is shorter
 	 */
 	if (visibleFolder)
 	{
+		UICollectionViewLayoutAttributes * attributes = self.layoutInformation[RBCollectionViewInfoFolderFolderKind][visibleFolder];
+
 		if ([indexPath isEqual:visibleFolder] || selectedFolderRow != openFolderRow) // A & B
 		{
-			UICollectionViewLayoutAttributes * attributes = self.layoutInformation[RBCollectionViewInfoFolderFolderKind][visibleFolder];
-
 			for (UIView *subview in [self.collectionView subviews])
 			{
 				// Find subview for our visible folder
@@ -179,11 +181,37 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 					} completion:^(BOOL finished) {
 						if ([indexPath isEqual:visibleFolder]) // B.2
 						{
+							// dispatch_after to prevent resized folder from flashing on screen
 							dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 								subview.frame = origFrame;
 							});
 						}
 					}];
+				}
+			}
+		}
+		else // C
+		{
+			CGFloat visibleHeight = [self heightForFolderAtIndexPath:visibleFolder];
+			CGFloat height = [self heightForFolderAtIndexPath:indexPath];
+
+			if (height < visibleHeight) // Resize open folder
+			{
+				for (UIView *subview in [self.collectionView subviews])
+				{
+					// Find subview for our visible folder
+					if ([subview isKindOfClass:[UICollectionReusableView class]] && CGRectEqualToRect(subview.frame, attributes.frame))
+					{
+						[UIView animateWithDuration:0.295 // Just under .3 to try and match
+											  delay:0.0
+											options:UIViewAnimationOptionCurveEaseInOut
+										 animations:^{
+											 CGRect frame = subview.frame;
+											 frame.size.height = height;
+											 subview.frame = frame;
+										 } completion:^(BOOL finished) {
+										 }];
+					}
 				}
 			}
 		}
@@ -196,6 +224,14 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 	else
 	{
 		self.visibleFolderInSection[@( indexPath.section )] = indexPath;
+
+		UICollectionViewLayoutAttributes * attributes = self.layoutInformation[RBCollectionViewInfoFolderFolderKind][indexPath];
+		CGRect scrollFrame = attributes.frame;
+		scrollFrame.origin.y += attributes.frame.size.height;
+		scrollFrame.size.height = 5;
+		dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+			[self.collectionView scrollRectToVisible:scrollFrame animated:YES];
+		});
 	}
 
 	// If we are opening a row below an already open row reload the visible item
