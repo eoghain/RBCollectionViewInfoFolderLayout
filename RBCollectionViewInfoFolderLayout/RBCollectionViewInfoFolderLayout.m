@@ -87,9 +87,6 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 {
 	self.stickyHeaders = NO;
 	self.cellSize = CGSizeMake(200, 200);
-//	self.headerSize = CGSizeZero;
-//	self.footerSize = CGSizeZero;
-//	self.folderHeight = 100.0;
 	self.interItemSpacingY = 5.0;
 	self.interItemSpacingX = 5.0;
 
@@ -108,36 +105,28 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 	[self invalidateLayout];
 }
 
-//- (void)setHeaderSize:(CGSize)headerSize
-//{
-//	if (CGSizeEqualToSize(_headerSize, headerSize))
-//		return;
-//
-//	_headerSize = headerSize;
-//	[self invalidateLayout];
-//}
-//
-//- (void)setFooterSize:(CGSize)footerSize
-//{
-//	if (CGSizeEqualToSize(_footerSize, footerSize))
-//		return;
-//
-//	_footerSize = footerSize;
-//	[self invalidateLayout];
-//}
-//
-//- (void)setFolderHeight:(CGFloat)folderHeight
-//{
-//	if (_folderHeight == folderHeight)
-//		return;
-//
-//	_folderHeight = folderHeight;
-//	[self invalidateLayout];
-//}
-
 #pragma mark - Interface
 
-- (void)closeFolderViewForIndexPaht:(NSIndexPath *)indexPath
+- (void)closeAllOpenFolders
+{
+	NSDictionary * openFolders = [self.visibleFolderInSection copy];
+
+	[[openFolders allKeys] enumerateObjectsUsingBlock:^(NSIndexPath * indexPath, NSUInteger idx, BOOL *stop) {
+		[self toggleFolderViewForIndexPath:indexPath];
+	}];
+}
+
+- (void)closeOpenFolderInSection:(NSInteger)section
+{
+	NSDictionary * openFolders = [self.visibleFolderInSection copy];
+
+	[[openFolders allKeys] enumerateObjectsUsingBlock:^(NSIndexPath * indexPath, NSUInteger idx, BOOL *stop) {
+		if (indexPath.section == section)
+			[self toggleFolderViewForIndexPath:indexPath];
+	}];
+}
+
+- (void)closeFolderViewForIndexPath:(NSIndexPath *)indexPath
 {
 	NSIndexPath * visibleFolder = self.visibleFolderInSection[@( indexPath.section )];
 
@@ -294,7 +283,8 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 	height += headerSize.height + self.interItemSpacingY;
 
 	CGSize footerSize = [self sizeForFooterInSection:section];
-	height += footerSize.height + self.interItemSpacingY;
+	if (footerSize.height > 0)
+		height += footerSize.height + self.interItemSpacingY;
 	
 	NSIndexPath * visibleFolder = self.visibleFolderInSection[@( section )];
 	if (visibleFolder)
@@ -458,7 +448,8 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 		viewRect.origin.y += [self heightForSection:indexPath.section];
 
 		// remove accidental addition of our own footer in [heightForSection:]
-		viewRect.origin.y -= footerSize.height + self.interItemSpacingY;
+		if (footerSize.height > 0)
+			viewRect.origin.y -= footerSize.height + self.interItemSpacingY;
 		viewRect.origin.x = CGRectGetMidX(self.collectionView.bounds) - (footerSize.width / 2);
 		viewRect.size = footerSize;
 	}
@@ -469,7 +460,8 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 		NSInteger row = (indexPath.row / cellsPerRowInSection);
 		
 		viewRect.origin.y += (self.cellSize.height * (1 + row)) + (self.interItemSpacingY * row);
-		viewRect.origin.y += headerSize.height + (self.interItemSpacingY * 2);
+		if (headerSize.height > 0)
+			viewRect.origin.y += headerSize.height + (self.interItemSpacingY * 2);
 		viewRect.size.height = folderHeight;
 		viewRect.size.width = self.collectionView.bounds.size.width;
 	}
@@ -490,7 +482,8 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 
 		viewRect.origin.x = deltaX * (indexPath.row % cellsPerRowInSection) + (self.cellSize.width / 2) - (width / 2);
 		viewRect.origin.y += (self.cellSize.height * (1 + row)) + (self.interItemSpacingY * row);
-		viewRect.origin.y += headerSize.height + self.interItemSpacingY;
+		if (headerSize.height > 0)
+			viewRect.origin.y += headerSize.height + self.interItemSpacingY;
 		viewRect.size.height = height;
 		viewRect.size.width = width;
 
@@ -529,29 +522,26 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 		}];
 	}];
 
-	// TODO: implement stickyHeaders
-	if (self.stickyHeaders == NO)
+	if (self.stickyHeaders == YES)
 	{
-		return attributes;
+		[attributes enumerateObjectsUsingBlock:^(UICollectionViewLayoutAttributes * layoutAttributes, NSUInteger idx, BOOL *stop) {
+			if (layoutAttributes.representedElementKind == RBCollectionViewInfoFolderHeaderKind)
+			{
+				layoutAttributes.zIndex = 1024;
+
+				CGFloat top = MAX(layoutAttributes.frame.origin.y, self.collectionView.contentOffset.y);
+				CGFloat left = layoutAttributes.frame.origin.x;
+				CGFloat width = self.collectionView.bounds.size.width;
+				CGFloat height = layoutAttributes.frame.size.height;
+
+				NSInteger section = layoutAttributes.indexPath.section;
+				CGFloat bottomY = [self heightForSection:section] + layoutAttributes.frame.origin.y;
+				top = MIN(top, bottomY - height);
+
+				layoutAttributes.frame = CGRectMake(left, top, width, height);
+			}
+		}];
 	}
-
-	[attributes enumerateObjectsUsingBlock:^(UICollectionViewLayoutAttributes * layoutAttributes, NSUInteger idx, BOOL *stop) {
-		if (layoutAttributes.representedElementKind == RBCollectionViewInfoFolderHeaderKind)
-		{
-			layoutAttributes.zIndex = 1024;
-
-			CGFloat top = MAX(layoutAttributes.frame.origin.y, self.collectionView.contentOffset.y);
-			CGFloat left = layoutAttributes.frame.origin.x;
-			CGFloat width = self.collectionView.bounds.size.width;
-			CGFloat height = layoutAttributes.frame.size.height;
-
-			NSInteger section = layoutAttributes.indexPath.section;
-			CGFloat bottomY = [self heightForSection:section] + layoutAttributes.frame.origin.y;
-			top = MIN(top, bottomY - height);
-
-			layoutAttributes.frame = CGRectMake(left, top, width, height);
-		}
-	}];
 
 	return attributes;
 }

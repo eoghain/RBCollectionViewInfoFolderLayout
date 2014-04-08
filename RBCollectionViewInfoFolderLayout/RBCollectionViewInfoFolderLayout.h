@@ -89,6 +89,16 @@ FOUNDATION_EXPORT NSString *const RBCollectionViewInfoFolderDimpleKind;
 /**
  * Close the folder at the given indexPath if it's open
  */
-- (void)closeFolderViewForIndexPaht:(NSIndexPath *)indexPath;
+- (void)closeFolderViewForIndexPath:(NSIndexPath *)indexPath;
+
+/**
+ * Close any folder in given section
+ */
+- (void)closeOpenFolderInSection:(NSInteger)section;
+
+/**
+ * Close all open folders
+ */
+- (void)closeAllOpenFolders;
 
 @end
