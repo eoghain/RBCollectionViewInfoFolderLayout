@@ -11,7 +11,7 @@
 #import "ComicData.h"
 #import "ComicDataView.h"
 
-@interface ViewController ()
+@interface ViewController () <RBCollectionViewInfoFolderLayoutDelegate>
 
 @property (nonatomic, strong) NSArray * dataKeys;
 @property (nonatomic, strong) NSDictionary * data;
@@ -27,10 +27,7 @@
 	self.imageCache = [[NSCache alloc] init];
 
 	RBCollectionViewInfoFolderLayout * layout = (id)self.collectionView.collectionViewLayout;
-	layout.headerSize = CGSizeMake(self.view.bounds.size.width, 50);
-	layout.footerSize = CGSizeMake(self.view.bounds.size.width, 25);
 	layout.cellSize = CGSizeMake(216, 325);
-	layout.folderHeight = 175;
 	layout.interItemSpacingY = 10;
 	layout.stickyHeaders = YES;
 
@@ -56,9 +53,9 @@
 	[super viewWillLayoutSubviews];
 	
 	// Keep headers full width
-	RBCollectionViewInfoFolderLayout * layout = (id)self.collectionView.collectionViewLayout;
-	layout.headerSize = CGSizeMake(self.view.bounds.size.width, 50);
-	layout.footerSize = CGSizeMake(self.view.bounds.size.width, 25);
+//	RBCollectionViewInfoFolderLayout * layout = (id)self.collectionView.collectionViewLayout;
+//	layout.headerSize = CGSizeMake(self.view.bounds.size.width, 50);
+//	layout.footerSize = CGSizeMake(self.view.bounds.size.width, 25);
 }
 
 #pragma mark - UICollectionViewDelegate
@@ -200,6 +197,23 @@
 {
 	RBCollectionViewInfoFolderLayout * layout = (id)self.collectionView.collectionViewLayout;
 	[layout toggleFolderViewForIndexPath:indexPath];
+}
+
+#pragma mark - RBCollectionViewInfoFolderLayoutDelegate
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(RBCollectionViewInfoFolderLayout *)collectionViewLayout sizeForHeaderInSection:(NSInteger)section
+{
+	return CGSizeMake(self.view.bounds.size.width, 50);
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(RBCollectionViewInfoFolderLayout *)collectionViewLayout heightForFolderAtIndexPath:(NSIndexPath *)indexPath
+{
+	return 175 * ((indexPath.row % 3) + 1);
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(RBCollectionViewInfoFolderLayout *)collectionViewLayout sizeForFooterInSection:(NSInteger)section
+{
+	return CGSizeMake(self.view.bounds.size.width, 25);
 }
 
 
