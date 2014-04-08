@@ -137,6 +137,14 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 
 #pragma mark - Interface
 
+- (void)closeFolderViewForIndexPaht:(NSIndexPath *)indexPath
+{
+	NSIndexPath * visibleFolder = self.visibleFolderInSection[@( indexPath.section )];
+
+	if ([indexPath isEqual:visibleFolder])
+		[self toggleFolderViewForIndexPath:indexPath];
+}
+
 - (void)toggleFolderViewForIndexPath:(NSIndexPath *)indexPath
 {
 	NSIndexPath * visibleFolder = self.visibleFolderInSection[@( indexPath.section )];
