@@ -159,7 +159,7 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 			for (UIView *subview in [self.collectionView subviews])
 			{
 				// Find subview for our visible folder
-				if ([subview isKindOfClass:[UICollectionReusableView class]] && CGRectEqualToRect(subview.frame, attributes.frame))
+				if ([subview isKindOfClass:[UICollectionReusableView class]] && CGRectIntersectsRect(subview.frame, attributes.frame))
 				{
 					CGRect origFrame = subview.frame;
 
@@ -170,7 +170,7 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 									 animations:^{
 						CGRect frame = subview.frame;
 
-						if (selectedFolderRow < openFolderRow)
+						if (selectedFolderRow < openFolderRow || [subview isKindOfClass:[RBCollectionViewInfoFolderDimple class]])
 							frame.origin.y += frame.size.height;
 
 						frame.size.height = 0;
@@ -487,8 +487,8 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 		viewRect.size.height = height;
 		viewRect.size.width = width;
 
-		// pull dimple over cell
-		viewRect.origin.y -= additionalHeight;
+		// pull dimple over cell (-1 to make sure dimple intersects folder for close animation)
+		viewRect.origin.y -= additionalHeight - 1;
 
 		// make sure dimple appears over cell
 		attributes.zIndex = 100;
