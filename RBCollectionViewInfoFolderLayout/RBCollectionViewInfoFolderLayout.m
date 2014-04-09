@@ -192,19 +192,29 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 			CGFloat visibleHeight = [self heightForFolderAtIndexPath:visibleFolder];
 			CGFloat height = [self heightForFolderAtIndexPath:indexPath];
 
-			if (height < visibleHeight) // Resize open folder
+			for (UIView *subview in [self.collectionView subviews])
 			{
-				for (UIView *subview in [self.collectionView subviews])
+				// Find subview for our visible folder
+				if ([subview isKindOfClass:[UICollectionReusableView class]] && CGRectIntersectsRect(subview.frame, attributes.frame))
 				{
-					// Find subview for our visible folder
-					if ([subview isKindOfClass:[UICollectionReusableView class]] && CGRectEqualToRect(subview.frame, attributes.frame))
+					if (height < visibleHeight || [subview isKindOfClass:[RBCollectionViewInfoFolderDimple class]])
 					{
 						[UIView animateWithDuration:0.295 // Just under .3 to try and match
 											  delay:0.0
 											options:UIViewAnimationOptionCurveEaseInOut
 										 animations:^{
 											 CGRect frame = subview.frame;
-											 frame.size.height = height;
+
+											 if ([subview isKindOfClass:[RBCollectionViewInfoFolderDimple class]])
+											 {
+												 frame.origin.y += frame.size.height;
+												 frame.size.height = 0;
+											 }
+											 else
+											 {
+												 frame.size.height = height;
+											 }
+
 											 subview.frame = frame;
 										 } completion:^(BOOL finished) {
 										 }];
