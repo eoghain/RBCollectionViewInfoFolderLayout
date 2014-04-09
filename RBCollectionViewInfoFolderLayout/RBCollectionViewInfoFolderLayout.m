@@ -48,6 +48,7 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 @interface RBCollectionViewInfoFolderLayout ()
 
 @property (strong, nonatomic) NSMutableDictionary * layoutInformation;
+@property (strong, nonatomic) NSMutableDictionary * previousLayoutInformation;
 @property (strong, nonatomic) NSMutableDictionary * cellsPerRowInSection;
 @property (strong, nonatomic) NSMutableDictionary * visibleFolderInSection;
 
@@ -140,90 +141,6 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 	NSInteger selectedFolderRow = [self rowForIndexPath:indexPath];
 	NSInteger openFolderRow = (visibleFolder) ? [self rowForIndexPath:visibleFolder] : selectedFolderRow;
 
-	// Ugly Hack to get folders to animate closeing/changing size
-	/*
-	 * A. if user selected an item in a different row than currently open folder's row
-	 *
-	 * B. if user selected the item that has folder already open
-	 *		1. close folder by shrinking height
-	 *		2. re-size folder so it can be open again later
-	 *
-	 * C. if toggle is on the same row but different item & items folder is shorter
-	 */
-	if (visibleFolder)
-	{
-		UICollectionViewLayoutAttributes * attributes = self.layoutInformation[RBCollectionViewInfoFolderFolderKind][visibleFolder];
-
-		if ([indexPath isEqual:visibleFolder] || selectedFolderRow != openFolderRow) // A & B
-		{
-			for (UIView *subview in [self.collectionView subviews])
-			{
-				// Find subview for our visible folder
-				if ([subview isKindOfClass:[UICollectionReusableView class]] && CGRectIntersectsRect(subview.frame, attributes.frame))
-				{
-					CGRect origFrame = subview.frame;
-
-					// Close folder A & B.1
-					[UIView animateWithDuration:0.295 // Just under .3 to try and match
-										  delay:0.0
-										options:UIViewAnimationOptionCurveEaseInOut
-									 animations:^{
-						CGRect frame = subview.frame;
-
-						if (selectedFolderRow < openFolderRow || [subview isKindOfClass:[RBCollectionViewInfoFolderDimple class]])
-							frame.origin.y += frame.size.height;
-
-						frame.size.height = 0;
-						subview.frame = frame;
-					} completion:^(BOOL finished) {
-						if ([indexPath isEqual:visibleFolder]) // B.2
-						{
-							// dispatch_after to prevent resized folder from flashing on screen
-							dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-								subview.frame = origFrame;
-							});
-						}
-					}];
-				}
-			}
-		}
-		else // C
-		{
-			CGFloat visibleHeight = [self heightForFolderAtIndexPath:visibleFolder];
-			CGFloat height = [self heightForFolderAtIndexPath:indexPath];
-
-			for (UIView *subview in [self.collectionView subviews])
-			{
-				// Find subview for our visible folder
-				if ([subview isKindOfClass:[UICollectionReusableView class]] && CGRectIntersectsRect(subview.frame, attributes.frame))
-				{
-					if (height < visibleHeight || [subview isKindOfClass:[RBCollectionViewInfoFolderDimple class]])
-					{
-						[UIView animateWithDuration:0.295 // Just under .3 to try and match
-											  delay:0.0
-											options:UIViewAnimationOptionCurveEaseInOut
-										 animations:^{
-											 CGRect frame = subview.frame;
-
-											 if ([subview isKindOfClass:[RBCollectionViewInfoFolderDimple class]])
-											 {
-												 frame.origin.y += frame.size.height;
-												 frame.size.height = 0;
-											 }
-											 else
-											 {
-												 frame.size.height = height;
-											 }
-
-											 subview.frame = frame;
-										 } completion:^(BOOL finished) {
-										 }];
-					}
-				}
-			}
-		}
-	}
-
 	if ([visibleFolder isEqual:indexPath])
 	{
 		[self.visibleFolderInSection removeObjectForKey:@( indexPath.section )];
@@ -244,14 +161,12 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 	// If we are opening a row below an already open row reload the visible item
 	if (selectedFolderRow > openFolderRow)
 	{
-		[self.collectionView reloadItemsAtIndexPaths:@[ visibleFolder ]];
+		[self.collectionView reloadSections:[NSIndexSet indexSetWithIndex:visibleFolder.section]];
 	}
 	else // reload the selected item
 	{
-		[self.collectionView reloadItemsAtIndexPaths:@[ indexPath ]];
+		[self.collectionView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section]];
 	}
-
-	[self invalidateLayout]; // makes closed folder stay disappeared
 }
 
 #pragma mark - Helpers
@@ -379,6 +294,8 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 	newLayoutDictionary[RBCollectionViewInfoFolderFooterKind] = footerLayoutDictionary;
 	newLayoutDictionary[RBCollectionViewInfoFolderDimpleKind] = dimpleLayoutDictionary;
 
+	// Store last layout so our animations work
+	self.previousLayoutInformation = self.layoutInformation;
     self.layoutInformation = newLayoutDictionary;
 }
 
@@ -497,8 +414,8 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 		viewRect.size.height = height;
 		viewRect.size.width = width;
 
-		// pull dimple over cell (-1 to make sure dimple intersects folder for close animation)
-		viewRect.origin.y -= additionalHeight - 1;
+		// pull dimple over cell
+		viewRect.origin.y -= additionalHeight;
 
 		// make sure dimple appears over cell
 		attributes.zIndex = 100;
@@ -585,7 +502,6 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 	return contentSize;
 }
 
-// TODO: figure out how to make appearing supplimentary view animate with the layout movement
 - (void)prepareForCollectionViewUpdates:(NSArray *)updateItems
 {
 	// Keep track of insert and delete index paths
@@ -626,6 +542,28 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 {
 	UICollectionViewLayoutAttributes * attributes = [super initialLayoutAttributesForAppearingSupplementaryElementOfKind:elementKind atIndexPath:elementIndexPath];
 
+	if (self.previousLayoutInformation[elementKind][elementIndexPath])
+	{
+		attributes = self.previousLayoutInformation[elementKind][elementIndexPath];
+	}
+
+	// grow folder down from top edge
+	if ([elementKind isEqualToString:RBCollectionViewInfoFolderFolderKind])
+	{
+		CGRect frame = attributes.frame;
+		frame.size.height = 0;
+		attributes.frame = frame;
+	}
+
+	// grow dimple away from folder towards cell
+	if ([elementKind isEqualToString:RBCollectionViewInfoFolderDimpleKind])
+	{
+		CGRect frame = attributes.frame;
+		frame.origin.y += frame.size.height;
+		frame.size.height = 0;
+		attributes.frame = frame;
+	}
+
 	attributes.alpha = 1.0;
 
 	return attributes;
@@ -635,6 +573,28 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 {
 	UICollectionViewLayoutAttributes * attributes = [super finalLayoutAttributesForDisappearingSupplementaryElementOfKind:elementKind atIndexPath:elementIndexPath];
 
+	if (self.previousLayoutInformation[elementKind][elementIndexPath])
+	{
+		attributes = self.layoutInformation[elementKind][elementIndexPath];
+	}
+
+	// Collapse folder up into top edge
+	if ([elementKind isEqualToString:RBCollectionViewInfoFolderFolderKind])
+	{
+		CGRect frame = attributes.frame;
+		frame.size.height = 0;
+		attributes.frame = frame;
+	}
+
+	// Shrink dimple down towards folder
+	if ([elementKind isEqualToString:RBCollectionViewInfoFolderDimpleKind])
+	{
+		CGRect frame = attributes.frame;
+		frame.origin.y += frame.size.height;
+		frame.size.height = 0;
+		attributes.frame = frame;
+	}
+
 	attributes.alpha = 1.0;
 
 	return attributes;
@@ -642,15 +602,11 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 
 - (UICollectionViewLayoutAttributes *)initialLayoutAttributesForAppearingItemAtIndexPath:(NSIndexPath *)itemIndexPath
 {
-	UICollectionViewLayoutAttributes * attributes;
+	UICollectionViewLayoutAttributes * attributes = [super initialLayoutAttributesForAppearingItemAtIndexPath:itemIndexPath];
 
-	if ([self.reloadIndexPaths containsObject:itemIndexPath])
+	if (self.previousLayoutInformation[RBCollectionViewInfoFolderCellKind][itemIndexPath])
 	{
-		attributes = self.layoutInformation[RBCollectionViewInfoFolderCellKind][itemIndexPath];
-	}
-	else
-	{
-		attributes = [super initialLayoutAttributesForAppearingItemAtIndexPath:itemIndexPath];
+		attributes = self.previousLayoutInformation[RBCollectionViewInfoFolderCellKind][itemIndexPath];
 	}
 
 	attributes.alpha = 1.0;
@@ -661,6 +617,11 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 - (UICollectionViewLayoutAttributes *)finalLayoutAttributesForDisappearingItemAtIndexPath:(NSIndexPath *)itemIndexPath
 {
 	UICollectionViewLayoutAttributes * attributes = [super finalLayoutAttributesForDisappearingItemAtIndexPath:itemIndexPath];
+
+	if (self.previousLayoutInformation[RBCollectionViewInfoFolderCellKind][itemIndexPath])
+	{
+		attributes = self.layoutInformation[RBCollectionViewInfoFolderCellKind][itemIndexPath];
+	}
 
 	if (!attributes) // If cell is moving off the screen attributes will be nil, but we want it to animate
 		attributes = self.layoutInformation[RBCollectionViewInfoFolderCellKind][itemIndexPath];
