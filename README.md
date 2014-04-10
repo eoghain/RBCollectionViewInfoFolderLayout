@@ -9,6 +9,8 @@ Only got the one for now, but run the demo to check out how the animations look 
 <img src="https://raw.githubusercontent.com/eoghain/RBCollectionViewInfoFolderLayout/master/screenshots/portrait.png" alt="Portrait" title="Screenshot 1" height="600">
 </p>
 
+>Data provided by Marvel. © 2014 Marvel
+
 ## Usage
 
 1. Copy RBCollectionViewInfoFolderLayout .h/.m into your project
