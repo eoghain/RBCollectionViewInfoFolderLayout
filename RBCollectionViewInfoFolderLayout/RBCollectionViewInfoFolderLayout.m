@@ -526,14 +526,9 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 		}
 		else if (update.updateAction == UICollectionUpdateActionMove)
 		{
-			[self.visibleFolderInSection enumerateKeysAndObjectsUsingBlock:^(id key, NSIndexPath * visibleIndexPath, BOOL *stop) {
-				if ([visibleIndexPath isEqual:update.indexPathBeforeUpdate])
-				{
-					dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-						[self toggleFolderViewForIndexPath:visibleIndexPath];
-					});
-				}
-			}];
+			dispatch_async(dispatch_get_main_queue(), ^{
+				[self closeAllOpenFolders];
+			});
 		}
 	}
 }
@@ -560,7 +555,7 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 	[self.reloadIndexPaths enumerateObjectsUsingBlock:^(NSIndexPath * reloadIndexPath, NSUInteger idx, BOOL *stop) {
 		NSIndexPath * testIndexPath = [NSIndexPath indexPathForRow:INT_MAX inSection:reloadIndexPath.section];
 
-		if ([testIndexPath isEqual:reloadIndexPath])
+		if ([testIndexPath isEqual:reloadIndexPath] && reloadIndexPath.section == elementIndexPath.section)
 		{
 			// grow folder down from top edge
 			if ([elementKind isEqualToString:RBCollectionViewInfoFolderFolderKind])
@@ -598,7 +593,7 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 	[self.reloadIndexPaths enumerateObjectsUsingBlock:^(NSIndexPath * reloadIndexPath, NSUInteger idx, BOOL *stop) {
 		NSIndexPath * testIndexPath = [NSIndexPath indexPathForRow:INT_MAX inSection:reloadIndexPath.section];
 
-		if ([testIndexPath isEqual:reloadIndexPath])
+		if ([testIndexPath isEqual:reloadIndexPath] && reloadIndexPath.section == elementIndexPath.section)
 		{
 			// Collapse folder up into top edge
 			if ([elementKind isEqualToString:RBCollectionViewInfoFolderFolderKind])
