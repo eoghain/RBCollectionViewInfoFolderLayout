@@ -6,7 +6,7 @@ A UICollectionViewLayout that uses a supplimental view to display a folder below
 Only got the one for now, but run the demo to check out how the animations look and work.
 
 <p align="center">
-<img src="https://raw.github.com/eoghain/RBCollectionViewBalancedColumnLayout/master/screenshots/portrait.png" alt="Portrait" title="Screenshot 1" height="600">
+<img src="https://raw.githubusercontent.com/eoghain/RBCollectionViewInfoFolderLayout/master/screenshots/portrait.png" alt="Portrait" title="Screenshot 1" height="600">
 </p>
 
 ## Usage
@@ -100,7 +100,7 @@ Handle various suplementary view request
 - [X] Imlement decoration view that places a caret over opened item linking it to the folder
 - [X] Animate dimple decoration
 - [ ] Make header/footer/dimple optional
-- [C] Figure out why position of the folder animates open, but the view just pops in
+- [X] Figure out why position of the folder animates open, but the view just pops in
 - [X] Implement sticky headers
 - [ ] Refactor deltaX calculation into prepareLayout so it isn't re-done for every item 
 - [X] Allow for per item folder heights.
