@@ -10,6 +10,27 @@
 
 @implementation ComicDataView
 
++ (CGFloat)heightOfViewWithTitle:(NSString *)title description:(NSString *)desc upc:(NSString *)upc constrainedToSize:(CGSize)constrainedSize
+{
+	__block CGFloat height = 0;
+	NSDictionary * fontsAndStrings = @{
+		UIFontTextStyleHeadline : title,
+		UIFontTextStyleBody : desc,
+		UIFontTextStyleCaption2 : upc
+	};
+	
+	[fontsAndStrings enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+		NSMutableAttributedString * string = [[NSMutableAttributedString alloc] initWithString:obj attributes:@{ NSFontAttributeName : [UIFont preferredFontForTextStyle:key] }];
+		
+		CGRect requiredFrame = [string boundingRectWithSize:constrainedSize options:(NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading) context:nil];
+		
+		height += requiredFrame.size.height;
+	}];
+	
+	// 20 == top padding, 10 == label separation, 5 == bottom padding
+	return height + 35;
+}
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];

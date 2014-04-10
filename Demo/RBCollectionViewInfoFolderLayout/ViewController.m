@@ -203,25 +203,13 @@
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(RBCollectionViewInfoFolderLayout *)collectionViewLayout heightForFolderAtIndexPath:(NSIndexPath *)indexPath
 {
-	__block CGFloat height = 0;
-	NSDictionary * fontsAndStrings = @{
-		UIFontTextStyleHeadline : self.data[self.dataKeys[indexPath.section]][@"results"][indexPath.row][@"title"],
-		UIFontTextStyleBody : self.data[self.dataKeys[indexPath.section]][@"results"][indexPath.row][@"description"],
-		UIFontTextStyleCaption2 : self.data[self.dataKeys[indexPath.section]][@"results"][indexPath.row][@"upc"]
-	  };
-
+	NSString * title = self.data[self.dataKeys[indexPath.section]][@"results"][indexPath.row][@"title"];
+	NSString * desc = self.data[self.dataKeys[indexPath.section]][@"results"][indexPath.row][@"description"];
+	NSString * upc = self.data[self.dataKeys[indexPath.section]][@"results"][indexPath.row][@"upc"];
+	
 	CGSize constrainedSize = CGSizeMake(self.collectionView.frame.size.width - 20, CGFLOAT_MAX);
 
-	[fontsAndStrings enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-		NSMutableAttributedString * string = [[NSMutableAttributedString alloc] initWithString:obj attributes:@{ NSFontAttributeName : [UIFont preferredFontForTextStyle:key] }];
-
-		CGRect requiredFrame = [string boundingRectWithSize:constrainedSize options:(NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading) context:nil];
-
-		height += requiredFrame.size.height;
-	}];
-	
-	// 20 == top padding, 10 == label separation, 5 == bottom padding
-	return height + 35;
+	return [ComicDataView heightOfViewWithTitle:title description:desc upc:upc constrainedToSize:constrainedSize];
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(RBCollectionViewInfoFolderLayout *)collectionViewLayout sizeForFooterInSection:(NSInteger)section

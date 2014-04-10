@@ -14,4 +14,6 @@
 @property (strong, nonatomic) UILabel * desc;
 @property (strong, nonatomic) UILabel * upc;
 
++ (CGFloat)heightOfViewWithTitle:(NSString *)title description:(NSString *)desc upc:(NSString *)upc constrainedToSize:(CGSize)constrainedSize;
+
 @end
