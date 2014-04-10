@@ -514,10 +514,16 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 	{
 		if (update.updateAction == UICollectionUpdateActionDelete)
 		{
+			dispatch_async(dispatch_get_main_queue(), ^{
+				[self closeAllOpenFolders];
+			});
 			[self.deleteIndexPaths addObject:update.indexPathBeforeUpdate];
 		}
 		else if (update.updateAction == UICollectionUpdateActionInsert)
 		{
+			dispatch_async(dispatch_get_main_queue(), ^{
+				[self closeAllOpenFolders];
+			});
 			[self.insertIndexPaths addObject:update.indexPathAfterUpdate];
 		}
 		else if (update.updateAction == UICollectionUpdateActionReload)
