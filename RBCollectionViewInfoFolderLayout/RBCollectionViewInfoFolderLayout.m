@@ -524,6 +524,17 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 		{
 			[self.reloadIndexPaths addObject:update.indexPathAfterUpdate];
 		}
+		else if (update.updateAction == UICollectionUpdateActionMove)
+		{
+			[self.visibleFolderInSection enumerateKeysAndObjectsUsingBlock:^(id key, NSIndexPath * visibleIndexPath, BOOL *stop) {
+				if ([visibleIndexPath isEqual:update.indexPathBeforeUpdate])
+				{
+					dispatch_async(dispatch_get_main_queue(), ^{
+						[self toggleFolderViewForIndexPath:visibleIndexPath];
+					});
+				}
+			}];
+		}
 	}
 }
 
@@ -546,11 +557,10 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 		attributes = self.previousLayoutInformation[elementKind][elementIndexPath];
 	}
 
-	if (self.reloadIndexPaths.count)
-	{
-		NSIndexPath * reloadIndexPath = [self.reloadIndexPaths lastObject];
+	[self.reloadIndexPaths enumerateObjectsUsingBlock:^(NSIndexPath * reloadIndexPath, NSUInteger idx, BOOL *stop) {
+		NSIndexPath * testIndexPath = [NSIndexPath indexPathForRow:INT_MAX inSection:reloadIndexPath.section];
 
-		if (reloadIndexPath.section == elementIndexPath.section)
+		if ([testIndexPath isEqual:reloadIndexPath])
 		{
 			// grow folder down from top edge
 			if ([elementKind isEqualToString:RBCollectionViewInfoFolderFolderKind])
@@ -569,7 +579,7 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 				attributes.frame = frame;
 			}
 		}
-	}
+	}];
 
 	attributes.alpha = 1.0;
 
@@ -585,11 +595,10 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 		attributes = self.layoutInformation[elementKind][elementIndexPath];
 	}
 
-	if (self.reloadIndexPaths.count)
-	{
-		NSIndexPath * reloadIndexPath = [self.reloadIndexPaths lastObject];
+	[self.reloadIndexPaths enumerateObjectsUsingBlock:^(NSIndexPath * reloadIndexPath, NSUInteger idx, BOOL *stop) {
+		NSIndexPath * testIndexPath = [NSIndexPath indexPathForRow:INT_MAX inSection:reloadIndexPath.section];
 
-		if (reloadIndexPath.section == elementIndexPath.section)
+		if ([testIndexPath isEqual:reloadIndexPath])
 		{
 			// Collapse folder up into top edge
 			if ([elementKind isEqualToString:RBCollectionViewInfoFolderFolderKind])
@@ -608,7 +617,7 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 				attributes.frame = frame;
 			}
 		}
-	}
+	}];
 
 	attributes.alpha = 1.0;
 
