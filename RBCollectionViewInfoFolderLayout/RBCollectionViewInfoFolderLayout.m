@@ -205,7 +205,8 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 	height += (self.cellSize.height + self.interItemSpacingY) * numRows; // previous rows
 
 	CGSize headerSize = [self sizeForHeaderInSection:section];
-	height += headerSize.height + self.interItemSpacingY;
+	if (headerSize.height > 0)
+		height += headerSize.height + self.interItemSpacingY;
 
 	CGSize footerSize = [self sizeForFooterInSection:section];
 	if (footerSize.height > 0)
@@ -325,9 +326,7 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 	// Add in header height if needed
 	CGSize headerSize = [self sizeForHeaderInSection:indexPath.section];
 	if (headerSize.height > 0)
-	{
 		itemFrame.origin.y += headerSize.height + self.interItemSpacingY;
-	}
 
 	// If cell intersects visible folder for section bump it below folder
 	NSIndexPath * visibleFolder = self.visibleFolderInSection[@( indexPath.section )];
@@ -386,9 +385,9 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 		NSInteger cellsPerRowInSection = [self.cellsPerRowInSection[@( indexPath.section )] integerValue];
 		NSInteger row = (indexPath.row / cellsPerRowInSection);
 		
-		viewRect.origin.y += (self.cellSize.height * (1 + row)) + (self.interItemSpacingY * row);
+		viewRect.origin.y += ((self.cellSize.height + self.interItemSpacingY) * (1 + row));
 		if (headerSize.height > 0)
-			viewRect.origin.y += headerSize.height + (self.interItemSpacingY * 2);
+			viewRect.origin.y += headerSize.height + self.interItemSpacingY;
 		viewRect.size.height = folderHeight;
 		viewRect.size.width = self.collectionView.bounds.size.width;
 	}
@@ -408,14 +407,14 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 		CGFloat width = (height / 3) * 5;
 
 		viewRect.origin.x = deltaX * (indexPath.row % cellsPerRowInSection) + (self.cellSize.width / 2) - (width / 2);
-		viewRect.origin.y += (self.cellSize.height * (1 + row)) + (self.interItemSpacingY * row);
+		viewRect.origin.y += ((self.cellSize.height + self.interItemSpacingY) * (1 + row));
 		if (headerSize.height > 0)
 			viewRect.origin.y += headerSize.height + self.interItemSpacingY;
 		viewRect.size.height = height;
 		viewRect.size.width = width;
 
 		// pull dimple over cell
-		viewRect.origin.y -= additionalHeight;
+		viewRect.origin.y -= additionalHeight * 2;
 
 		// make sure dimple appears over cell
 		attributes.zIndex = 100;
