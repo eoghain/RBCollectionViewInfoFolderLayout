@@ -546,21 +546,29 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 		attributes = self.previousLayoutInformation[elementKind][elementIndexPath];
 	}
 
-	// grow folder down from top edge
-	if ([elementKind isEqualToString:RBCollectionViewInfoFolderFolderKind])
+	if (self.reloadIndexPaths.count)
 	{
-		CGRect frame = attributes.frame;
-		frame.size.height = 0;
-		attributes.frame = frame;
-	}
+		NSIndexPath * reloadIndexPath = [self.reloadIndexPaths lastObject];
 
-	// grow dimple away from folder towards cell
-	if ([elementKind isEqualToString:RBCollectionViewInfoFolderDimpleKind])
-	{
-		CGRect frame = attributes.frame;
-		frame.origin.y += frame.size.height;
-		frame.size.height = 0;
-		attributes.frame = frame;
+		if (reloadIndexPath.section == elementIndexPath.section)
+		{
+			// grow folder down from top edge
+			if ([elementKind isEqualToString:RBCollectionViewInfoFolderFolderKind])
+			{
+				CGRect frame = attributes.frame;
+				frame.size.height = 0;
+				attributes.frame = frame;
+			}
+
+			// grow dimple away from folder towards cell
+			if ([elementKind isEqualToString:RBCollectionViewInfoFolderDimpleKind])
+			{
+				CGRect frame = attributes.frame;
+				frame.origin.y += frame.size.height;
+				frame.size.height = 0;
+				attributes.frame = frame;
+			}
+		}
 	}
 
 	attributes.alpha = 1.0;
@@ -577,21 +585,29 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 		attributes = self.layoutInformation[elementKind][elementIndexPath];
 	}
 
-	// Collapse folder up into top edge
-	if ([elementKind isEqualToString:RBCollectionViewInfoFolderFolderKind])
+	if (self.reloadIndexPaths.count)
 	{
-		CGRect frame = attributes.frame;
-		frame.size.height = 0;
-		attributes.frame = frame;
-	}
+		NSIndexPath * reloadIndexPath = [self.reloadIndexPaths lastObject];
 
-	// Shrink dimple down towards folder
-	if ([elementKind isEqualToString:RBCollectionViewInfoFolderDimpleKind])
-	{
-		CGRect frame = attributes.frame;
-		frame.origin.y += frame.size.height;
-		frame.size.height = 0;
-		attributes.frame = frame;
+		if (reloadIndexPath.section == elementIndexPath.section)
+		{
+			// Collapse folder up into top edge
+			if ([elementKind isEqualToString:RBCollectionViewInfoFolderFolderKind])
+			{
+				CGRect frame = attributes.frame;
+				frame.size.height = 0;
+				attributes.frame = frame;
+			}
+
+			// Shrink dimple down towards folder
+			if ([elementKind isEqualToString:RBCollectionViewInfoFolderDimpleKind])
+			{
+				CGRect frame = attributes.frame;
+				frame.origin.y += frame.size.height;
+				frame.size.height = 0;
+				attributes.frame = frame;
+			}
+		}
 	}
 
 	attributes.alpha = 1.0;
