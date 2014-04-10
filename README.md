@@ -16,9 +16,9 @@ A UICollectionViewLayout that uses a supplimental view to display a folder below
 ####TODO
 
 - [X] Imlement decoration view that places a caret over opened item linking it to the folder
-- [ ] Animate caret decoration
+- [X] Animate caret decoration
 - [ ] Make decoration optional
-- [ ] Figure out why position of the folder animates open, but the view just pops in
+- [C] Figure out why position of the folder animates open, but the view just pops in
 - [X] Implement sticky headers
 - [ ] Refactor deltaX calculation into prepareLayout so it isn't re-done for every item 
 - [X] Allow for per item folder heights.
