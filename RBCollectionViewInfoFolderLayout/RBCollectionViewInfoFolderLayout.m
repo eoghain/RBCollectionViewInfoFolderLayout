@@ -51,6 +51,7 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 @property (strong, nonatomic) NSMutableDictionary * previousLayoutInformation;
 @property (strong, nonatomic) NSMutableDictionary * cellsPerRowInSection;
 @property (strong, nonatomic) NSMutableDictionary * visibleFolderInSection;
+@property (strong, nonatomic) NSMutableDictionary * deltaXInSection;
 
 @property (strong, nonatomic) NSMutableArray * insertIndexPaths;
 @property (strong, nonatomic) NSMutableArray * deleteIndexPaths;
@@ -59,6 +60,7 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 @property (strong, nonatomic) NSMutableDictionary * headerSizes;
 @property (strong, nonatomic) NSMutableDictionary * footerSizes;
 @property (strong, nonatomic) NSMutableDictionary * folderHeights;
+
 
 @end
 
@@ -244,12 +246,20 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 	self.headerSizes = [NSMutableDictionary dictionaryWithCapacity:numSections];
 	self.footerSizes = [NSMutableDictionary dictionaryWithCapacity:numSections];
 	self.folderHeights = [NSMutableDictionary dictionaryWithCapacity:numSections];
+	self.deltaXInSection = [NSMutableDictionary dictionaryWithCapacity:numSections];
 
 	for(NSInteger section = 0; section < numSections; section++)
 	{
 		NSInteger numItems = [self.collectionView numberOfItemsInSection:section];
 
 		self.cellsPerRowInSection[@( section )] = @( floor( (self.collectionView.bounds.size.width + self.interItemSpacingX) / (self.cellSize.width + self.interItemSpacingX)) );
+
+
+		NSInteger cellsPerRowInSection = [self.cellsPerRowInSection[@( section )] integerValue];
+		CGFloat totalWidthUsed = cellsPerRowInSection * self.cellSize.width;
+		CGFloat emptySpace = self.collectionView.bounds.size.width - totalWidthUsed;
+		CGFloat rightPadding = emptySpace / MAX((cellsPerRowInSection - 1), 1);
+		self.deltaXInSection[@( section )] = @( self.cellSize.width + rightPadding );
 
 		for(NSInteger item = 0; item < numItems; item++)
 		{
@@ -309,12 +319,17 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 
 	// TODO: move all this into prepare
 	NSInteger cellsPerRowInSection = [self.cellsPerRowInSection[@( indexPath.section )] integerValue];
-	CGFloat totalWidthUsed = cellsPerRowInSection * self.cellSize.width;
-	CGFloat emptySpace = self.collectionView.bounds.size.width - totalWidthUsed;
-	CGFloat rightPadding = emptySpace / (cellsPerRowInSection - 1);
-	CGFloat deltaX = self.cellSize.width + rightPadding;
+	CGFloat deltaX = [self.deltaXInSection[@( indexPath.section )] floatValue];
 
-	itemFrame.origin.x = deltaX * (indexPath.row % cellsPerRowInSection);
+	if (cellsPerRowInSection == 1)
+	{
+		itemFrame.origin.x = (deltaX - self.cellSize.width) / 2;
+	}
+	else
+	{
+		itemFrame.origin.x = deltaX * (indexPath.row % cellsPerRowInSection);
+	}
+
 	itemFrame.origin.y = (self.cellSize.height * (indexPath.row / cellsPerRowInSection)) + (self.interItemSpacingY * (indexPath.row / cellsPerRowInSection));
 
 	// Do this for all sections before us
@@ -396,17 +411,20 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 	{
 		NSInteger cellsPerRowInSection = [self.cellsPerRowInSection[@( indexPath.section )] integerValue];
 		NSInteger row = (indexPath.row / cellsPerRowInSection);
-
-		CGFloat totalWidthUsed = cellsPerRowInSection * self.cellSize.width;
-		CGFloat emptySpace = self.collectionView.bounds.size.width - totalWidthUsed;
-		CGFloat rightPadding = emptySpace / (cellsPerRowInSection - 1);
-		CGFloat deltaX = self.cellSize.width + rightPadding;
+		CGFloat deltaX = [self.deltaXInSection[@( indexPath.section )] floatValue];
 
 		CGFloat additionalHeight = 10;
 		CGFloat height = self.interItemSpacingY + additionalHeight;
 		CGFloat width = (height / 3) * 5;
 
-		viewRect.origin.x = deltaX * (indexPath.row % cellsPerRowInSection) + (self.cellSize.width / 2) - (width / 2);
+		if (cellsPerRowInSection == 1)
+		{
+			viewRect.origin.x = (deltaX - self.cellSize.width) / 2 + (self.cellSize.width / 2) - (width / 2);
+		}
+		else
+		{
+			viewRect.origin.x = deltaX * (indexPath.row % cellsPerRowInSection) + (self.cellSize.width / 2) - (width / 2);
+		}
 		viewRect.origin.y += ((self.cellSize.height + self.interItemSpacingY) * (1 + row));
 		if (headerSize.height > 0)
 			viewRect.origin.y += headerSize.height + self.interItemSpacingY;
