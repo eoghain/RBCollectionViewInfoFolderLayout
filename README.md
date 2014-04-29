@@ -108,7 +108,7 @@ Handle various suplementary view request
 - [ ] Make header/footer/dimple optional
 - [X] Figure out why position of the folder animates open, but the view just pops in
 - [X] Implement sticky headers
-- [ ] Refactor deltaX calculation into prepareLayout so it isn't re-done for every item 
+- [X] Refactor deltaX calculation into prepareLayout so it isn't re-done for every item 
 - [X] Allow for per item folder heights.
 - [X] Implement delegate methods to allow per-section headers/footers
 - [ ] Add SectionInset property/delegate
