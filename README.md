@@ -112,3 +112,4 @@ Handle various suplementary view request
 - [X] Allow for per item folder heights.
 - [X] Implement delegate methods to allow per-section headers/footers
 - [ ] Add SectionInset property/delegate
+- [X] Add ability to get item from a point in the displayed folder view.

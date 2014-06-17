@@ -101,4 +101,12 @@ FOUNDATION_EXPORT NSString *const RBCollectionViewInfoFolderDimpleKind;
  */
 - (void)closeAllOpenFolders;
 
+/**
+ * IndexPath for the item that is associated with the folder view at a given point
+ *
+ * Useful for when you need to place buttons in your folder to act on the item.
+ * Don't forget to translate the point into the collectionViews coordinate space.
+ */
+- (NSIndexPath *)indexPathForItemAssociatedWithFolderAtPoint:(CGPoint)point;
+
 @end

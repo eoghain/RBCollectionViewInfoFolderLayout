@@ -53,6 +53,17 @@
 	[super viewWillLayoutSubviews];
 }
 
+#pragma mark - IBActions
+
+- (IBAction)buttonPressed:(UIButton *)btn
+{
+	RBCollectionViewInfoFolderLayout * layout = (id)self.collectionView.collectionViewLayout;
+	CGPoint point = [[btn superview] convertPoint:btn.center toView:self.collectionView];
+	NSIndexPath * indexPath = [layout indexPathForItemAssociatedWithFolderAtPoint:point];
+	
+	[[[UIAlertView alloc] initWithTitle:@"Attached IndexPath" message:[NSString stringWithFormat:@"Index Path %@", indexPath ] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
+}
+
 #pragma mark - UICollectionViewDelegate
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -130,6 +141,8 @@
 		comicDataView.title.text = self.data[self.dataKeys[indexPath.section]][@"results"][indexPath.row][@"title"];
 		comicDataView.desc.text = self.data[self.dataKeys[indexPath.section]][@"results"][indexPath.row][@"description"];
 		comicDataView.upc.text = self.data[self.dataKeys[indexPath.section]][@"results"][indexPath.row][@"upc"];
+		
+		[comicDataView.button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
 
 		reuseView = comicDataView;
 	}

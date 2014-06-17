@@ -53,7 +53,14 @@
 		self.upc.translatesAutoresizingMaskIntoConstraints = NO;
 		self.upc.font = [UIFont preferredFontForTextStyle:UIFontTextStyleCaption2];
 		self.upc.textColor = [UIColor colorWithRed:0x33/250.0 green:0x33/250.0 blue:0x33/250.0 alpha:1.0];
+		
+		self.button = [UIButton buttonWithType:UIButtonTypeCustom];
+		self.button = [UIButton buttonWithType:UIButtonTypeCustom];
+		self.button.frame = CGRectMake(0, 0, 100, 44);
+		self.button.translatesAutoresizingMaskIntoConstraints = NO;
+		[self.button setTitle:@"Which Item?" forState:UIControlStateNormal];
 
+		[self addSubview:self.button];
 		[self addSubview:self.title];
 		[self addSubview:self.desc];
 		[self addSubview:self.upc];
@@ -65,7 +72,14 @@
 
 		[constraintsArray addObject: [NSLayoutConstraint constraintWithItem:self.title attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeft multiplier:1.0 constant:10.0f]];
 
-		[constraintsArray addObject: [NSLayoutConstraint constraintWithItem:self.title attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeRight multiplier:1.0 constant:-10.0f]];
+//		[constraintsArray addObject: [NSLayoutConstraint constraintWithItem:self.title attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeRight multiplier:1.0 constant:-10.0f]];
+		
+		// button
+		[constraintsArray addObject: [NSLayoutConstraint constraintWithItem:self.button attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1.0 constant:14.0f]];
+		
+		[constraintsArray addObject: [NSLayoutConstraint constraintWithItem:self.button attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.title attribute:NSLayoutAttributeRight multiplier:1.0 constant:10.0f]];
+		
+		[constraintsArray addObject: [NSLayoutConstraint constraintWithItem:self.button attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeRight multiplier:1.0 constant:-10.0f]];
 
 		// description
 		[constraintsArray addObject: [NSLayoutConstraint constraintWithItem:self.desc attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.title attribute:NSLayoutAttributeLeading multiplier:1.0 constant:0.0f]];

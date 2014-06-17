@@ -13,6 +13,7 @@
 @property (strong, nonatomic) UILabel * title;
 @property (strong, nonatomic) UILabel * desc;
 @property (strong, nonatomic) UILabel * upc;
+@property (strong, nonatomic) UIButton * button;
 
 + (CGFloat)heightOfViewWithTitle:(NSString *)title description:(NSString *)desc upc:(NSString *)upc constrainedToSize:(CGSize)constrainedSize;
 

@@ -171,6 +171,21 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 	}
 }
 
+- (NSIndexPath *)indexPathForItemAssociatedWithFolderAtPoint:(CGPoint)point
+{
+	__block NSIndexPath * indexPath = nil;
+	[self.visibleFolderInSection enumerateKeysAndObjectsUsingBlock:^(id key, NSIndexPath * obj, BOOL *stop) {
+		UICollectionViewLayoutAttributes * attributes = self.layoutInformation[RBCollectionViewInfoFolderFolderKind][obj];
+		if (CGRectContainsPoint(attributes.frame, point))
+		{
+			indexPath = obj;
+			*stop = YES;
+		}
+	}];
+		
+	return indexPath;
+}
+
 #pragma mark - Helpers
 
 - (NSInteger)rowForIndexPath:(NSIndexPath *)indexPath
