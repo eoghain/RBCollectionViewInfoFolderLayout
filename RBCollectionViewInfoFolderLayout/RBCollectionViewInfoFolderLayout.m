@@ -592,7 +592,7 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 	}
 
 	[self.reloadIndexPaths enumerateObjectsUsingBlock:^(NSIndexPath * reloadIndexPath, NSUInteger idx, BOOL *stop) {
-		NSIndexPath * testIndexPath = [NSIndexPath indexPathForRow:INT_MAX inSection:reloadIndexPath.section];
+		NSIndexPath * testIndexPath = [NSIndexPath indexPathForRow:NSNotFound inSection:reloadIndexPath.section];
 
 		if ([testIndexPath isEqual:reloadIndexPath] && reloadIndexPath.section == elementIndexPath.section)
 		{
@@ -630,7 +630,7 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 	}
 
 	[self.reloadIndexPaths enumerateObjectsUsingBlock:^(NSIndexPath * reloadIndexPath, NSUInteger idx, BOOL *stop) {
-		NSIndexPath * testIndexPath = [NSIndexPath indexPathForRow:INT_MAX inSection:reloadIndexPath.section];
+		NSIndexPath * testIndexPath = [NSIndexPath indexPathForRow:NSNotFound inSection:reloadIndexPath.section];
 
 		if ([testIndexPath isEqual:reloadIndexPath] && reloadIndexPath.section == elementIndexPath.section)
 		{
