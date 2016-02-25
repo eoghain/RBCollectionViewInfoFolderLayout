@@ -432,7 +432,7 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
         CGFloat height = self.interItemSpacingY + additionalHeight;;
         
         if(height <= 10){
-            height *= 2;
+            height = additionalHeight * 2;
         }
         
 		CGFloat width = (height / 3) * 5;
