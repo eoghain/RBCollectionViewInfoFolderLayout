@@ -429,7 +429,12 @@ NSString *const RBCollectionViewInfoFolderFolderKind = @"RBCollectionViewInfoFol
 		CGFloat deltaX = [self.deltaXInSection[@( indexPath.section )] floatValue];
 
 		CGFloat additionalHeight = 10;
-		CGFloat height = self.interItemSpacingY + additionalHeight;
+        CGFloat height = self.interItemSpacingY + additionalHeight;;
+        
+        if(height <= 10){
+            height = additionalHeight * 2;
+        }
+        
 		CGFloat width = (height / 3) * 5;
 
 		if (cellsPerRowInSection == 1)
